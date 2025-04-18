@@ -2,4 +2,12 @@
 
 body {
     word-break: keep-all;
+    font-family: 'Pretendard', sans-serif;
 }
+
+.roboto-mono {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }

@@ -1,21 +1,292 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BAT 공채 2025</title>
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/input.css">
-</head>
-<body>
-    <header>
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Roboto+Mono:ital,wght@0,700;1,700&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  </head>
+  <body class="bg-white">
+    <header
+      class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-sm z-50 border-b border-[#DBDBDB]"
+    >
+      <nav
+        class="w-full mx-auto px-[24px] flex justify-between items-center h-[72px]"
+      >
+        <div class="">
+          <img src="img/bat.png" alt="BAT Logo" class="w-[193px] h-auto" />
+        </div>
+        <div class="hidden md:flex space-x-[40px] text-[16px] items-center">
+          <a href="#about" class="text-black">공채 소개</a>
+          <a href="#organization" class="text-black">조직 소개</a>
+          <a href="#positions" class="text-black">채용 포지션 안내</a>
+          <a href="#journey" class="text-black">합류 여정</a>
+          <button
+            class="bg-black text-[#FFFFFF]/80 rounded-[8px] h-[43px] px-[24px] flex items-center justify-center"
+          >
+            Coming Soon
+          </button>
+        </div>
+        <button class="md:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </nav>
     </header>
-    
+
     <main>
-        Hello World
+      <section
+        class="w-full h-screen pt-[72px] bg-gradient-to-b from-[#BCFF64] to-transparent"
+      >
+        <img
+          src="img/2025.svg"
+          alt="BAT Logo"
+          class="w-full h-full absolute top-0 left-0 opacity-70 z-0"
+        />
+        <div
+          class="h-full mx-auto text-center flex flex-col items-center justify-center"
+        >
+          <p class="text-[28px] font-semibold mb-[6px] z-10">AE NEXT STAGE</p>
+          <img
+            src="img/main_logo.svg"
+            alt="BAT Logo"
+            class="w-[666px] h-auto z-10"
+          />
+          <p class="text-[24px] font-semibold mt-[16px] z-10">
+            지금, 제대로 일할 차례입니다.
+          </p>
+          <div
+            class="flex flex-row items-center justify-center gap-[12px] mt-[6px] z-10"
+          >
+            <p class="text-[20px] opacity-70">접수 기간</p>
+            <div class="w-[2px] h-[13px] bg-black opacity-30"></div>
+            <p class="text-[20px] opacity-70">
+              2025년 5월 7일(수) ~ 5월 20일(화)
+            </p>
+          </div>
+          <div class="absolute bottom-[40px] animate-bounce z-10">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <div class="w-full h-[1px] bg-[#E6E6E6]"></div>
+      <section class="w-full mx-auto px-[60px] py-[80px] max-w-[1440px]">
+        <div class="flex flex-row items-center justify-between">
+          <div class="flex flex-col items-start">
+            <p
+              class="text-[24px] font-bold bg-no-repeat bg-left pl-[16px]"
+              style="
+                background-image: url(img/slash-s.svg);
+                background-position-x: 0px;
+              "
+            >
+              BAT OPEN CALL
+            </p>
+            <p class="text-[32px] font-semibold mt-[32px] leading-[130%]">
+              잘하는 AE는,<br />
+              잘하는 팀에서 일해야 하니까
+            </p>
+          </div>
+          <div class="relative min-w-[550px] w-[550px] h-[520px] mt-[96px]">
+            <img
+              src="img/s-bg.png"
+              alt="slash"
+              class="absolute left-0 top-0 w-[550px] h-auto"
+            />
+            <div class="absolute">
+              <img
+                src="/img/chat1.png"
+                alt="chat"
+                class="w-auto h-[52px] flex-shrink-0 mt-[30px]"
+              />
+              <img
+                src="/img/chat2.png"
+                alt="chat"
+                class="w-auto h-[52px] flex-shrink-0 mt-[24px]"
+              />
+              <img
+                src="/img/chat3.png"
+                alt="chat"
+                class="w-auto h-[52px] flex-shrink-0 mt-[57px] ml-[-120px]"
+              />
+              <img
+                src="/img/chat4.png"
+                alt="chat"
+                class="w-auto h-[52px] flex-shrink-0 mt-[20px]"
+              />
+              <img
+                src="/img/chat5.png"
+                alt="chat"
+                class="w-auto h-[76px] flex-shrink-0 mt-[32px]"
+              />
+              <img
+                src="/img/chat6.png"
+                alt="chat"
+                class="w-auto h-[52px] flex-shrink-0 mt-[20px]"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="w-full h-[1px] bg-[#E6E6E6]"></div>
+
+      <section class="w-full mx-auto px-[60px] py-[80px] max-w-[1440px]">
+        <div class="flex flex-row items-start justify-center gap-[77px]">
+          <img src="img/about.png" alt="about" class="w-[480px] h-auto" />
+          <div class="flex flex-col items-start justify-between h-[400px]">
+            <div>
+              <p
+                class="text-[24px] font-bold bg-no-repeat bg-left pl-[16px]"
+                style="
+                  background-image: url(img/slash-s.svg);
+                  background-position-x: 0px;
+                "
+              >
+                About BAT
+              </p>
+              <p class="text-[32px] font-semibold mt-[32px] leading-[130%]">
+                브랜드와 함께 성장하는<br />
+                글로벌 종합 브랜드 에이전시
+              </p>
+            </div>
+            <div class="mt-auto">
+              <p class="text-[16px] leading-[130%] w-[384px] text-[#333333]">
+                뷰티, 글로벌, 커머스 등 다양한 영역의 500개 이상의 프로젝트를
+                수행하며,퍼포먼스 중심 마케팅부터 크리에이티브 전략까지 브랜드의
+                성장을 이끄는 팀으로 자리잡았습니다. 빠른 실행력, 밀도 높은
+                팀워크 그리고 팀원 개인의 성장을 중시하는 문화
+                <br />
+                <br />
+                우리가 BAT를 만들어가는 방식입니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="w-full h-[1px] bg-[#E6E6E6]"></div>
+      <section class="w-full bg-[#F9F9F9]">
+        <section class="w-full mx-auto px-[60px] py-[100px] max-w-[1440px]">
+          <div class="flex flex-row items-center justify-center">
+            <div class="flex flex-col items-center">
+              <p
+                class="text-[24px] font-bold bg-no-repeat bg-left pl-[16px]"
+                style="
+                  background-image: url(img/slash-s.svg);
+                  background-position-x: 0px;
+                "
+              >
+                Our Team
+              </p>
+              <p
+                class="text-[32px] font-semibold mt-[32px] leading-[130%] text-center"
+              >
+                실력 있는 사람들이 오래 일할 수 있는 구조,<br />
+                그리고 그걸 가능하게 만드는<br />
+                동료들의 이야기
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
     </main>
-    
-    <footer>
+
+    <footer class="bg-black text-white py-12">
+      <div class="max-w-[1440px] mx-auto px-[60px]">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center mb-8"
+        >
+          <div class="mb-6 md:mb-0">
+            <img src="/img/footer_logo.png" alt="BAT 로고" class="h-8 mb-4" />
+          </div>
+          <div class="flex flex-wrap gap-6">
+            <a
+              target="_blank"
+              href="https://batcrew.co.kr/"
+              class="text-[14px] text-[#a2a2a2] hover:text-white transition-colors"
+              >BAT</a
+            >
+            <a
+              target="_blank"
+              href="https://batcrew.co.kr/ko/privacy-policy/"
+              class="text-[14px] text-[#a2a2a2] hover:text-white transition-colors"
+              >개인정보취급방침</a
+            >
+            <p class="text-[14px] text-[#a2a2a2]">© BAT 2025</p>
+          </div>
+        </div>
+      </div>
     </footer>
-</body>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        const lenis = new Lenis();
+
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+        function updateCountdown() {
+          var endDate = new Date("2025-05-07T00:00:00+09:00");
+          var now = new Date();
+          var diff = endDate - now;
+
+          if (diff <= 0) {
+            $("#countdown").text("00:00:00:00");
+            return;
+          }
+
+          var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          var hours = Math.floor(
+            (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          var minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+          days = days < 10 ? "0" + days : days;
+          hours = hours < 10 ? "0" + hours : hours;
+          minutes = minutes < 10 ? "0" + minutes : minutes;
+          seconds = seconds < 10 ? "0" + seconds : seconds;
+
+          $("#countdown").text(
+            days + ":" + hours + ":" + minutes + ":" + seconds
+          );
+        }
+        // 초기 카운트다운 업데이트
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+      });
+    </script>
+  </body>
 </html>
