@@ -1012,6 +1012,9 @@
   .text-center {
     text-align: center;
   }
+  .text-left {
+    text-align: left;
+  }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
@@ -1287,6 +1290,16 @@
         --tw-blur: blur(var(--blur-sm));
         filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
       }
+    }
+  }
+  .group-\[\.active\]\:opacity-0 {
+    &:is(:where(.group):is(.active) *) {
+      opacity: 0%;
+    }
+  }
+  .group-\[\.active\]\:opacity-100 {
+    &:is(:where(.group):is(.active) *) {
+      opacity: 100%;
     }
   }
   .hover\:bg-\[\#F9F9F9\] {
