@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="BAT OPEN CALL 공채 2025" />
-    <meta name="keywords" content="BAT, 공채, 2025, 채용, 채용공고, 채용정보, 채용공고, 채용정보, 채용공고, 채용정보" />
+    <meta
+      name="keywords"
+      content="BAT, 공채, 2025, 채용, 채용공고, 채용정보, 채용공고, 채용정보, 채용공고, 채용정보"
+    />
     <meta name="author" content="BAT" />
     <meta property="og:title" content="BAT OPEN CALL 공채 2025" />
     <meta property="og:description" content="BAT OPEN CALL 공채 2025" />
@@ -12,9 +15,20 @@
     <!-- <meta property="og:url" content="https://batcrew.co.kr/open-call-2025" /> -->
     <meta property="og:site_name" content="BAT OPEN CALL 공채 2025" />
     <meta property="og:type" content="website" />
-    <link rel="icon" href="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_32,h_32/https://batcrew.co.kr/wp-content/uploads/2023/01/cropped-logo-primary-dark-2-150x150.png" sizes="32x32">
-    <link rel="icon" href="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_192,h_192/https://batcrew.co.kr/wp-content/uploads/2023/01/cropped-logo-primary-dark-2-300x300.png" sizes="192x192">
-    <link rel="apple-touch-icon" href="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_180,h_180/https://batcrew.co.kr/wp-content/uploads/2023/01/cropped-logo-primary-dark-2-300x300.png">
+    <link
+      rel="icon"
+      href="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_32,h_32/https://batcrew.co.kr/wp-content/uploads/2023/01/cropped-logo-primary-dark-2-150x150.png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_192,h_192/https://batcrew.co.kr/wp-content/uploads/2023/01/cropped-logo-primary-dark-2-300x300.png"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_180,h_180/https://batcrew.co.kr/wp-content/uploads/2023/01/cropped-logo-primary-dark-2-300x300.png"
+    />
 
     <title>BAT 공채 2025</title>
     <link rel="stylesheet" href="./css/global.css" />
@@ -31,45 +45,51 @@
   </head>
   <body class="bg-white">
     <header
-      class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-sm z-50"
+      class="fixed top-0 left-0 w-full bg-transparent z-50 transition-all duration-300 border-none shadow-none"
+      id="main-header"
     >
       <nav
-        class="w-full mx-auto px-[24px] flex justify-between items-center h-[56px] md:h-[72px]"
+        class="w-full mx-auto px-[24px] flex justify-between items-center h-[56px] md:h-[72px] border-none shadow-none"
       >
         <div class="">
           <img
+            src="img/bat_w.png"
+            alt="BAT Logo"
+            class="w-[150px] md:w-[193px] h-auto logo-white"
+          />
+          <img
             src="img/bat.png"
             alt="BAT Logo"
-            class="w-[150px] md:w-[193px] h-auto"
+            class="w-[150px] md:w-[193px] h-auto logo-dark hidden"
           />
         </div>
         <div class="hidden md:flex space-x-[40px] text-[16px] items-center">
           <!-- <a class="cursor-pointer text-black scroll-link" data-scroll-section="about">공채 소개</a> -->
           <a
-            class="cursor-pointer text-black scroll-link"
+            class="cursor-pointer text-white scroll-link nav-link"
             data-scroll-section="organization"
             >조직 소개</a
           >
           <a
-            class="cursor-pointer text-black scroll-link"
+            class="cursor-pointer text-white scroll-link nav-link"
             data-scroll-section="positions"
             >포지션 안내</a
           >
           <a
-            class="cursor-pointer text-black scroll-link"
+            class="cursor-pointer text-white scroll-link nav-link"
             data-scroll-section="journey"
             >합류 여정</a
           >
           <button
-            class="bg-black text-[#FFFFFF]/80 rounded-[8px] h-[43px] px-[24px] flex items-center justify-center"
+            class="border border-white text-white rounded-[8px] h-[43px] px-[24px] flex items-center justify-center header-button"
           >
             Coming Soon
           </button>
         </div>
         <button class="flex md:hidden hamburger-menu" id="mobile-menu-button">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
+          <span class="hamburger-line bg-white"></span>
+          <span class="hamburger-line bg-white"></span>
+          <span class="hamburger-line bg-white"></span>
         </button>
       </nav>
       <!-- 모바일 메뉴 -->
@@ -101,17 +121,19 @@
 
     <main>
       <section
-        class="w-full h-screen pt-[56px] md:pt-[72px] bg-gradient-to-b from-[#BCFF64] to-transparent"
+        class="w-full h-screen pt-[56px] md:pt-[72px] relative"
+        id="main-section"
       >
         <img
-          src="img/2025.svg"
-          alt="BAT Logo"
-          class="w-full h-full absolute top-0 left-0 opacity-70 z-0"
+          src="img/demo0001.png"
+          alt="배경 이미지"
+          class="absolute inset-0 w-full h-full object-cover z-0"
         />
+
         <div
-          class="h-full mx-auto text-center flex flex-col items-center justify-center px-4"
+          class="h-full mx-auto text-center flex flex-col items-center justify-center px-4 relative z-10"
         >
-          <p class="text-[16px] md:text-[28px] font-semibold mb-[6px] z-10">
+          <p class="text-[16px] md:text-[28px] font-semibold mb-[6px]">
             AE NEXT STAGE
           </p>
           <img
@@ -119,13 +141,21 @@
             alt="BAT Logo"
             class="w-full max-w-[320px] md:max-w-[666px] h-auto z-10"
           />
-          <p class="text-[18px] md:text-[24px] font-semibold mt-[16px] z-10">
+          <p
+            class="text-[18px] md:text-[24px] font-semibold mt-[16px] z-10"
+          ></p>
+
+          <p class="text-[18px] md:text-[24px] font-semibold mt-[16px]">
             지금, 제대로 일할 차례입니다.
           </p>
           <div
-            class="flex flex-col md:flex-row items-center justify-center gap-[2px] md:gap-[12px] mt-[6px] z-10"
+            class="flex flex-col md:flex-row items-center justify-center gap-[2px] md:gap-[12px] mt-[6px]"
           >
-            <p class="text-[14px] md:text-[20px] opacity-70 mt-[8px] md:mt-[0px]">접수 기간</p>
+            <p
+              class="text-[14px] md:text-[20px] opacity-70 mt-[8px] md:mt-[0px]"
+            >
+              접수 기간
+            </p>
             <div
               class="hidden md:block w-[2px] h-[13px] bg-black opacity-30"
             ></div>
@@ -133,9 +163,7 @@
               2025년 5월 7일(수) ~ 5월 20일(화)
             </p>
           </div>
-          <div
-            class="absolute bottom-[20px] md:bottom-[40px] animate-bounce z-10"
-          >
+          <div class="absolute bottom-[20px] md:bottom-[40px] animate-bounce">
             <svg
               width="32"
               height="32"
@@ -155,6 +183,52 @@
           </div>
         </div>
       </section>
+
+      <style>
+        .scrolled-header {
+          background-color: rgba(255, 255, 255, 0.8);
+          backdrop-filter: blur(8px);
+          border-bottom: 1px solid #dbdbbd;
+          transition: background-color 0.3s, backdrop-filter 0.3s;
+        }
+        .scrolled-header .nav-link {
+          color: black;
+        }
+        .scrolled-header .header-button {
+          background-color: black;
+          color: rgba(255, 255, 255, 0.8);
+        }
+        .scrolled-header .hamburger-line {
+          background-color: black;
+        }
+      </style>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const header = document.getElementById("main-header");
+          const mainSection = document.getElementById("main-section");
+          const logoWhite = document.querySelector(".logo-white");
+          const logoDark = document.querySelector(".logo-dark");
+
+          function checkScroll() {
+            const mainSectionBottom =
+              mainSection.getBoundingClientRect().bottom;
+
+            if (mainSectionBottom <= header.offsetHeight) {
+              header.classList.add("scrolled-header");
+              logoWhite.classList.add("hidden");
+              logoDark.classList.remove("hidden");
+            } else {
+              header.classList.remove("scrolled-header");
+              logoWhite.classList.remove("hidden");
+              logoDark.classList.add("hidden");
+            }
+          }
+
+          window.addEventListener("scroll", checkScroll);
+          checkScroll();
+        });
+      </script>
 
       <div class="w-full h-[1px] bg-[#E6E6E6]"></div>
       <section
@@ -276,7 +350,7 @@
             class="hidden md:block w-full md:max-w-[480px] h-auto"
           />
           <div
-            class="flex flex-col items-center md:items-start justify-between h-auto md:h-[400px] "
+            class="flex flex-col items-center md:items-start justify-between h-auto md:h-[400px]"
           >
             <div class="flex flex-col items-center md:items-start">
               <p
@@ -302,9 +376,7 @@
               class="block md:hidden w-full md:max-w-[480px] h-auto mt-[40px]"
             />
             <div class="mt-[32px] md:mt-auto">
-              <p
-                class="text-[14px] md:text-[16px] leading-[130%] w-full md:w-[384px] text-[#333333]"
-              >
+              <p class="text-[16px] w-full md:w-[384px] opacity-80">
                 뷰티, 글로벌, 커머스 등 다양한 영역의 500개 이상의 프로젝트를
                 수행하며,퍼포먼스 중심 마케팅부터 크리에이티브 전략까지 브랜드의
                 성장을 이끄는 팀으로 자리잡았습니다. 빠른 실행력, 밀도 높은
@@ -320,7 +392,9 @@
 
       <div class="w-full h-[1px] bg-[#E6E6E6]"></div>
       <section class="w-full bg-[#F9F9F9] reveal-section">
-        <section class="w-full mx-auto px-[16px] md:px-[60px] py-[60px] md:py-[100px] max-w-[1440px]">
+        <section
+          class="w-full mx-auto px-[16px] md:px-[60px] py-[60px] md:py-[100px] max-w-[1440px]"
+        >
           <div class="flex flex-row items-center justify-center">
             <div class="flex flex-col items-center">
               <p
@@ -335,13 +409,17 @@
               <p
                 class="text-[24px] md:text-[32px] font-semibold mt-[24px] md:mt-[32px] leading-[130%] text-center"
               >
-                실력 있는 사람들이 오래 일할 수 있는 구조,<br class="hidden md:block" />
+                실력 있는 사람들이 오래 일할 수 있는 구조,<br
+                  class="hidden md:block"
+                />
                 그리고 그걸 가능하게 만드는<br class="hidden md:block" />
                 동료들의 이야기
               </p>
             </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-[40px] md:pt-[80px]">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-[40px] md:pt-[80px]"
+          >
             <div
               class="border-1 border-[#E6E6E6] rounded-[8px] overflow-hidden relative group"
               onclick="this.classList.toggle('active')"
@@ -350,7 +428,9 @@
               <div
                 class="flex flex-row items-center justify-between p-[20px] md:p-[28px] absolute bottom-0 left-0 w-full group-hover:opacity-0 transition-opacity duration-300 group-[.active]:opacity-0"
               >
-                <p class="text-[20px] md:text-[24px] font-semibold leading-[130%]">
+                <p
+                  class="text-[20px] md:text-[24px] font-semibold leading-[130%]"
+                >
                   성과를<br />
                   빠르게 인정하는 팀
                 </p>
@@ -370,8 +450,10 @@
                     진짜 커리어 고민, <br />
                     함께 나눌 수 있는 리더
                   </p>
-                  <div class="w-full h-[1px] bg-black/50 my-[16px] md:my-[24px]"></div>
-                  <p class="text-[14px] leading-[130%] text-black">
+                  <div
+                    class="w-full h-[1px] bg-black/50 my-[16px] md:my-[24px]"
+                  ></div>
+                  <p class="text-[14px] md:text-[16px] text-black">
                     진짜 커리어 고민, 함께 나눌 수 있는 리더진짜 커리어 고민,
                     함께 나눌 수 있는 리더진짜 커리어 고민, 함께 나눌 수 있는
                     리더진짜 커리어 고민, 함께 나눌 수 있는 리더진짜 커리어
@@ -380,7 +462,9 @@
                     고민, - 나눌 수 있는 리더함께 나눌 수 있는 리더함께 나눌 수
                     있는 리더함께 나눌 수 있는 리더함께 나눌 수 있는 리더
                   </p>
-                  <p class="mt-[24px] md:mt-[44px] text-[14px] md:text-[16px] leading-[130%] text-black">
+                  <p
+                    class="mt-[24px] md:mt-[44px] text-[14px] md:text-[16px] text-black"
+                  >
                     배영진 님 / CGO(Chief Growth Officer) / 2025년 입사
                   </p>
                 </div>
@@ -395,7 +479,9 @@
               <div
                 class="flex flex-row items-center justify-between p-[20px] md:p-[28px] absolute bottom-0 left-0 w-full group-hover:opacity-0 transition-opacity duration-300 group-[.active]:opacity-0"
               >
-                <p class="text-[20px] md:text-[24px] font-semibold leading-[130%]">
+                <p
+                  class="text-[20px] md:text-[24px] font-semibold leading-[130%]"
+                >
                   진짜 커리어 고민, <br />
                   함께 나눌 수 있는 리더
                 </p>
@@ -415,8 +501,10 @@
                     진짜 커리어 고민, <br />
                     함께 나눌 수 있는 리더
                   </p>
-                  <div class="w-full h-[1px] bg-black/50 my-[16px] md:my-[24px]"></div>
-                  <p class="text-[14px] leading-[130%] text-black">
+                  <div
+                    class="w-full h-[1px] bg-black/50 my-[16px] md:my-[24px]"
+                  ></div>
+                  <p class="text-[14px] md:text-[16px] text-black">
                     진짜 커리어 고민, 함께 나눌 수 있는 리더진짜 커리어 고민,
                     함께 나눌 수 있는 리더진짜 커리어 고민, 함께 나눌 수 있는
                     리더진짜 커리어 고민, 함께 나눌 수 있는 리더진짜 커리어
@@ -425,7 +513,9 @@
                     고민, - 나눌 수 있는 리더함께 나눌 수 있는 리더함께 나눌 수
                     있는 리더함께 나눌 수 있는 리더함께 나눌 수 있는 리더
                   </p>
-                  <p class="mt-[24px] md:mt-[44px] text-[14px] md:text-[16px] leading-[130%] text-black">
+                  <p
+                    class="mt-[24px] md:mt-[44px] text-[14px] md:text-[16px] text-black"
+                  >
                     배영진 님 / CGO(Chief Growth Officer) / 2025년 입사
                   </p>
                 </div>
@@ -440,7 +530,9 @@
               <div
                 class="flex flex-row items-center justify-between p-[20px] md:p-[28px] absolute bottom-0 left-0 w-full group-hover:opacity-0 transition-opacity duration-300 group-[.active]:opacity-0"
               >
-                <p class="text-[20px] md:text-[24px] font-semibold leading-[130%]">
+                <p
+                  class="text-[20px] md:text-[24px] font-semibold leading-[130%]"
+                >
                   글로벌<br />
                   성장의 기회
                 </p>
@@ -460,8 +552,10 @@
                     진짜 커리어 고민, <br />
                     함께 나눌 수 있는 리더
                   </p>
-                  <div class="w-full h-[1px] bg-black/50 my-[16px] md:my-[24px]"></div>
-                  <p class="text-[14px] leading-[130%] text-black">
+                  <div
+                    class="w-full h-[1px] bg-black/50 my-[16px] md:my-[24px]"
+                  ></div>
+                  <p class="text-[14px] md:text-[16px] text-black">
                     진짜 커리어 고민, 함께 나눌 수 있는 리더진짜 커리어 고민,
                     함께 나눌 수 있는 리더진짜 커리어 고민, 함께 나눌 수 있는
                     리더진짜 커리어 고민, 함께 나눌 수 있는 리더진짜 커리어
@@ -470,7 +564,9 @@
                     고민, - 나눌 수 있는 리더함께 나눌 수 있는 리더함께 나눌 수
                     있는 리더함께 나눌 수 있는 리더함께 나눌 수 있는 리더
                   </p>
-                  <p class="mt-[24px] md:mt-[44px] text-[14px] md:text-[16px] leading-[130%] text-black">
+                  <p
+                    class="mt-[24px] md:mt-[44px] text-[14px] md:text-[16px] text-black"
+                  >
                     배영진 님 / CGO(Chief Growth Officer) / 2025년 입사
                   </p>
                 </div>
@@ -485,7 +581,9 @@
               <div
                 class="flex flex-row items-center justify-between p-[20px] md:p-[28px] absolute bottom-0 left-0 w-full group-hover:opacity-0 transition-opacity duration-300 group-[.active]:opacity-0"
               >
-                <p class="text-[20px] md:text-[24px] font-semibold leading-[130%]">
+                <p
+                  class="text-[20px] md:text-[24px] font-semibold leading-[130%]"
+                >
                   전문성을<br />
                   키울 수 있는 환경
                 </p>
@@ -505,8 +603,10 @@
                     진짜 커리어 고민, <br />
                     함께 나눌 수 있는 리더
                   </p>
-                  <div class="w-full h-[1px] bg-black/50 my-[16px] md:my-[24px]"></div>
-                  <p class="text-[14px] leading-[130%] text-black">
+                  <div
+                    class="w-full h-[1px] bg-black/50 my-[16px] md:my-[24px]"
+                  ></div>
+                  <p class="text-[14px] md:text-[16px] text-black">
                     진짜 커리어 고민, 함께 나눌 수 있는 리더진짜 커리어 고민,
                     함께 나눌 수 있는 리더진짜 커리어 고민, 함께 나눌 수 있는
                     리더진짜 커리어 고민, 함께 나눌 수 있는 리더진짜 커리어
@@ -515,7 +615,9 @@
                     고민, - 나눌 수 있는 리더함께 나눌 수 있는 리더함께 나눌 수
                     있는 리더함께 나눌 수 있는 리더함께 나눌 수 있는 리더
                   </p>
-                  <p class="mt-[24px] md:mt-[44px] text-[14px] md:text-[16px] leading-[130%] text-black">
+                  <p
+                    class="mt-[24px] md:mt-[44px] text-[14px] md:text-[16px] text-black"
+                  >
                     배영진 님 / CGO(Chief Growth Officer) / 2025년 입사
                   </p>
                 </div>
@@ -548,10 +650,13 @@
                 onclick="toggleAccordion(this)"
               >
                 <div class="flex items-center gap-[8px] md:gap-[16px]">
-                  <span class="text-[16px] text-left md:text-[24px] font-semibold"
+                  <span
+                    class="text-[16px] text-left md:text-[24px] font-semibold"
                     >퍼포먼스 마케팅 AE (경력)</span
                   >
-                  <span class="text-[12px] md:text-[14px] text-[#666666] mt-[3px]">
+                  <span
+                    class="text-[12px] md:text-[14px] text-[#666666] mt-[3px]"
+                  >
                     <svg
                       class="w-4 h-4 md:w-6 md:h-6 transform transition-transform duration-300"
                       fill="none"
@@ -568,18 +673,23 @@
                   </span>
                 </div>
                 <!-- <a class="bg-black text-[#FFFFFF] rounded-[8px] h-[43px] px-[20px] flex items-center justify-center">지원하기</a> -->
-                <a class="text-black/60 text-[14px] md:text-[16px] items-center justify-center hidden md:flex"
+                <a
+                  class="text-black/60 text-[14px] md:text-[16px] items-center justify-center hidden md:flex"
                   >Coming Soon</a
                 >
               </button>
               <div class="hidden bg-[#F9F9F9]">
-                <div class="p-[20px] md:p-[28px] space-y-[20px] md:space-y-[24px]">
+                <div
+                  class="p-[20px] md:p-[28px] space-y-[20px] md:space-y-[24px]"
+                >
                   <div>
-                    <h4 class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]">
+                    <h4
+                      class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]"
+                    >
                       주요 업무
                     </h4>
                     <ul
-                      class="list-disc list-inside text-[13px] md:text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
+                      class="list-disc list-inside text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
                     >
                       <li>
                         퍼포먼스 마케팅 매체 운영 및 분석 (SA, DA, APP, SNS 등)
@@ -593,11 +703,13 @@
                     </ul>
                   </div>
                   <div>
-                    <h4 class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]">
+                    <h4
+                      class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]"
+                    >
                       자격 요건
                     </h4>
                     <ul
-                      class="list-disc list-inside text-[13px] md:text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
+                      class="list-disc list-inside text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
                     >
                       <li>
                         퍼포먼스 마케팅 유관 업무 최소 3년 이상 및 그에 준하는
@@ -629,11 +741,13 @@
                     </ul>
                   </div>
                   <div>
-                    <h4 class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]">
+                    <h4
+                      class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]"
+                    >
                       우대 사항
                     </h4>
                     <ul
-                      class="list-disc list-inside text-[13px] md:text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
+                      class="list-disc list-inside text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
                     >
                       <li>
                         1-2명의 동료를 이끌며, 책임감 있게 문제 해결을 주도하고
@@ -660,10 +774,13 @@
                 onclick="toggleAccordion(this)"
               >
                 <div class="flex items-center gap-[8px] md:gap-[16px]">
-                  <span class="text-[16px] text-left md:text-[24px] font-semibold"
+                  <span
+                    class="text-[16px] text-left md:text-[24px] font-semibold"
                     >퍼포먼스 마케팅 AE (파트장/팀장)</span
                   >
-                  <span class="text-[12px] md:text-[14px] text-[#666666] mt-[3px]">
+                  <span
+                    class="text-[12px] md:text-[14px] text-[#666666] mt-[3px]"
+                  >
                     <svg
                       class="w-4 h-4 md:w-6 md:h-6 transform transition-transform duration-300"
                       fill="none"
@@ -679,18 +796,23 @@
                     </svg>
                   </span>
                 </div>
-                <a class="text-black/60 text-[14px] md:text-[16px] items-center justify-center hidden md:flex"
+                <a
+                  class="text-black/60 text-[14px] md:text-[16px] items-center justify-center hidden md:flex"
                   >Coming Soon</a
                 >
               </button>
               <div class="hidden bg-[#F9F9F9]">
-                <div class="p-[20px] md:p-[28px] space-y-[20px] md:space-y-[24px]">
+                <div
+                  class="p-[20px] md:p-[28px] space-y-[20px] md:space-y-[24px]"
+                >
                   <div>
-                    <h4 class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]">
+                    <h4
+                      class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]"
+                    >
                       주요 업무
                     </h4>
                     <ul
-                      class="list-disc list-inside text-[13px] md:text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
+                      class="list-disc list-inside text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
                     >
                       <li>
                         퍼포먼스 마케팅 전략 기획 및 실행 총괄 (SA, DA, APP, SNS
@@ -712,11 +834,13 @@
                     </ul>
                   </div>
                   <div>
-                    <h4 class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]">
+                    <h4
+                      class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]"
+                    >
                       자격 요건
                     </h4>
                     <ul
-                      class="list-disc list-inside text-[13px] md:text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
+                      class="list-disc list-inside text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
                     >
                       <li>
                         퍼포먼스 마케팅 유관 업무 최소 5년 이상 및 그에 준하는
@@ -738,11 +862,13 @@
                     </ul>
                   </div>
                   <div>
-                    <h4 class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]">
+                    <h4
+                      class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]"
+                    >
                       우대 사항
                     </h4>
                     <ul
-                      class="list-disc list-inside text-[13px] md:text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
+                      class="list-disc list-inside text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
                     >
                       <li>
                         대형 광고주 캠페인 운영 경험 및 대행사 리딩 경험이 있는
@@ -770,10 +896,13 @@
                 onclick="toggleAccordion(this)"
               >
                 <div class="flex items-center gap-[8px] md:gap-[16px]">
-                  <span class="text-[16px] text-left md:text-[24px] font-semibold"
+                  <span
+                    class="text-[16px] text-left md:text-[24px] font-semibold"
                     >퍼포먼스 마케팅 AE (뷰티 브랜드 담당)</span
                   >
-                  <span class="text-[12px] md:text-[14px] text-[#666666] mt-[3px]">
+                  <span
+                    class="text-[12px] md:text-[14px] text-[#666666] mt-[3px]"
+                  >
                     <svg
                       class="w-4 h-4 md:w-6 md:h-6 transform transition-transform duration-300"
                       fill="none"
@@ -789,18 +918,23 @@
                     </svg>
                   </span>
                 </div>
-                <a class="text-black/60 text-[14px] md:text-[16px] items-center justify-center hidden md:flex"
+                <a
+                  class="text-black/60 text-[14px] md:text-[16px] items-center justify-center hidden md:flex"
                   >Coming Soon</a
                 >
               </button>
               <div class="hidden bg-[#F9F9F9]">
-                <div class="p-[20px] md:p-[28px] space-y-[20px] md:space-y-[24px]">
+                <div
+                  class="p-[20px] md:p-[28px] space-y-[20px] md:space-y-[24px]"
+                >
                   <div>
-                    <h4 class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]">
+                    <h4
+                      class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]"
+                    >
                       주요 업무
                     </h4>
                     <ul
-                      class="list-disc list-inside text-[13px] md:text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
+                      class="list-disc list-inside text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
                     >
                       <li>
                         글로벌 뷰티 브랜드의 퍼포먼스 마케팅 캠페인을 기획하고
@@ -824,11 +958,13 @@
                     </ul>
                   </div>
                   <div>
-                    <h4 class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]">
+                    <h4
+                      class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]"
+                    >
                       자격 요건
                     </h4>
                     <ul
-                      class="list-disc list-inside text-[13px] md:text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
+                      class="list-disc list-inside text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
                     >
                       <li>
                         SNS 광고 운영(Meta, TikTok, YouTube 등) 경험이 있으신 분
@@ -847,11 +983,13 @@
                     </ul>
                   </div>
                   <div>
-                    <h4 class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]">
+                    <h4
+                      class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]"
+                    >
                       우대 사항
                     </h4>
                     <ul
-                      class="list-disc list-inside text-[13px] md:text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
+                      class="list-disc list-inside text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
                     >
                       <li>
                         광고 이미지/영상 소재에 대한 기획 감각 또는 간단한 툴
@@ -882,10 +1020,13 @@
                 onclick="toggleAccordion(this)"
               >
                 <div class="flex items-center gap-[8px] md:gap-[16px]">
-                  <span class="text-[16px] text-left md:text-[24px] font-semibold"
+                  <span
+                    class="text-[16px] text-left md:text-[24px] font-semibold"
                     >퍼포먼스 마케팅 AE (글로벌 담당)</span
                   >
-                  <span class="text-[12px] md:text-[14px] text-[#666666] mt-[3px]">
+                  <span
+                    class="text-[12px] md:text-[14px] text-[#666666] mt-[3px]"
+                  >
                     <svg
                       class="w-4 h-4 md:w-6 md:h-6 transform transition-transform duration-300"
                       fill="none"
@@ -901,14 +1042,21 @@
                     </svg>
                   </span>
                 </div>
-                <a class="text-black/60 text-[14px] md:text-[16px] items-center justify-center hidden md:flex"
+                <a
+                  class="text-black/60 text-[14px] md:text-[16px] items-center justify-center hidden md:flex"
                   >Coming Soon</a
                 >
               </button>
               <div class="hidden bg-[#F9F9F9]">
-                <div class="p-[20px] md:p-[28px] space-y-[20px] md:space-y-[24px]">
+                <div
+                  class="p-[20px] md:p-[28px] space-y-[20px] md:space-y-[24px]"
+                >
                   <div>
-                    <h4 class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]">TBD</h4>
+                    <h4
+                      class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]"
+                    >
+                      TBD
+                    </h4>
                   </div>
                 </div>
               </div>
@@ -930,14 +1078,26 @@
           >
             합류 여정
           </p>
-          <p class="text-[16px] md:text-[20px] opacity-70">5월 7일(수) ~ 5월 20일(화)</p>
+          <p class="text-[16px] md:text-[20px] opacity-70">
+            5월 7일(수) ~ 5월 20일(화)
+          </p>
         </div>
-        <img src="img/map.png" alt="합류 여정" class="w-full hidden md:block h-auto" />
-        <img src="img/map_m.png" alt="합류 여정" class="w-full h-auto md:hidden mb-[16px]" />
+        <img
+          src="img/map.png"
+          alt="합류 여정"
+          class="w-full hidden md:block h-auto"
+        />
+        <img
+          src="img/map_m.png"
+          alt="합류 여정"
+          class="w-full h-auto md:hidden mb-[16px]"
+        />
         <div
           class="w-full flex flex-col items-start text-[#6A6A6A] px-[16px] md:px-[60px] pt-[20px] md:pt-[27px]"
         >
-          <p class="text-[16px] md:text-[18px] font-bold mb-[8px] md:mb-[12px]">유의사항</p>
+          <p class="text-[16px] md:text-[18px] font-bold mb-[8px] md:mb-[12px]">
+            유의사항
+          </p>
           <p class="text-[14px] md:text-[16px]">
             -전형별 상세 일정은 합격자분께 개별 안내드릴 예정입니다<br />
             -서류 검토 과정에서 추가 자료 요청이 있을 수 있습니다<br />
@@ -952,33 +1112,32 @@
         class="relative w-full h-screen pt-[56px] md:pt-[72px] bg-gradient-to-b to-[#BCFF64] from-transparent"
       >
         <img
-          src="img/2025.svg"
+          src="img/2025_bottom.png"
           alt="BAT Logo"
-          class="w-full h-full absolute top-0 left-0 opacity-70 z-10"
+          class="w-full h-auto absolute top-[20px] left-0 opacity-70 z-10"
         />
         <div
           class="h-full mx-auto text-center flex flex-col items-center justify-center"
         >
-          <p class="text-[20px] md:text-[28px] font-semibold mb-[4px] md:mb-[6px] z-10">AE NEXT STAGE</p>
+          <p
+            class="text-[20px] md:text-[28px] font-semibold mb-[4px] md:mb-[6px] z-10"
+          >
+            AE NEXT STAGE
+          </p>
           <img
             src="img/main_logo.svg"
             alt="BAT Logo"
             class="w-[80%] md:w-[666px] h-auto z-10"
           />
-          <p class="text-[18px] md:text-[24px] font-semibold mt-[12px] md:mt-[16px] z-10 px-[16px] md:px-0">
+          <p
+            class="text-[18px] md:text-[24px] font-semibold mt-[12px] md:mt-[16px] z-10 px-[16px] md:px-0"
+          >
             진짜 퍼포먼스를 만들어갈 준비가 되었다면,<br />
             지금, 당신의 다음 스테이지는 BAT입니다.
           </p>
           <div
             class="flex flex-row items-center justify-center gap-[12px] mt-[6px] z-10"
-          >
-            <p
-              id="countdown"
-              class="text-[16px] md:text-[20px] roboto-mono bg-white mt-[16px] md:mt-[24px] px-[10px] md:px-[12px] py-[4px] md:py-[6px] rounded-[8px]"
-            >
-              00:00:00:00
-            </p>
-          </div>
+          ></div>
         </div>
       </section>
     </main>
@@ -989,7 +1148,11 @@
           class="flex flex-col md:flex-row justify-between items-center mb-6 md:mb-8"
         >
           <div class="mb-6 md:mb-0">
-            <img src="/img/footer_logo.png" alt="BAT 로고" class="h-6 md:h-8 mb-4" />
+            <img
+              src="/img/footer_logo.png"
+              alt="BAT 로고"
+              class="h-6 md:h-8 mb-4"
+            />
           </div>
           <div class="flex flex-wrap gap-4 md:gap-6 justify-center">
             <a
