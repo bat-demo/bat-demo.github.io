@@ -89,3 +89,9 @@ body {
 .mobile-menu-container.open .mobile-menu-item:nth-child(4) {
     transition-delay: 0.4s;
 }
+.fira-code {
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}

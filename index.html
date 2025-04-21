@@ -41,6 +41,7 @@
       href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Roboto+Mono:ital,wght@0,700;1,700&family=VT323&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   </head>
   <body class="bg-white">
@@ -1139,7 +1140,9 @@
           </p>
           <div
             class="flex flex-row items-center justify-center gap-[12px] mt-[6px] z-10"
-          ></div>
+          >
+          <span id="countdown" class="fira-code mt-[16px] md:mt-[38px] text-[#1A1A1A] px-[16px] py-[6px] rounded-[8px] border border-[rgba(150,204,80,0.60)] bg-[rgba(120,163,64,0.20)] backdrop-blur-[25px] text-[22px] md:text-[32px] font-medium"></span>
+        </div>
         </div>
       </section>
     </main>
@@ -1293,8 +1296,8 @@
           }
         });
         aboutTimeline
-          .to(".first-text", { opacity: 0, y: -30, duration: 0.8, ease: "power2.out" }, "+=0.8")
-          .to(".second-text", { opacity: 1, y: 0, duration: 1.0, ease: "power2.out" }, "+=1.0")
+          .to(".first-text", { opacity: 0, y: -30, duration: 0.5, ease: "power2.out" }, "+=0.6")
+          .to(".second-text", { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, "+=0.8")
           .to(".chat-bubble", {
             opacity: 1,
             y: 0,
