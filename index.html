@@ -45,6 +45,7 @@
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   </head>
   <body class="bg-white">
+    <div id="shadow-header" class="fixed h-[83px] top-0 left-0 w-full bg-[linear-gradient(to_bottom,rgba(14,14,14,0.3),transparent)] z-50"></div>
     <header
       class="fixed top-0 left-0 w-full bg-transparent z-50 transition-all duration-300 border-none shadow-none"
       id="main-header"
@@ -82,7 +83,8 @@
             >합류 여정</a
           >
           <button
-            class="border border-white text-white rounded-[8px] h-[43px] px-[24px] flex items-center justify-center header-button"
+            class="bg-[#0E0E0E] rounded-[8px] h-[43px] px-[24px] flex items-center justify-center header-button"
+            style="color:rgba(188, 255, 100, 0.4)"
           >
             Coming Soon
           </button>
@@ -163,7 +165,7 @@
             <div
               class="hidden md:block w-[2px] h-[13px] bg-black opacity-30"
             ></div>
-            <p class="text-[14px] md:text-[20px] opacity-70">
+            <p class="text-[14px] md:text-[20px] opacity-80">
               2025년 5월 7일(수) ~ 5월 20일(화)
             </p>
           </div>
@@ -213,6 +215,7 @@
           const mainSection = document.getElementById("main-section");
           const logoWhite = document.querySelector(".logo-white");
           const logoDark = document.querySelector(".logo-dark");
+          const shadowHeader = document.getElementById("shadow-header");
 
           function checkScroll() {
             const mainSectionBottom =
@@ -222,10 +225,12 @@
               header.classList.add("scrolled-header");
               logoWhite.classList.add("hidden");
               logoDark.classList.remove("hidden");
+              shadowHeader.classList.add("hidden");
             } else {
               header.classList.remove("scrolled-header");
               logoWhite.classList.remove("hidden");
               logoDark.classList.add("hidden");
+              shadowHeader.classList.remove("hidden");
             }
           }
 
@@ -291,7 +296,7 @@
               <img
                 src="/img/chat3.png"
                 alt="chat"
-                class="w-auto h-[32px] md:h-[52px] flex-shrink-0 mt-[32px] md:mt-[57px] md:ml-[-120px] chat-bubble opacity-0"
+                class="w-auto h-[46px] md:h-[76px] flex-shrink-0 mt-[32px] md:mt-[57px] md:ml-[-120px] chat-bubble opacity-0"
                 data-delay="1600"
               />
               <img
@@ -379,13 +384,12 @@
             />
             <div class="mt-[32px] md:mt-auto">
               <p class="text-[16px] w-full md:w-[384px] opacity-80">
-                뷰티, 글로벌, 커머스 등 다양한 영역의 500개 이상의 프로젝트를
-                수행하며,퍼포먼스 중심 마케팅부터 크리에이티브 전략까지 브랜드의
-                성장을 이끄는 팀으로 자리잡았습니다. 빠른 실행력, 밀도 높은
-                팀워크 그리고 팀원 개인의 성장을 중시하는 문화
-                <br />
-                <br />
-                우리가 BAT를 만들어가는 방식입니다.
+                뷰티, 글로벌, 커머스 등 다양한 영역에서 500개 이상의 프로젝트를
+                수행하며, 퍼포먼스 중심 마케팅부터 크리에이티브 전략까지 브랜드의
+                성장을 이끄는 팀으로 <br class="hidden md:block"/>자리 잡았습니다.<br /><br />
+                
+                빠른 실행력, 밀도 높은
+                팀워크 그리고 팀원 개인의 성장을 중시하는 문화, 우리가 BAT를 만들어가는 방식입니다.
               </p>
             </div>
           </div>
@@ -430,16 +434,24 @@
               <div
                 class="flex flex-row items-center justify-between p-[20px] md:p-[28px] absolute bottom-0 left-0 w-full group-hover:opacity-0 transition-opacity duration-300 group-[.active]:opacity-0"
               >
-                <p
-                  class="text-[20px] md:text-[24px] font-semibold leading-[130%]"
-                >
-                  성과를<br />
-                  빠르게 인정하는 팀
-                </p>
+                <div>
+                  <p
+                    class="text-[20px] md:text-[24px] font-semibold leading-[130%]"
+                  >
+                    빠른 성장 기회
+                  </p>
+                  <p class="text-[14px] md:text-[16px] mt-[4px]">
+                    "성과를 빠르게 인정하는 팀"
+                  </p>
+                  <p class="text-[12px] md:text-[14px] text-black/50 mt-[2px]">
+                    입사 3개월만에 팀장이 된 케이스.<br>
+                    여기선 그런 일이, 실제로 일어납니다.
+                  </p>
+                </div>
                 <img
                   src="img/plus_btn.png"
                   alt="plus"
-                  class="w-[32px] h-[32px] md:w-[40px] md:h-[40px]"
+                  class="w-[32px] h-[32px] md:w-[40px] md:h-[40px] md:hidden lg:block"
                 />
               </div>
               <div
@@ -449,25 +461,18 @@
                   <p
                     class="text-[20px] md:text-[24px] font-semibold leading-[130%] text-black"
                   >
-                    진짜 커리어 고민, <br />
-                    함께 나눌 수 있는 리더
+                  빠른 성장 기회
                   </p>
                   <div
                     class="w-full h-[1px] bg-black/50 my-[16px] md:my-[24px]"
                   ></div>
                   <p class="text-[14px] md:text-[16px] text-black">
-                    진짜 커리어 고민, 함께 나눌 수 있는 리더진짜 커리어 고민,
-                    함께 나눌 수 있는 리더진짜 커리어 고민, 함께 나눌 수 있는
-                    리더진짜 커리어 고민, 함께 나눌 수 있는 리더진짜 커리어
-                    고민, 함께 나눌 수 있는 리더진짜 커리어 고민, 함께 나눌 수
-                    있는 리더진짜 커리어 고민, 함께 나눌 수 있는 리더진짜 커리어
-                    고민, - 나눌 수 있는 리더함께 나눌 수 있는 리더함께 나눌 수
-                    있는 리더함께 나눌 수 있는 리더함께 나눌 수 있는 리더
+                    "팀장이 되어야겠다"는 것보다 "실력으로 인정받고 싶다"는 마음이 컸어요. BAT는 생각보다 훨씬 빠르게 실력을 발휘해보고 '성과'로 연결시킬 수 있는 구조이고, 또 빠르게 '기회'로 바꿔주는 조직인 것 같아요.
                   </p>
                   <p
                     class="mt-[24px] md:mt-[44px] text-[14px] md:text-[16px] text-black"
                   >
-                    배영진 님 / CGO(Chief Growth Officer) / 2025년 입사
+                    남현승 님 / 팀장 / 2024년 입사
                   </p>
                 </div>
               </div>
@@ -481,16 +486,24 @@
               <div
                 class="flex flex-row items-center justify-between p-[20px] md:p-[28px] absolute bottom-0 left-0 w-full group-hover:opacity-0 transition-opacity duration-300 group-[.active]:opacity-0"
               >
-                <p
-                  class="text-[20px] md:text-[24px] font-semibold leading-[130%]"
-                >
-                  진짜 커리어 고민, <br />
-                  함께 나눌 수 있는 리더
-                </p>
+                <div>
+                  <p
+                    class="text-[20px] md:text-[24px] font-semibold leading-[130%]"
+                  >
+                    커리어 설계 가능한 리더
+                  </p>
+                  <p class="text-[14px] md:text-[16px] mt-[4px]">
+                    "진짜 커리어 고민, 함께 나눌 수 있는 리더"
+                  </p>
+                  <p class="text-[12px] md:text-[14px] text-black/50 mt-[2px]">
+                    인하우스와 에이전시를 모두 경험한 리더들과 함께,<br>
+                    당신의 성장 방향을 진지하게 고민할 수 있습니다.
+                  </p>
+                </div>
                 <img
                   src="img/plus_btn.png"
                   alt="plus"
-                  class="w-[32px] h-[32px] md:w-[40px] md:h-[40px]"
+                  class="w-[32px] h-[32px] md:w-[40px] md:h-[40px] md:hidden lg:block"
                 />
               </div>
               <div
@@ -500,25 +513,18 @@
                   <p
                     class="text-[20px] md:text-[24px] font-semibold leading-[130%] text-black"
                   >
-                    진짜 커리어 고민, <br />
-                    함께 나눌 수 있는 리더
+                    커리어 설계 가능한 리더
                   </p>
                   <div
                     class="w-full h-[1px] bg-black/50 my-[16px] md:my-[24px]"
                   ></div>
                   <p class="text-[14px] md:text-[16px] text-black">
-                    진짜 커리어 고민, 함께 나눌 수 있는 리더진짜 커리어 고민,
-                    함께 나눌 수 있는 리더진짜 커리어 고민, 함께 나눌 수 있는
-                    리더진짜 커리어 고민, 함께 나눌 수 있는 리더진짜 커리어
-                    고민, 함께 나눌 수 있는 리더진짜 커리어 고민, 함께 나눌 수
-                    있는 리더진짜 커리어 고민, 함께 나눌 수 있는 리더진짜 커리어
-                    고민, - 나눌 수 있는 리더함께 나눌 수 있는 리더함께 나눌 수
-                    있는 리더함께 나눌 수 있는 리더함께 나눌 수 있는 리더
+                    BAT는 기본기를 단단히 다지고, 전략을 직접 설계하며 성장할 수 있는 팀이에요. 스스로에 대한 확신이 생기는 순간, 커리어는 자연스럽게 열립니다.
                   </p>
                   <p
                     class="mt-[24px] md:mt-[44px] text-[14px] md:text-[16px] text-black"
                   >
-                    배영진 님 / CGO(Chief Growth Officer) / 2025년 입사
+                    김광수 님 / 에이전시 부문 대표 / 2019년 입사
                   </p>
                 </div>
               </div>
@@ -532,16 +538,25 @@
               <div
                 class="flex flex-row items-center justify-between p-[20px] md:p-[28px] absolute bottom-0 left-0 w-full group-hover:opacity-0 transition-opacity duration-300 group-[.active]:opacity-0"
               >
-                <p
-                  class="text-[20px] md:text-[24px] font-semibold leading-[130%]"
-                >
-                  글로벌<br />
-                  성장의 기회
-                </p>
+                <div>
+                  <p
+                    class="text-[20px] md:text-[24px] font-semibold leading-[130%]"
+                  >
+                    브랜드 중심의 캠페인 경험
+                  </p>
+                  <p class="text-[14px] md:text-[16px] mt-[4px]">
+                    "앞으로의 성장판은, 여기 있습니다."
+                  </p>
+                  <p class="text-[12px] md:text-[14px] text-black/50 mt-[2px]">
+                    글로벌과 뷰티 중심으로 확장 중인 브랜드 캠페인.<br>
+                    지금 이 흐름에 함께한다면,<br>
+                    단순한 참여자가 아니라 리더로 합류할 수 있습니다.
+                  </p>
+                </div>
                 <img
                   src="img/plus_btn.png"
                   alt="plus"
-                  class="w-[32px] h-[32px] md:w-[40px] md:h-[40px]"
+                  class="w-[32px] h-[32px] md:w-[40px] md:h-[40px] md:hidden lg:block"
                 />
               </div>
               <div
@@ -551,20 +566,13 @@
                   <p
                     class="text-[20px] md:text-[24px] font-semibold leading-[130%] text-black"
                   >
-                    진짜 커리어 고민, <br />
-                    함께 나눌 수 있는 리더
+                  브랜드 중심의 캠페인 경험
                   </p>
                   <div
                     class="w-full h-[1px] bg-black/50 my-[16px] md:my-[24px]"
                   ></div>
                   <p class="text-[14px] md:text-[16px] text-black">
-                    진짜 커리어 고민, 함께 나눌 수 있는 리더진짜 커리어 고민,
-                    함께 나눌 수 있는 리더진짜 커리어 고민, 함께 나눌 수 있는
-                    리더진짜 커리어 고민, 함께 나눌 수 있는 리더진짜 커리어
-                    고민, 함께 나눌 수 있는 리더진짜 커리어 고민, 함께 나눌 수
-                    있는 리더진짜 커리어 고민, 함께 나눌 수 있는 리더진짜 커리어
-                    고민, - 나눌 수 있는 리더함께 나눌 수 있는 리더함께 나눌 수
-                    있는 리더함께 나눌 수 있는 리더함께 나눌 수 있는 리더
+                    지금은 BAT의 뷰티, 글로벌 조직 초창기 멤버로 함께 성장할 수 있는 정말 좋은 타이밍이에요. 브랜드를 키우는 일의 처음부터 끝까지 직접 경험하게 될 거예요.
                   </p>
                   <p
                     class="mt-[24px] md:mt-[44px] text-[14px] md:text-[16px] text-black"
@@ -583,16 +591,25 @@
               <div
                 class="flex flex-row items-center justify-between p-[20px] md:p-[28px] absolute bottom-0 left-0 w-full group-hover:opacity-0 transition-opacity duration-300 group-[.active]:opacity-0"
               >
-                <p
-                  class="text-[20px] md:text-[24px] font-semibold leading-[130%]"
-                >
-                  전문성을<br />
-                  키울 수 있는 환경
-                </p>
+                <div>
+                  <p
+                    class="text-[20px] md:text-[24px] font-semibold leading-[130%]"
+                  >
+                  사람을 위한 시스템이 있다는 것
+                  </p>
+                  <p class="text-[14px] md:text-[16px] mt-[4px]">
+                    "좋은 동료만큼, 서로를 챙기는 구조도 중요하잖아요."
+                  </p>
+                  <p class="text-[12px] md:text-[14px] text-black/50 mt-[2px]">
+                    BAT는 AE가 오래 일할 수 있도록<br>
+                    일뿐 아니라 '사람'을 중심에 둔 시스템을 만들어가고 있습니다.<br>
+                    그 흐름에 자발적으로 함께하고 있는 팀원도 있어요.
+                  </p>
+                </div>
                 <img
                   src="img/plus_btn.png"
                   alt="plus"
-                  class="w-[32px] h-[32px] md:w-[40px] md:h-[40px]"
+                  class="w-[32px] h-[32px] md:w-[40px] md:h-[40px] block md:hidden absolute top-[20px] right-[20px] md:static"
                 />
               </div>
               <div
@@ -602,25 +619,18 @@
                   <p
                     class="text-[20px] md:text-[24px] font-semibold leading-[130%] text-black"
                   >
-                    진짜 커리어 고민, <br />
-                    함께 나눌 수 있는 리더
+                    사람을 위한 시스템이 있다는 것
                   </p>
                   <div
                     class="w-full h-[1px] bg-black/50 my-[16px] md:my-[24px]"
                   ></div>
                   <p class="text-[14px] md:text-[16px] text-black">
-                    진짜 커리어 고민, 함께 나눌 수 있는 리더진짜 커리어 고민,
-                    함께 나눌 수 있는 리더진짜 커리어 고민, 함께 나눌 수 있는
-                    리더진짜 커리어 고민, 함께 나눌 수 있는 리더진짜 커리어
-                    고민, 함께 나눌 수 있는 리더진짜 커리어 고민, 함께 나눌 수
-                    있는 리더진짜 커리어 고민, 함께 나눌 수 있는 리더진짜 커리어
-                    고민, - 나눌 수 있는 리더함께 나눌 수 있는 리더함께 나눌 수
-                    있는 리더함께 나눌 수 있는 리더함께 나눌 수 있는 리더
+                    모두가 내가 잘하길 응원하고 지지하는 팀에서 일한다는 건, 생각보다 큰 힘이 돼요.
                   </p>
                   <p
                     class="mt-[24px] md:mt-[44px] text-[14px] md:text-[16px] text-black"
                   >
-                    배영진 님 / CGO(Chief Growth Officer) / 2025년 입사
+                    유연주 님 / 퍼포먼스 마케팅 AE / 2022년 입사
                   </p>
                 </div>
               </div>
@@ -1025,7 +1035,7 @@
                 <div class="flex items-center gap-[8px] md:gap-[16px]">
                   <span
                     class="text-[16px] text-left md:text-[24px] font-semibold"
-                    >퍼포먼스 마케팅 AE (글로벌 담당)</span
+                    >글로벌 퍼포먼스 마케팅 AE</span
                   >
                   <span
                     class="text-[12px] md:text-[14px] text-[#666666] mt-[3px]"
@@ -1058,8 +1068,70 @@
                     <h4
                       class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]"
                     >
-                      TBD
+                      주요 업무
                     </h4>
+                    <ul
+                      class="list-disc list-inside text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
+                    >
+                      <li>
+                        국내 기업의 해외 시장 진출을 위한 현지 퍼포먼스 마케팅 전략 기획, 실행 및 성과 분석
+                      </li>
+                      <li>
+                        글로벌 셀프 서빙 매체 Google, Meta를 중심으로 현지 로컬 매체 운영
+                      </li>
+                      <li>
+                        국가별 소비자 인사이트, 경쟁사, 산업 트렌드에 대한 분석
+                      </li>
+                      <li>
+                        글로벌 Paid 광고 캠페인 기획 및 집행
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4
+                      class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]"
+                    >
+                      자격 요건
+                    </h4>
+                    <ul
+                      class="list-disc list-inside text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
+                    >
+                      <li>
+                        광고 에이전시 또는 인하우스에서 글로벌 퍼포먼스 마케팅 3년 이상 경력 또는 이에 준하는 경험을 보유하신 분
+                      </li>
+                      <li>
+                        Meta에 특화된 글로벌 및 로컬 크리에이티브 콘텐츠 기획 경험이 있고, 2개 이상의 캠페인을 운영해본 경험이 있으신 분
+                      </li>
+                      <li>
+                        국가별 타깃과 시장 특성을 고려한 글로벌 퍼포먼스 전략 수립 및 실행 경험이 있으신 분
+                      </li>
+                      <li>
+                        브랜드와 팀의 성장을 함께 고민하고 주도적으로 리드해본 경험이 있으신 분
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4
+                      class="text-[15px] md:text-[16px] font-semibold mb-[8px] md:mb-[12px]"
+                    >
+                      우대 사항
+                    </h4>
+                    <ul
+                      class="list-disc list-inside text-[14px] text-[#666666] space-y-[6px] md:space-y-[8px]"
+                    >
+                      <li>
+                        브랜드, 콘텐츠, sns 채널, 인플루언서, 바이럴 마케팅 중 하나 이상의 분야에서 경험이 있으신 분
+                      </li>
+                      <li>
+                        모바일 앱/웹 트래킹 툴 활용 경험이 있으신 분
+                      </li>
+                      <li>
+                        Amazon, TikTok Shop, Shopee, Qoo10, Rakuten, Lazada 등 글로벌 또는 로컬 플랫폼에 특화된 퍼포먼스 매체 운영 경험이 있으신 분
+                      </li>
+                      <li>
+                        다양한 문화와 소비자 인사이트에 대한 이해가 높으신 분
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
