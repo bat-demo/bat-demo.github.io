@@ -236,9 +236,9 @@
       <div class="w-full h-[1px] bg-[#E6E6E6]"></div>
       <section
         id="about"
-        class="w-full mx-auto px-[16px] md:px-[60px] py-[60px] md:py-[80px] max-w-[1440px] reveal-section md:min-w-[1240px]"
+        class="w-full h-screen mx-auto px-[16px] md:px-[60px] py-[60px] md:py-[80px] max-w-[1440px] flex items-center justify-center md:min-w-[1240px]"
       >
-        <div class="flex flex-col md:flex-row items-center md:justify-between">
+        <div class="flex flex-col md:flex-row items-center md:justify-between w-full">
           <div class="w-full flex flex-col items-center md:items-start">
             <p
               class="text-[20px] md:text-[24px] font-bold bg-no-repeat bg-left pl-[16px] ml-[-16px]"
@@ -261,9 +261,7 @@
               <p
                 class="text-[24px] md:text-[32px] font-semibold leading-[130%] text-animation second-text absolute top-0 left-0 opacity-0 w-full md:w-auto"
               >
-                BAT는 실력 있는 AE에게<span class="hidden md:inline"
-                  ><br
-                /></span>
+                BAT는 실력 있는 AE에게<br />
                 다음 스테이지를 제안합니다
               </p>
             </div>
@@ -1181,6 +1179,8 @@
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script>
       $(document).ready(function () {
         // Lenis 스무스 스크롤 초기화
@@ -1278,26 +1278,30 @@
             }
           }
         });
-
-        // 텍스트 애니메이션 (about 섹션)
-        $(window).scroll(function () {
-          var aboutSection = $("#about");
-          if (aboutSection.length) {
-            var sectionTop = aboutSection.offset().top;
-            var windowHeight = $(window).height();
-            var scrollTop = $(window).scrollTop();
-
-            if (scrollTop + windowHeight > sectionTop + 200) {
-              setTimeout(function () {
-                $(".first-text").addClass("animate-out");
-
-                setTimeout(function () {
-                  $(".second-text").addClass("animate-in");
-                }, 800);
-              }, 1200);
-            }
+        
+        // GSAP ScrollTrigger setup for about section
+        gsap.registerPlugin(ScrollTrigger);
+        
+        const aboutTimeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#about",
+            start: "top+=" + (window.innerWidth < 768 ? 0 : 72) + " top",
+            end: "bottom+=200% top",
+            scrub: true,
+            pin: true,
+            pinSpacing: true
           }
         });
+        aboutTimeline
+          .to(".first-text", { opacity: 0, y: -30, duration: 0.8, ease: "power2.out" }, "+=0.8")
+          .to(".second-text", { opacity: 1, y: 0, duration: 1.0, ease: "power2.out" }, "+=1.0")
+          .to(".chat-bubble", {
+            opacity: 1,
+            y: 0,
+            stagger: 1,
+            duration: 1.5,
+            ease: "power2.out"
+          }, "+=1.5");
 
         // 초기 스크롤 트리거
         setTimeout(function () {
