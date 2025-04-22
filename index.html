@@ -54,11 +54,12 @@
     <nav
       class="w-full mx-auto px-[24px] flex justify-between items-center h-[56px] md:h-[72px] border-none shadow-none">
       <div class="">
-        <img src="img/bat_w.png" alt="BAT Logo" class="w-[150px] md:w-[193px] h-auto logo-white" />
-        <img src="img/bat.png" alt="BAT Logo" class="w-[150px] md:w-[193px] h-auto logo-dark hidden" />
+        <a href="/" class="cursor-pointer">
+          <img src="img/bat_w.png" alt="BAT Logo" class="w-[150px] md:w-[193px] h-auto logo-white" />
+          <img src="img/bat.png" alt="BAT Logo" class="w-[150px] md:w-[193px] h-auto logo-dark hidden" />
+        </a>
       </div>
       <div class="hidden md:flex space-x-[40px] text-[16px] items-center">
-        <!-- <a class="cursor-pointer text-black scroll-link" data-scroll-section="about">공채 소개</a> -->
         <a class="cursor-pointer text-white scroll-link nav-link" data-scroll-section="organization">조직 소개</a>
         <a class="cursor-pointer text-white scroll-link nav-link" data-scroll-section="positions">포지션 안내</a>
         <a class="cursor-pointer text-white scroll-link nav-link" data-scroll-section="journey">합류 여정</a>
@@ -66,6 +67,11 @@
           style="color:rgba(188, 255, 100, 0.4)">
           Coming Soon
         </button>
+        <!-- FIXME
+        <a href="/" class="bg-[#0E0E0E] rounded-[8px] h-[43px] px-[24px] flex items-center justify-center header-button"
+          style="color:rgba(188, 255, 100, 1)" target="_blank">
+          채용공고 보러가기
+        </a> -->
       </div>
       <button class="flex md:hidden hamburger-menu" id="mobile-menu-button">
         <span class="hamburger-line bg-white"></span>
@@ -85,6 +91,11 @@
           class="bg-black text-[#FFFFFF]/80 rounded-[8px] h-[43px] px-[24px] flex items-center justify-center mt-2">
           Coming Soon
         </button>
+        <!-- FIXME -->
+        <!-- <a href="/" class="bg-black rounded-[8px] h-[43px] px-[24px] flex items-center justify-center mt-2"
+          style="color:rgba(188, 255, 100, 1)" target="_blank">
+          채용공고 보러가기
+        </a> -->
       </div>
     </div>
   </header>
@@ -484,7 +495,8 @@
                   </svg>
                 </span>
               </div>
-              <!-- <a class="bg-black text-[#FFFFFF] rounded-[8px] h-[43px] px-[20px] flex items-center justify-center">지원하기</a> -->
+              <!-- FIXME -->
+              <!-- <a href="" class="bg-black text-[#FFFFFF] rounded-[8px] h-[43px] px-[20px] flex items-center justify-center">지원하기</a> -->
               <a class="text-black/60 text-[14px] md:text-[16px] items-center justify-center hidden md:flex">Coming
                 Soon</a>
             </button>
@@ -559,6 +571,9 @@
                     </li>
                   </ul>
                 </div>
+
+                <!-- FIXME -->
+                <!-- <a href="" class="bg-black text-[#FFFFFF] rounded-[8px] h-[43px] px-[20px] flex items-center justify-center mt-[24px]">지원하기</a> -->
               </div>
             </div>
           </div>
@@ -577,6 +592,8 @@
                   </svg>
                 </span>
               </div>
+              <!-- FIXME -->
+              <!-- <a href="" class="bg-black text-[#FFFFFF] rounded-[8px] h-[43px] px-[20px] flex items-center justify-center">지원하기</a> -->
               <a class="text-black/60 text-[14px] md:text-[16px] items-center justify-center hidden md:flex">Coming
                 Soon</a>
             </button>
@@ -650,6 +667,8 @@
                     </li>
                   </ul>
                 </div>
+                <!-- FIXME -->
+                <!-- <a href="" class="bg-black text-[#FFFFFF] rounded-[8px] h-[43px] px-[20px] flex items-center justify-center mt-[24px]">지원하기</a> -->
               </div>
             </div>
           </div>
@@ -668,6 +687,8 @@
                   </svg>
                 </span>
               </div>
+              <!-- FIXME -->
+              <!-- <a href="" class="bg-black text-[#FFFFFF] rounded-[8px] h-[43px] px-[20px] flex items-center justify-center">지원하기</a> -->
               <a class="text-black/60 text-[14px] md:text-[16px] items-center justify-center hidden md:flex">Coming
                 Soon</a>
             </button>
@@ -743,6 +764,8 @@
                     </li>
                   </ul>
                 </div>
+                <!-- FIXME -->
+                <!-- <a href="" class="bg-black text-[#FFFFFF] rounded-[8px] h-[43px] px-[20px] flex items-center justify-center mt-[24px]">지원하기</a> -->
               </div>
             </div>
           </div>
@@ -761,6 +784,8 @@
                   </svg>
                 </span>
               </div>
+              <!-- FIXME -->
+              <!-- <a href="" class="bg-black text-[#FFFFFF] rounded-[8px] h-[43px] px-[20px] flex items-center justify-center">지원하기</a> -->
               <a class="text-black/60 text-[14px] md:text-[16px] items-center justify-center hidden md:flex">Coming
                 Soon</a>
             </button>
@@ -823,6 +848,8 @@
                     </li>
                   </ul>
                 </div>
+                <!-- FIXME -->
+                <!-- <a href="" class="bg-black text-[#FFFFFF] rounded-[8px] h-[43px] px-[20px] flex items-center justify-center mt-[24px]">지원하기</a> -->
               </div>
             </div>
           </div>
@@ -860,7 +887,7 @@
     </section>
 
     <section class="relative w-full h-screen pt-[56px] md:pt-[72px] bg-gradient-to-b to-[#BCFF64] from-transparent">
-      <img src="img/2025_bottom.png" alt="BAT Logo" class="w-full h-auto absolute top-[20px] left-0 opacity-70 z-10" />
+      <img src="img/2025_bottom.png" alt="BAT Logo" class="w-full h-auto absolute top-[20px] left-0 opacity-70" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;" />
       <div class="h-full mx-auto text-center flex flex-col items-center justify-center">
         <p class="text-[20px] md:text-[28px] font-semibold mb-[4px] md:mb-[6px] z-10">
           AE NEXT STAGE
@@ -874,6 +901,10 @@
           <span id="countdown"
             class="fira-code mt-[16px] md:mt-[38px] text-[#1A1A1A] px-[16px] py-[6px] rounded-[8px] border border-[rgba(150,204,80,0.60)] bg-[rgba(120,163,64,0.20)] backdrop-blur-[25px] text-[22px] md:text-[32px] font-medium"></span>
         </div>
+        <!-- FIXME -->
+        <!-- <a href="/" target="_blank" class="z-20 mt-[16px] md:mt-[38px]">
+          <img src="./img/cta.png" alt="지원하기" class="w-[132px] md:w-[160px] h-auto cta-image" />
+        </a> -->
       </div>
     </section>
   </main>
@@ -908,6 +939,15 @@
       }
       requestAnimationFrame(raf);
 
+      $(".cta-image").hover(
+        function () {
+          $(this).attr("src", "./img/cta_hover.png");
+        },
+        function () {
+          $(this).attr("src", "./img/cta.png");
+        }
+      );
+      
       // 모바일 메뉴 토글 기능
       $("#mobile-menu-button").click(function () {
         $(this).toggleClass("active");
