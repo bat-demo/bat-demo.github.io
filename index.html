@@ -134,6 +134,22 @@
     </section>
 
     <style>
+      .open-header {
+        background-color: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(8px);
+      }
+      .open-header .logo-white {
+        display: none;
+      }
+
+      .open-header .logo-dark {
+        display: block;
+      }
+
+      .open-header .hamburger-line {
+        background-color: black;
+      }
+
       .scrolled-header {
         background-color: rgba(255, 255, 255, 0.8);
         backdrop-filter: blur(8px);
@@ -961,11 +977,13 @@
       $("#mobile-menu-button").click(function () {
         $(this).toggleClass("active");
         $("#mobile-menu").toggleClass("open");
+        $("#main-header").toggleClass("open-header");
       });
 
       $(".mobile-menu-item").click(function () {
         $("#mobile-menu-button").removeClass("active");
         $("#mobile-menu").removeClass("open");
+        $("#main-header").removeClass("open-header");
       });
 
       // 카운트다운 타이머 기능
