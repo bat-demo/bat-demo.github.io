@@ -1111,9 +1111,9 @@
 
       // 카운트다운 타이머 기능
       function updateCountdown() {
-        var endDate = new Date("2025-05-20T23:59:59+09:00");
+        var startDate = new Date("2025-05-07T00:00:00+09:00");
         var now = new Date();
-        var diff = endDate - now;
+        var diff = now - startDate;
 
         if (diff <= 0) {
           $("#countdown").text("00:00:00:00");
