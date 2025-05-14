@@ -23,16 +23,15 @@
     href="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_180,h_180/https://batcrew.co.kr/wp-content/uploads/2023/01/cropped-logo-primary-dark-2-300x300.png" />
 
   <title>BAT 공채 2025</title>
-  <link rel="stylesheet" href="./css/global.css?v=20250506" />
-  <link rel="stylesheet" href="./css/output.css?v=20250506" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="./css/global.css?v=20250514" />
+  <link rel="stylesheet" href="./css/output.css?v=20250514" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=PT+Mono&family=Roboto+Mono:ital,wght@0,700;1,700&family=VT323&display=swap"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@600&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!-- Google tag (gtag.js) -->
@@ -65,7 +64,7 @@
   <header class="fixed top-0 left-0 w-full bg-transparent z-50 transition-all duration-300 border-none shadow-none"
     id="main-header">
     <nav
-      class="w-full mx-auto px-[24px] flex justify-between items-center h-[56px] md:h-[72px] border-none shadow-none">
+      class="max-w-[960px] w-full mx-auto px-[24px] md:px-[60px] flex justify-between items-center h-[56px] md:h-[72px] border-none shadow-none">
       <div class="">
         <a href="/" class="cursor-pointer">
           <img src="img/bat_w.png" alt="BAT Logo" class="w-[150px] md:w-[193px] h-auto logo-white" />
@@ -78,7 +77,7 @@
         <a class="cursor-pointer text-white scroll-link nav-link" data-scroll-section="journey">합류 여정</a>
         <a href="https://bat.career.greetinghr.com/value1" class="bg-[#0E0E0E] rounded-[8px] h-[43px] px-[24px] flex items-center justify-center header-button"
           style="color:rgba(188, 255, 100, 1)" target="_blank">
-          채용공고 보러가기
+          지원하기
         </a>
       </div>
       <button class="flex md:hidden hamburger-menu" id="mobile-menu-button">
@@ -124,6 +123,11 @@
           <div class="hidden md:block w-[2px] h-[13px] bg-black opacity-30"></div>
           <p class="text-[14px] md:text-[20px] opacity-80">
             2025년 5월 7일(수) ~ 5월 20일(화)
+          </p>
+        </div>
+        <div class="inline-flex flex-col justify-center items-center gap-[6px] rounded-[23px] bg-[rgba(0,0,0,0.97)] backdrop-blur-[12px] py-[14px] px-[24px] mt-[30px]">
+          <p class="kode-mono text-[14px] md:text-[20px] text-center font-semibold tracking-[-0.2px]" style="font-feature-settings: 'case' on;">
+            <span class="text-[#6A6A6A] mr-[8px]">D+</span><span id="countdown" class="text-[#BCFF64]">00:00:00:00</span>
           </p>
         </div>
         <div class="absolute bottom-[20px] md:bottom-[40px] animate-bounce">
@@ -204,82 +208,6 @@
       });
     </script>
 
-    <div class="w-full h-[1px] bg-[#E6E6E6]"></div>
-    <section id="about"
-      class="w-full h-screen mx-auto px-[20px] md:px-[60px] py-[60px] md:py-[80px] max-w-[1440px] flex items-center justify-center md:min-w-[1240px]">
-      <div class="flex flex-col md:flex-row items-center md:justify-between w-full">
-        <div class="w-full flex flex-col items-center md:items-start">
-          <p class="text-[20px] md:text-[24px] font-bold bg-no-repeat bg-left pl-[16px] ml-[-16px]" style="
-                background-image: url(img/slash-s.svg);
-                background-position-x: 0px;
-              ">
-            BAT OPEN CALL
-          </p>
-          <!-- 텍스트 애니메이션 -->
-          <div class="text-animation-container w-full h-[84px] relative mt-[24px] text-center md:text-left">
-            <p
-              class="text-[24px] md:text-[32px] font-semibold leading-[130%] text-animation first-text absolute top-0 left-0 w-full md:w-auto">
-              잘하는 AE는,<br />잘하는 팀에서 일해야 하니까
-            </p>
-            <p
-              class="text-[24px] md:text-[32px] font-semibold leading-[130%] text-animation second-text absolute top-0 left-0 opacity-0 w-full md:w-auto">
-              BAT는 실력 있는 AE에게<br />
-              다음 스테이지를 제안합니다
-            </p>
-          </div>
-        </div>
-        <div
-          class="relative w-full max-w-[320px] md:min-w-[550px] md:w-[550px] h-[320px] md:h-[520px] mt-[40px] md:mt-[96px]">
-          <img src="img/s-bg.png" alt="slash" class="absolute left-0 top-0 w-full md:w-[550px] h-auto" />
-          <div class="w-full absolute chat-container origin-top-left">
-            <img src="./img/chat1.png" alt="chat"
-              class="w-auto h-[32px] md:h-[52px] flex-shrink-0 mt-[20px] md:mt-[30px] chat-bubble opacity-0"
-              data-delay="0" />
-            <img src="./img/chat2.png" alt="chat"
-              class="w-auto h-[32px] md:h-[52px] flex-shrink-0 mt-[16px] md:mt-[24px] chat-bubble opacity-0"
-              data-delay="800" />
-            <img src="./img/chat3.png" alt="chat"
-              class="w-auto h-[46px] md:h-[76px] flex-shrink-0 mt-[32px] md:mt-[57px] md:ml-[-120px] chat-bubble opacity-0"
-              data-delay="1600" />
-            <img src="./img/chat4.png" alt="chat"
-              class="w-auto h-[32px] md:h-[52px] flex-shrink-0 mt-[16px] md:mt-[20px] chat-bubble opacity-0"
-              data-delay="2400" />
-            <img src="./img/chat5.png" alt="chat"
-              class="w-auto h-[46px] md:h-[76px] flex-shrink-0 mt-[24px] md:mt-[32px] chat-bubble opacity-0"
-              data-delay="3200" />
-            <img src="./img/chat6.png" alt="chat"
-              class="w-auto h-[32px] md:h-[52px] flex-shrink-0 mt-[16px] md:mt-[20px] chat-bubble opacity-0"
-              data-delay="4000" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <style>
-      .chat-bubble {
-        transform: translateY(30px);
-        transition: opacity 0.5s ease, transform 0.5s ease;
-      }
-
-      .chat-bubble.show {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .text-animation {
-        transition: opacity 1s ease, transform 1s ease;
-      }
-
-      .text-animation.animate-out {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-
-      .text-animation.animate-in {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    </style>
-    <div class="w-full h-[1px] bg-[#E6E6E6]"></div>
 
     <section id="organization"
       class="w-full mx-auto px-[20px] md:px-[60px] py-[60px] md:py-[80px] max-w-[960px] reveal-section">
@@ -495,62 +423,6 @@
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="w-full h-auto relative bg-[#141414] pt-[140px] pb-[160px] reveal-section overflow-hidden">
-        <img src="img/video_title.png" class="w-full max-w-[612px] h-auto mx-auto mb-[24px]" alt="Video Title">
-        <div class="swiper-container video-swiper max-w-[960px] mx-auto mt-[70px] md:p-[60px]">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide rounded-[16px] overflow-hidden">
-              <div style="padding:177.78% 0 0 0;position:relative;">
-                <iframe src="https://player.vimeo.com/video/1080833770?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="남현승_full_v3"></iframe>
-              </div>
-            </div>
-            <div class="swiper-slide rounded-[16px] overflow-hidden">
-              <div style="padding:177.78% 0 0 0;position:relative;">
-                <iframe src="https://player.vimeo.com/video/1080834056?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="유연주_full_v2"></iframe>
-              </div>
-            </div>
-            <div class="swiper-slide rounded-[16px] overflow-hidden">
-              <div style="padding:177.78% 0 0 0;position:relative;">
-                <iframe src="https://player.vimeo.com/video/1080833667?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="김광수_full_v3"></iframe>
-              </div>
-            </div>
-            <div class="swiper-slide rounded-[16px] overflow-hidden">
-              <div style="padding:177.78% 0 0 0;position:relative;">
-                <iframe src="https://player.vimeo.com/video/1080833936?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="배영진_full_v3"></iframe>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-button-prev hidden md:block">
-            <img src="img/video_btn_left.png" alt="Prev" class="w-[40px] h-[40px] video-btn-left cursor-pointer" />
-          </div>
-          <div class="swiper-button-next hidden md:block">
-            <img src="img/video_btn_right.png" alt="Next" class="w-[40px] h-[40px] video-btn-right cursor-pointer" />
-          </div>
-          <style>
-            .swiper-button-prev, .swiper-button-next {
-              display: none !important;
-            }
-            @media (min-width: 768px) {
-              .swiper-button-prev, .swiper-button-next {
-                display: block !important;
-              }
-            }
-          </style>
-          <div class="video-counter text-center mt-[38px] flex items-center justify-center gap-[28px]">
-            <div class="swiper-button-prev-m md:hidden">
-              <img src="img/video_btn_left.png" alt="Prev" class="w-[40px] h-[40px] video-btn-left cursor-pointer" />
-            </div>
-            <div>
-              <span id="current-slide" class="text-white opacity-70 fira-code text-[18px] font-semibold leading-[130%] tracking-[-0.18px]">01</span>
-              <span class="text-white opacity-40 fira-code text-[18px] font-semibold leading-[130%] tracking-[-0.18px] mx-[2px]">/</span>
-              <span id="total-slides" class="text-white opacity-40 fira-code text-[18px] font-semibold leading-[130%] tracking-[-0.18px]">04</span>
-            </div>
-            <div class="swiper-button-next-m md:hidden">
-              <img src="img/video_btn_right.png" alt="Next" class="w-[40px] h-[40px] video-btn-right cursor-pointer" />
             </div>
           </div>
         </div>
@@ -1098,21 +970,78 @@
       </div>
     </section>
 
-    <section class="relative w-full h-screen pt-[56px] md:pt-[72px] bg-gradient-to-b to-[#BCFF64] from-transparent">
-      <img src="img/2025_bottom.png" alt="BAT Logo" class="w-full h-auto absolute top-[20px] left-0 opacity-70" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;" />
+    <section class="w-full h-auto relative bg-[#141414] pt-[140px] pb-[160px] overflow-hidden">
+      <img src="img/video_title.png" class="w-full max-w-[612px] h-auto mx-auto mb-[24px]" alt="Video Title">
+      <div class="swiper-container video-swiper max-w-[960px] mx-auto mt-[70px] md:p-[60px]">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide rounded-[16px] overflow-hidden">
+            <div style="padding:177.78% 0 0 0;position:relative;">
+              <iframe src="https://player.vimeo.com/video/1080833770?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="남현승_full_v3"></iframe>
+            </div>
+          </div>
+          <div class="swiper-slide rounded-[16px] overflow-hidden">
+            <div style="padding:177.78% 0 0 0;position:relative;">
+              <iframe src="https://player.vimeo.com/video/1080834056?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="유연주_full_v2"></iframe>
+            </div>
+          </div>
+          <div class="swiper-slide rounded-[16px] overflow-hidden">
+            <div style="padding:177.78% 0 0 0;position:relative;">
+              <iframe src="https://player.vimeo.com/video/1080833667?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="김광수_full_v3"></iframe>
+            </div>
+          </div>
+          <div class="swiper-slide rounded-[16px] overflow-hidden">
+            <div style="padding:177.78% 0 0 0;position:relative;">
+              <iframe src="https://player.vimeo.com/video/1080833936?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="배영진_full_v3"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev hidden md:block">
+          <img src="img/video_btn_left.png" alt="Prev" class="w-[40px] h-[40px] video-btn-left cursor-pointer" />
+        </div>
+        <div class="swiper-button-next hidden md:block">
+          <img src="img/video_btn_right.png" alt="Next" class="w-[40px] h-[40px] video-btn-right cursor-pointer" />
+        </div>
+        <style>
+          .swiper-button-prev, .swiper-button-next {
+            display: none !important;
+          }
+          @media (min-width: 768px) {
+            .swiper-button-prev, .swiper-button-next {
+              display: block !important;
+            }
+          }
+        </style>
+        <div class="video-counter text-center mt-[38px] flex items-center justify-center gap-[28px]">
+          <div class="swiper-button-prev-m md:hidden">
+            <img src="img/video_btn_left.png" alt="Prev" class="w-[40px] h-[40px] video-btn-left cursor-pointer" />
+          </div>
+          <div>
+            <span id="current-slide" class="text-white opacity-70 kode-mono text-[18px] font-semibold leading-[130%] tracking-[-0.18px]">01</span>
+            <span class="text-white opacity-40 kode-mono text-[18px] font-semibold leading-[130%] tracking-[-0.18px] mx-[2px]">/</span>
+            <span id="total-slides" class="text-white opacity-40 kode-mono text-[18px] font-semibold leading-[130%] tracking-[-0.18px]">04</span>
+          </div>
+          <div class="swiper-button-next-m md:hidden">
+            <img src="img/video_btn_right.png" alt="Next" class="w-[40px] h-[40px] video-btn-right cursor-pointer" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative w-full h-[60vh] pt-[56px] md:pt-[72px] bg-[#141414]">
+      <img src="img/footer_bg.png" alt="BAT Logo" class="w-full h-auto absolute bottom-0 left-0" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;" />
       <div class="h-full mx-auto text-center flex flex-col items-center justify-center">
-        <p class="text-[20px] md:text-[28px] font-semibold mb-[4px] md:mb-[6px] z-10">
+        <p class="text-[20px] text-white md:text-[28px] font-semibold mb-[4px] md:mb-[6px] z-10">
           AE NEXT STAGE
         </p>
-        <img src="img/main_logo.svg" alt="BAT Logo" class="w-[80%] md:w-[666px] h-auto z-10" />
-        <p class="text-[18px] md:text-[24px] font-semibold mt-[12px] md:mt-[16px] z-10 px-[20px] md:px-0">
+        <img src="img/footer_logo.svg" alt="BAT Logo" class="w-[80%] md:w-[666px] h-auto z-10" />
+        <p class="text-[18px] md:text-[20px] mt-[24px] md:mt-[32px] z-10 px-[20px] md:px-0 text-white opacity-60">
           진짜 퍼포먼스를 만들어갈 준비가 되었다면,<br />
           지금, 당신의 다음 스테이지는 BAT입니다.
         </p>
         <div class="flex flex-row items-center justify-center gap-[12px] mt-[6px] z-10">
         </div>
         <a href="https://bat.career.greetinghr.com/value1" target="_blank" class="z-20 mt-[16px] md:mt-[38px]">
-          <img src="./img/cta.png" alt="지원하기" class="w-[132px] md:w-[160px] h-auto cta-image" />
+          <img src="./img/footer_cta.png" alt="지원하기" class="w-[132px] md:w-[160px] h-auto" />
         </a>
       </div>
     </section>
@@ -1148,15 +1077,6 @@
       }
       requestAnimationFrame(raf);
 
-      $(".cta-image").hover(
-        function () {
-          $(this).attr("src", "./img/cta_hover.png");
-        },
-        function () {
-          $(this).attr("src", "./img/cta.png");
-        }
-      );
-
       $('.video-btn-left').hover(
         function() {
           $(this).attr('src', 'img/video_btn_left_hover.png');
@@ -1190,7 +1110,7 @@
 
       // 카운트다운 타이머 기능
       function updateCountdown() {
-        var endDate = new Date("2025-05-07T00:00:00+09:00");
+        var endDate = new Date("2025-05-20T23:59:59+09:00");
         var now = new Date();
         var diff = endDate - now;
 
@@ -1264,31 +1184,6 @@
           }
         }
       });
-
-      // GSAP ScrollTrigger setup for about section
-      gsap.registerPlugin(ScrollTrigger);
-
-      const aboutTimeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#about",
-          start: "top+=" + (window.innerWidth < 768 ? 0 : 72) + " top",
-          end: "bottom+=200% top",
-          scrub: true,
-          pin: true,
-          pinSpacing: true
-        }
-      });
-      aboutTimeline
-        .to(".first-text", { opacity: 0, y: -30, duration: 0.5, ease: "power2.out" }, "+=0.6")
-        .to(".second-text", { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, "+=1.8")
-        .to(".chat-bubble", {
-          opacity: 1,
-          y: 0,
-          stagger: 1,
-          duration: 1.5,
-          ease: "power2.out"
-        }, "+=1.5");
-
       // 초기 스크롤 트리거
       setTimeout(function () {
         $(window).trigger("scroll");

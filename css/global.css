@@ -95,3 +95,9 @@ body {
     font-weight: 500;
     font-style: normal;
 }
+.kode-mono {
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
