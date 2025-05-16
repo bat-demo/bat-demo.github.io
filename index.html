@@ -32,7 +32,6 @@
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@600&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-29RLVYQSLW"></script>
@@ -1070,13 +1069,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
   <script>
     $(document).ready(function () {
-      // Lenis 스무스 스크롤 초기화
-      const lenis = new Lenis();
-      function raf(time) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
-      requestAnimationFrame(raf);
 
       $('.video-btn-left').hover(
         function() {
