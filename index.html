@@ -23,8 +23,8 @@
     href="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_180,h_180/https://batcrew.co.kr/wp-content/uploads/2023/01/cropped-logo-primary-dark-2-300x300.png" />
 
   <title>BAT 공채 2025</title>
-  <link rel="stylesheet" href="./css/global.css?v=20250514" />
-  <link rel="stylesheet" href="./css/output.css?v=20250514" />
+  <link rel="stylesheet" href="./css/global.css?v=20250516" />
+  <link rel="stylesheet" href="./css/output.css?v=20250516" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -126,7 +126,7 @@
         </div>
         <div class="inline-flex flex-col justify-center items-center gap-[6px] rounded-[23px] bg-[rgba(0,0,0,0.97)] backdrop-blur-[12px] py-[14px] px-[24px] mt-[30px]">
           <p class="kode-mono text-[14px] md:text-[20px] text-center font-semibold tracking-[-0.2px]" style="font-feature-settings: 'case' on;">
-            <span class="text-[#6A6A6A] mr-[8px]">D-</span><span id="countdown" class="text-[#BCFF64]">00:00:00:00</span>
+            <span id="countdown" class="text-[#BCFF64]">00일 00시간 00분 00초</span><span class="text-white ml-[8px] font-pretendard">남음</span>
           </p>
         </div>
         <div class="absolute bottom-[20px] md:bottom-[40px] animate-bounce">
@@ -209,7 +209,7 @@
 
 
     <section id="organization"
-      class="w-full mx-auto px-[20px] md:px-[60px] py-[60px] md:py-[80px] max-w-[960px] reveal-section">
+      class="w-full mx-auto px-[20px] md:px-[60px] pt-[80px] md:pt-[120px] pb-0 md:pb-[50px] max-w-[960px] reveal-section">
       <div class="flex flex-col md:flex-row items-center md:items-start justify-center gap-[40px] md:gap-[60px]">
         <img src="img/about.png" alt="about" class="hidden md:block w-full md:max-w-[396px] h-auto" />
         <div class="flex flex-col items-center md:items-start h-auto">
@@ -241,7 +241,24 @@
         </div>
       </div>
     </section>
-
+    <section class="relative w-full h-[320px] md:h-[520px] overflow-hidden reveal-section">
+      <div class="absolute inset-0 w-full h-full">
+        <img src="img/cta_bg.png?v=20250517" alt="BAT Logo" class="w-full h-full object-cover object-center" oncontextmenu="return false;" ondragstart="return false;" onselectstart="return false;" />
+      </div>
+      <div class="absolute inset-0 mx-auto text-center flex flex-col items-center justify-center">
+        <p class="text-[20px] md:text-[28px] font-semibold z-10">
+          AE NEXT STAGE
+        </p>
+        <img src="img/main_logo.svg" alt="BAT Logo" class="w-[60%] md:w-[486px] h-auto z-10" />
+        <p class="text-[16px] md:text-[20px] mt-[4px] md:mt-[8px] z-10 px-[20px] md:px-0 text-[#333333]">
+          진짜 퍼포먼스를 만들어갈 준비가 되었다면,<br />
+          지금, 당신의 다음 스테이지는 BAT입니다.
+        </p>
+        <a href="https://bat.career.greetinghr.com/value1" target="_blank" class="z-20 mt-[16px] md:mt-[32px]">
+          <img src="./img/cta_hover.png" alt="지원하기" class="w-[132px] md:w-[160px] h-auto" />
+        </a>
+      </div>
+    </section>
     <div class="w-full h-[1px] bg-[#E6E6E6]"></div>
     <section class="w-full bg-[#F5F5F5] reveal-section">
       <section class="w-full mx-auto px-[20px] md:px-[60px] py-[60px] md:py-[100px] max-w-[960px]">
@@ -1108,7 +1125,7 @@
         var diff = startDate - now;
 
         if (diff <= 0) {
-          $("#countdown").text("00:00:00:00");
+          $("#countdown").text("00일 00시간 00분 00초");
           return;
         }
 
@@ -1125,7 +1142,7 @@
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         $("#countdown").text(
-          days + ":" + hours + ":" + minutes + ":" + seconds
+          days + "일 " + hours + "시간 " + minutes + "분 " + seconds + "초"
         );
       }
 
