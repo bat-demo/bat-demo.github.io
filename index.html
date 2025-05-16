@@ -126,7 +126,7 @@
         </div>
         <div class="inline-flex flex-col justify-center items-center gap-[6px] rounded-[23px] bg-[rgba(0,0,0,0.97)] backdrop-blur-[12px] py-[14px] px-[24px] mt-[30px]">
           <p class="kode-mono text-[14px] md:text-[20px] text-center font-semibold tracking-[-0.2px]" style="font-feature-settings: 'case' on;">
-            <span class="text-[#6A6A6A] mr-[8px]">D+</span><span id="countdown" class="text-[#BCFF64]">00:00:00:00</span>
+            <span class="text-[#6A6A6A] mr-[8px]">D-</span><span id="countdown" class="text-[#BCFF64]">00:00:00:00</span>
           </p>
         </div>
         <div class="absolute bottom-[20px] md:bottom-[40px] animate-bounce">
@@ -1103,9 +1103,9 @@
 
       // 카운트다운 타이머 기능
       function updateCountdown() {
-        var startDate = new Date("2025-05-07T00:00:00+09:00");
+        var startDate = new Date("2025-05-20T00:00:00+09:00");
         var now = new Date();
-        var diff = now - startDate;
+        var diff = startDate - now;
 
         if (diff <= 0) {
           $("#countdown").text("00:00:00:00");
