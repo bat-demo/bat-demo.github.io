@@ -1,0 +1,1243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LG PuroTec™</title>
+    <meta name="description" content="Inorganic antibacterial preservative made with 30 years of LG Electronics' technology">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LG PuroTec™">
+    <meta property="og:description" content="Inorganic antibacterial preservative made with 30 years of LG Electronics' technology">
+    <meta property="og:image" content="../meta.png">
+    <!-- favicon -->
+    <link rel="icon" href="../favicon.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- Pretendard (optional) -->
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+        rel="stylesheet">
+    <!-- Your main stylesheet -->
+    <link rel="stylesheet" href="../css/output.css">
+    <style>
+        /* Text moves down and icon moves up, then return */
+        @keyframes scrollText {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(8px);
+            }
+        }
+
+        @keyframes scrollIcon {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        body {
+            font-family: "Pretendard", sans-serif;
+        }
+
+        .scroll-down button {
+            animation: scrollText 1.2s ease-in-out infinite;
+        }
+
+        .scroll-down .caret {
+            animation: scrollIcon 1.2s ease-in-out infinite;
+        }
+
+        #hero video {
+            -webkit-mask: linear-gradient(180deg, #000000 85%, rgba(0, 0, 0, 0) 100%);
+            mask: linear-gradient(180deg, #000000 85%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 10000;
+        }
+
+        #overlay .box {
+            align-content: flex-start;
+            align-items: flex-start;
+            background-color: #fff;
+            border-radius: 24px;
+            display: flex;
+            flex: none;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 25px;
+            height: 95%;
+            justify-content: flex-start;
+            left: calc(50% - min(390px, 95.13%) / 2);
+            max-width: 390px;
+            overflow: auto;
+            padding: 20px;
+            position: fixed;
+            top: 10px;
+            width: 95%;
+            z-index: 4;
+        }
+
+        .overlay-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            font-size: 11px;
+            color: #2f2f2f;
+            table-layout: fixed;
+            opacity: 0.7;
+        }
+
+        .overlay-table th,
+        .overlay-table td {
+            border: 1px solid #e0e0e0;
+            padding: 8px;
+            vertical-align: middle;
+        }
+
+        .overlay-table th:first-child,
+        .overlay-table td:first-child {
+            width: 25%;
+            padding-left: 12px;
+        }
+
+        .overlay-table th:nth-child(2),
+        .overlay-table td:nth-child(2) {
+            width: 35%;
+        }
+
+        .overlay-table th:nth-child(3),
+        .overlay-table td:nth-child(3) {
+            width: 40%;
+        }
+
+        .overlay-table th {
+            background: #f7f7f7;
+            font-weight: 500;
+        }
+
+        .overlay-subtable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            font-size: 9px;
+            color: #2f2f2f;
+            opacity: 0.6;
+        }
+
+
+        .overlay-subtable th:first-child,
+        .overlay-subtable td:first-child {
+            width: 20%;
+            padding-left: 12px;
+        }
+
+
+        .overlay-subtable th:nth-child(2),
+        .overlay-subtable td:nth-child(2) {
+            width: 40%;
+        }
+
+        .overlay-subtable th:nth-child(3),
+        .overlay-subtable td:nth-child(3) {
+            width: 40%;
+        }
+
+
+        .overlay-subtable th,
+        .overlay-subtable td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .overlay-subtable th {
+            font-weight: 500;
+        }
+
+        .overlay-table td,
+        .overlay-subtable td {
+            text-align: center;
+        }
+
+        .overlay-footnote {
+            margin-top: 12px;
+            font-size: 8px;
+            color: #2f2f2f;
+            line-height: 1.4em;
+            opacity: 0.6;
+            letter-spacing: -0.04em;
+        }
+    </style>
+</head>
+
+<body class="relative bg-[#0d0d0d]">
+    <!-- Main Content -->
+    <main class="relative bg-[#0d0d0d]">
+        <!-- Hero Section -->
+        <section id="hero" class="h-screen relative flex items-center justify-center">
+            <video class="absolute inset-0 w-full h-full object-cover" src="../videos/main.mp4" autoplay muted loop
+                playsinline></video>
+            <div
+                class="flex flex-col gap-4 items-center scroll-down absolute bottom-[28px] left-1/2 -translate-x-1/2 opacity-60">
+                <button class="font-ibm-plex-mono text-[12px] text-[#5E5E5E]" aria-label="아래로 스크롤">
+                    SCROLL DOWN
+                </button>
+                <div class="caret">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="22" height="22">
+                        <path d="M 2 4.5 L 6 8.5 L 10 4.5" fill="none" stroke="#5E5E5E" stroke-width="0.8"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Header: 로고 및 언어 선택 -->
+        <header class="absolute top-0 left-0 w-full z-20 h-screen">
+            <div class="w-full h-full flex justify-center items-center">
+                <div class="flex flex-col items-center gap-[18px]">
+                    <img src="../images/logo.png" alt="LG PuroTec™ 로고" class="w-[275px] h-auto" draggable="false">
+                    <p class="font-ibm-plex-mono font-[500] text-[14px] text-[#bababa] uppercase">Innovative
+                        Antimicrobial Technology</p>
+                </div>
+                <nav class="language-switcher absolute top-[12px] right-[12px] w-[60px] h-[40px]">
+                    <label for="language-select" class="sr-only">Language select</label>
+
+                    <button
+                        class="cursor-pointer h-full px-2.5 language-button flex items-center gap-2 border border-[#959595] rounded-[10px] bg-white/15 hover:bg-white/50">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="18" height="18"
+                                fill="rgb(255, 255, 255)">
+                                <path
+                                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm87.63,96H175.8c-1.41-28.46-10.27-55.47-25.12-77A88.2,88.2,0,0,1,215.63,120ZM128,215.89c-18.73-20.27-30.09-49-31.77-79.89h63.54C158.09,166.87,146.73,195.62,128,215.89ZM96.23,120c1.68-30.87,13-59.62,31.77-79.89,18.73,20.27,30.09,49,31.77,79.89Zm9.09-77C90.47,64.53,81.61,91.54,80.2,120H40.37A88.2,88.2,0,0,1,105.32,43ZM40.37,136H80.2c1.41,28.46,10.27,55.47,25.12,77A88.2,88.2,0,0,1,40.37,136Zm110.31,77c14.85-21.56,23.71-48.57,25.12-77h39.83A88.2,88.2,0,0,1,150.68,213Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="caret">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="12" height="12">
+                                <path d="M 2 4.5 L 6 8.5 L 10 4.5" fill="none" stroke="rgb(255, 255, 255)"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div
+                        class="language-dropdown hidden absolute top-full right-0 mt-1 w-[260px] bg-white/15 backdrop-blur-sm border border-[#959595] rounded-[10px] shadow-lg overflow-hidden">
+                        <a href="/"
+                            class="w-full text-left px-4 py-3 hover:bg-white/50 text-[15px] text-white flex items-center gap-2"
+                            data-lang="ko">
+                            Korean
+                        </a>
+                        <a href="/en"
+                            class="w-full text-left px-4 py-3 hover:bg-white/50 text-[15px] text-white flex items-center gap-2"
+                            data-lang="en">
+                            English (United States)
+                        </a>
+                        <a href="/zh-cn"
+                            class="w-full text-left px-4 py-3 hover:bg-white/50 text-[15px] text-white flex items-center gap-2"
+                            data-lang="zh">
+                            Chinese (China)
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="max-w-[400px] mx-auto">
+            <!-- Features Section -->
+            <section id="features"
+                class="flex flex-col items-center justify-center w-full max-w-[400px] h-min overflow-hidden relative bg-[#0d0d0d]">
+                <div class="w-full flex flex-col gap-[44px]" style="padding: 132px 24px 64px;">
+                    <div class="w-full flex flex-col gap-[16px]">
+                        <div class="w-full flex flex-col gap-[21px]">
+                            <h2
+                                class="w-full text-left font-ibm-plex-mono text-[14px] font-[500] leading-[1.3em] text-[#4e4e4e] uppercase animate-on-scroll">
+                                Innovative<br />Antimicrobial Technology</h2>
+
+                            <p
+                                class="w-full text-left font-pretendard text-[30px] tracking-[-0.04em] leading-[1.3em] text-white animate-on-scroll">
+                                Inorganic<br>antibacterial additive<br>made with 30 years of<br>LG Electronics' technology<br>
+                                <img src="../images/logo.png" class="w-[191px] h-auto mt-[8px] animate-on-scroll"
+                                    alt="LG PuroTec™ logo">
+                            </p>
+
+                        </div>
+                        <div class="w-full min-h-[1px] bg-[#2e2e2e] mt-[12px]"></div>
+                        <p class="font-pretendard text-[#a6a6a6] tracking-[-0.03em] leading-[1.5em] animate-on-scroll">
+                            LG PuroTec™ is<br>
+                            a physically and chemically stable<br>
+                            inorganic glass material that,<br>
+                            when added in small amounts to products,<br>
+                            provides antibacterial preservation<br>
+                            that keeps them clean.</p>
+                    </div>
+                    <img src="../images/values.png" class="w-full h-auto animate-on-scroll" alt="LG PuroTec™"
+                        draggable="false">
+                </div>
+                <div class="w-full flex flex-col gap-[44px]" style="padding: 103px 24px 181px;">
+                    <div class="w-full flex flex-col gap-[16px]">
+                        <div class="w-full flex flex-col gap-[21px]">
+                            <h2
+                                class="w-full text-left font-ibm-plex-mono text-[14px] font-[500] leading-[1.3em] text-[#4e4e4e] uppercase animate-on-scroll">
+                                The next generation of<br>
+                                GLASS-BASED ANTIMICROBIALS
+                            </h2>
+
+                            <p
+                                class="w-full text-left font-pretendard text-[30px] tracking-[-0.04em] leading-[1.3em] text-white animate-on-scroll">
+                                Next-generation<br>
+                                antibacterial material<br>
+                                made from glass
+                            </p>
+
+                        </div>
+                        <div class="w-full min-h-[1px] bg-[#2e2e2e] mt-[12px]"></div>
+                        <p class="font-pretendard text-[#a6a6a6] tracking-[-0.03em] leading-[1.5em] animate-on-scroll">
+                            Antibacterial glass material developed<br>
+                            through LG Electronics' outstanding technology<br>
+                            boasts stronger antibacterial performance.
+                        </p>
+                    </div>
+                    <img src="../images/value2-en.png" class="w-full h-auto animate-on-scroll" alt="LG PuroTec™"
+                        draggable="false">
+                </div>
+            </section>
+
+            <!-- Special Offer Cards -->
+            <section id="offers"
+                class="flex flex-col items-center justify-center w-full max-w-[400px] h-min overflow-hidden relative bg-[#0d0d0d]">
+                <div class="w-full flex flex-col gap-[16px]" style="padding: 56px 20px 120px;">
+                    <h2 class="font-pretendard text-[28px] tracking-[-0.04em] leading-[1.3em] text-[#e0e0e0]">Special
+                        Values<br />for Your Product</h2>
+                    <div class="cards offer-cards flex flex-col gap-[30px]">
+                        <article class="card animate-card bg-[#dfeeed] rounded-[24px] p-[15px] pb-[54px] flex flex-col">
+                            <div class="w-full h-[280px] aspect-video rounded-[16px] overflow-hidden">
+                                <video src="../videos/product1.mp4" muted loop playsinline autoplay
+                                    class="w-full h-[280px] object-cover"></video>
+                            </div>
+                            <div class="flex flex-row items-start justify-between gap-[8px] pt-[22px] pb-[23px]">
+                                <h3
+                                    class="font-pretendard font-[300] text-[24px] tracking-[0.02em] leading-[1.1em] text-[#1f1f1f]">
+                                    Powerful<br>Antimicrobial Protection</h3>
+                                <div
+                                    class="flex items-center justify-center w-[32px] h-[32px] rounded-[26px] border border-[#222222] overflow-hidden">
+                                    <span
+                                        class="font-pretendard font-[300] text-[20px] leading-[1em] text-[#1f1f1f]">1</span>
+                                </div>
+                            </div>
+                            <div class="w-full h-[1px] bg-[#a6bfbd] mb-[12px]"></div>
+                            <p class="font-pretendard text-[#1f1f1f] tracking-[-0.03em] leading-[1.5em] opacity-60">Powerfully protects products<br>from microbial growth</p>
+                        </article>
+                        <article class="card animate-card bg-[#e7eedf] rounded-[24px] p-[15px] pb-[54px] flex flex-col">
+                            <div class="w-full h-[280px] aspect-video rounded-[16px] overflow-hidden">
+                                <video src="../videos/product2.mp4" muted loop playsinline autoplay
+                                    class="w-full h-[280px] object-cover"></video>
+                            </div>
+                            <div class="flex flex-row items-start justify-between gap-[8px] pt-[22px] pb-[23px]">
+                                <h3
+                                    class="font-pretendard font-[300] text-[24px] tracking-[0.02em] leading-[1.1em] text-[#1f1f1f]">
+                                    Long-lasting<br>Performance
+                                </h3>
+                                <div
+                                    class="flex items-center justify-center w-[32px] h-[32px] rounded-[26px] border border-[#222222] overflow-hidden">
+                                    <span
+                                        class="font-pretendard font-[300] text-[20px] leading-[1em] text-[#1f1f1f]">2</span>
+                                </div>
+                            </div>
+                            <div class="w-full h-[1px] bg-[#a6bfbd] mb-[12px]"></div>
+                            <p class="font-pretendard text-[#1f1f1f] tracking-[-0.03em] leading-[1.5em] opacity-60">
+                                Amazingly long-lasting<br>antibacterial efficacy</p>
+                        </article>
+                        <article class="card animate-card bg-[#eeebdf] rounded-[24px] p-[15px] pb-[54px] flex flex-col">
+                            <div class="w-full h-[280px] aspect-video rounded-[16px] overflow-hidden">
+                                <video src="../videos/product3.mp4" muted loop playsinline autoplay
+                                    class="w-full h-[280px] object-cover"></video>
+                            </div>
+                            <div class="flex flex-row items-start justify-between gap-[8px] pt-[22px] pb-[23px]">
+                                <h3
+                                    class="font-pretendard font-[300] text-[24px] tracking-[0.02em] leading-[1.1em] text-[#1f1f1f]">
+                                    Stability<br>for Discoloration
+                                </h3>
+                                <div
+                                    class="flex items-center justify-center w-[32px] h-[32px] rounded-[26px] border border-[#222222] overflow-hidden">
+                                    <span
+                                        class="font-pretendard font-[300] text-[20px] leading-[1em] text-[#1f1f1f]">3</span>
+                                </div>
+                            </div>
+                            <div class="w-full h-[1px] bg-[#a6bfbd] mb-[12px]"></div>
+                            <p class="font-pretendard text-[#1f1f1f] tracking-[-0.03em] leading-[1.5em] opacity-60">Maintain product value<br>with excellent discoloration stability</p>
+                        </article>
+                    </div>
+            </section>
+
+            <style>
+                .animate-card {
+                    opacity: 0.5;
+                    transform: scale(0.9);
+                    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+                }
+
+                .animate-card.visible {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const cards = document.querySelectorAll('.animate-card');
+
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('visible');
+                            }
+                        });
+                    }, {
+                        threshold: 0.5,
+                        rootMargin: '-20% 0px'
+                    });
+
+                    cards.forEach(card => {
+                        observer.observe(card);
+                    });
+                });
+            </script>
+
+            <style>
+                .animate-on-scroll {
+                    opacity: 0;
+                    transform: translateY(50px);
+                    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+                }
+
+                .animate-on-scroll.visible {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('visible');
+                            } else {
+                                entry.target.classList.remove('visible');
+                            }
+                        });
+                    }, {
+                        threshold: 0.1,
+                        rootMargin: '0px'
+                    });
+
+                    animatedElements.forEach(element => {
+                        observer.observe(element);
+                    });
+                });
+            </script>
+
+        </div>
+
+        <section class="w-full bg-white">
+            <div class="max-w-[400px] mx-auto">
+                <div
+                    class="w-full flex flex-col items-start justify-center gap-[10px] h-min overflow-hidden relative pt-[128px] px-4 bg-white">
+                    <div class="w-full flex flex-col gap-[36px]">
+                        <h2 class="font-ibm-plex-mono text-[14px] text-[#bababa] uppercase">
+                            Our Values
+                        </h2>
+                        <div class="flex flex-col gap-[12px]">
+                            <p class="font-pretendard text-[26px] tracking-[-0.04em] leading-[1.4em] text-[#0d0d0d]">
+                                The value<br>
+                                LG PuroTec™ can provide
+                            </p>
+                            <p class="font-pretendard text-[16px] text-[#0d0d0d] opacity-70">
+                                Adding an antibacterial additive<br>can enhance your product's value.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="w-full flex flex-col items-start justify-center h-min overflow-hidden relative pt-[50px] pb-[72px] px-4 bg-white">
+                    <h2 class="font-ibm-plex-mono text-[14px] text-[#bababa] uppercase pb-[16px]">
+                        Benefits for your product
+                    </h2>
+                    <div class="w-full flex flex-col gap-[16px]">
+                        <article class="w-full flex flex-col gap-[16px] bg-black rounded-[24px] px-[56px] py-[64px]">
+                            <div class="flex flex-col gap-[12px]">
+                                <div
+                                    class="border border-[rgba(74,159,170,0.5)] rounded-[25px] px-[13px] py-[6px] w-fit">
+                                    <p class="font-ibm-plex-mono text-[12px] text-[#4A9FAA] font-medium">VALUE 1</p>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h6 class="text-white text-[20px] font-medium">Powerfully</h6>
+                                    <h6 class="text-white text-[20px] font-medium">protects products</h6>
+                                    <h6 class="text-white text-[20px] font-medium">from microbial growth</h6>
+                                </div>
+                            </div>
+
+                            <div class="w-[240px] h-[240px] rounded-[20px] overflow-hidden">
+                                <video src="../videos/value1.mp4" autoplay loop preload="auto" muted playsinline
+                                    class="w-full h-full object-cover"></video>
+                            </div>
+
+                            <div class="flex flex-col gap-[20px]">
+                                <div class="opacity-70">
+                                    <p class="text-white text-[16px]">Gaining differentiated customer</p>
+                                    <p class="text-white text-[16px]">recognition with products</p>
+                                    <p class="text-white text-[16px]">that have strong antibacterial</p>
+                                    <p class="text-white text-[16px]">preservative properties.</p>
+                                </div>
+                                <div class="value-more w-full border border-white rounded-[24px] px-4 py-2 cursor-pointer"
+                                    data-value="1">
+                                    <p class="text-white text-center">Learn more</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="w-full flex flex-col gap-[16px] bg-black rounded-[24px] px-[56px] py-[64px]">
+                            <div class="flex flex-col gap-[12px]">
+                                <div
+                                    class="border border-[rgba(107,128,82,0.5)] rounded-[25px] px-[13px] py-[6px] w-fit">
+                                    <p class="font-ibm-plex-mono text-[12px] text-[#6B8052] font-medium">VALUE 2</p>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h6 class="text-white text-[20px] font-medium">Amazingly long-lasting</h6>
+                                    <h6 class="text-white text-[20px] font-medium">antibacterial efficacy</h6>
+                                </div>
+                            </div>
+
+                            <div class="w-[240px] h-[240px] rounded-[20px] overflow-hidden">
+                                <video src="../videos/value2.mp4" autoplay loop preload="auto" muted playsinline
+                                    class="w-full h-full object-cover"></video>
+                            </div>
+
+                            <div class="flex flex-col gap-[20px]">
+                                <div class="opacity-70">
+                                    <p class="text-white text-[16px]">Securing a customer-centered brand image</p>
+                                    <p class="text-white text-[16px]">that emphasizes cleanliness</p>
+                                    <p class="text-white text-[16px]">and hygiene in everyday life.</p>
+                                </div>
+                                <div class="value-more w-full border border-white rounded-[24px] px-4 py-2 cursor-pointer"
+                                    data-value="2">
+                                    <p class="text-white text-center">Learn more</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="w-full flex flex-col gap-[16px] bg-black rounded-[24px] px-[56px] py-[64px]">
+                            <div class="flex flex-col gap-[12px]">
+                                <div
+                                    class="border border-[rgba(153,144,108,0.5)] rounded-[25px] px-[13px] py-[6px] w-fit">
+                                    <p class="font-ibm-plex-mono text-[12px] text-[#99906C] font-medium">VALUE 3</p>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h6 class="text-white text-[20px] font-medium">Maintain product value</h6>
+                                    <h6 class="text-white text-[20px] font-medium">with excellent</h6>
+                                    <h6 class="text-white text-[20px] font-medium">discoloration stability</h6>
+                                </div>
+                            </div>
+
+                            <div class="w-[240px] h-[240px] rounded-[20px] overflow-hidden">
+                                <video src="../videos/value3.mp4" autoplay loop preload="auto" muted playsinline
+                                    class="w-full h-full object-cover"></video>
+                            </div>
+
+                            <div class="flex flex-col gap-[20px]">
+                                <div class="opacity-70">
+                                    <p class="text-white text-[16px]">Reducing customer complaints</p>
+                                    <p class="text-white text-[16px]">due to product discoloration,</p>
+                                    <p class="text-white text-[16px]">thereby lowering product maintenance costs.</p>
+                                </div>
+                                <div class="value-more w-full border border-white rounded-[24px] px-4 py-2 cursor-pointer"
+                                    data-value="3">
+                                    <p class="text-white text-center">Learn more</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gradient-to-b from-[#010202] via-[rgba(40,36,32,1)] to-[rgba(107,98,86,1)]">
+            <video src="../videos/animation.mp4" autoplay loop preload="auto" muted playsinline
+                class="w-full object-cover min-h-[800px]"></video>
+        </section>
+
+        <div class="max-w-[400px] mx-auto">
+            <section class="w-full h-[725px] relative overflow-hidden" id="storySection">
+                <img src="../images/story.png" alt="story"
+                    class="w-full h-[725px] object-cover transition-all duration-300" id="storyImage">
+                <!-- 위쪽 딤 그라디언트 -->
+                <div class="absolute inset-0 pointer-events-none z-10"
+                    style="background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(13,13,13, 0.6) 160%);"></div>
+                <!-- 아래쪽 딤 그라디언트 -->
+                <div class="absolute inset-0 pointer-events-none z-10"
+                    style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(13, 13, 13) 100%);"></div>
+                <div
+                    class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-between z-20 p-[40px]">
+                    <p class="font-pretendard font-medium text-[22px] tracking-[-0.04em] leading-[1.3em] text-center text-white">
+                        Core Story of LG Advanced Materials<br>
+                        Heralding Innovation
+                    </p>
+                    <div class="flex items-center justify-center relative w-full" style="height: 150px;">
+                        <!-- 왼쪽 작은 원 -->
+                        <div class="w-[32px] h-[32px] rounded-full border border-white flex items-center justify-center overflow-hidden transition-all duration-1000 absolute left-0"
+                            id="leftCircle">
+                            <div class="w-[16px] h-[16px] rounded-full bg-white"></div>
+                        </div>
+
+                        <!-- 가운데 큰 원 -->
+                        <div class="w-[150px] h-[150px] rounded-full bg-white flex items-center justify-center transition-all duration-1000 mx-auto"
+                            id="centerCircle">
+                            <p class="font-ibm-plex-mono text-[14px] text-black text-center leading-[1.2em]">
+                                LG<br>Advanced<br>Materials<br>Way
+                            </p>
+                        </div>
+
+                        <!-- 오른쪽 작은 원 -->
+                        <div class="w-[32px] h-[32px] rounded-full border border-white flex items-center justify-center overflow-hidden transition-all duration-1000 absolute right-0"
+                            id="rightCircle">
+                            <div class="w-[16px] h-[16px] rounded-full bg-white"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div
+                class="bg-[#0d0d0d] sticky top-0 h-[800px] flex flex-col items-center justify-start p-[140px_20px] overflow-hidden z-[1]">
+                <div class="text-container">
+                    <p class="font-pretendard text-[23px] font-[500] tracking-[-0.04em] leading-[1.4em] text-[#3d3d3d]">
+                        <span class="line">LG PuroTec™</span><br>
+                        <span class="line">is shaping a better future</span><br>
+                        <span class="line">combined with LG Electronics Advanced Materials,</span><br>
+                        <span class="line">advancing the vision of a future</span><br>
+                        <span class="line">where humanity and nature coexist</span><br>
+                        <span class="line">through the infinite potential of glass.</span><br><br>
+                        <span class="line">Join us on our journey</span><br>
+                        <span class="line">to create an advanced future</span><br>
+                        <span class="line">with LG Advanced Materials.</span>
+                    </p>
+                </div>
+            </div>
+
+            <style>
+                .line {
+                    display: inline-block;
+                    transition: color 0.3s ease;
+                }
+            </style>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const lines = document.querySelectorAll('.line');
+                    const container = document.querySelector('.text-container');
+                    let lastScrollTop = 0;
+
+                    function updateTextColor() {
+                        const containerRect = container.getBoundingClientRect();
+                        const windowHeight = window.innerHeight;
+                        const viewportCenter = windowHeight / 2;
+                        const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                        lines.forEach((line, index) => {
+                            const lineRect = line.getBoundingClientRect();
+                            const lineCenter = lineRect.top + lineRect.height / 2;
+                            const distanceFromCenter = Math.abs(lineCenter - viewportCenter);
+
+                            if (currentScrollTop > lastScrollTop) {
+                                // 아래로 스크롤
+                                if (distanceFromCenter < 100) {
+                                    line.style.color = '#ffffff';
+                                }
+                            } else {
+                                // 위로 스크롤
+                                if (distanceFromCenter < 100) {
+                                    line.style.color = '#3d3d3d';
+                                }
+                            }
+                        });
+
+                        lastScrollTop = currentScrollTop;
+                    }
+
+                    window.addEventListener('scroll', updateTextColor);
+                    updateTextColor();
+                });
+            </script>
+        </div>
+        <div class="max-w-[400px] mx-auto">
+            <div class="w-full flex flex-col items-center justify-center gap-[56px] bg-[#0d0d0d] p-[96px_20px_180px]">
+                <!-- Card 1 -->
+                <div class="flex flex-col items-center gap-[32px] w-[342px]">
+                    <div
+                        class="flex flex-col items-center gap-[44px] h-[500px] w-full bg-[#b8b8b8] rounded-[40px] px-[24px] py-[32px] relative overflow-hidden">
+                        <div
+                            class="absolute top-[-40px] left-[calc(50%-194px)] w-[388px] h-[580px] overflow-hidden z-[0]">
+                            <img src="../images/footer1.png" alt="" class="w-full h-full object-cover rounded-[inherit]">
+                        </div>
+                        <div class="flex flex-col items-center relative gap-[24px] flex-1" style="z-index: 3;">
+                            <div class="flex flex-col items-center gap-[10px] flex-1 justify-center">
+                                <div class="flex items-center justify-center w-[32px] h-[32px] bg-white rounded-[26px]">
+                                    <h2 class="text-[20px] text-[#3a3a38] font-pretendard">1</h2>
+                                </div>
+                                <h6 class="text-[22px] text-white font-pretendard font-medium text-center">Materials:<br>A small but vast world</h6>
+                            </div>
+                            <p
+                                class="text-[#858585] text-center font-pretendard font-medium leading-[1.5] tracking-[-0.03em] relative z-20">
+                                Daily life is a vast world made up of small worlds called materials.<br>
+                                We have focused on the value of materials that are more significant because they are invisible,
+                                enabling everyone to lead their daily lives
+                                with peace of mind.
+                            </p>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full h-[224px]"
+                            style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);z-index: 2;">
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="flex flex-col items-center gap-[32px] w-[342px]">
+                    <div
+                        class="flex flex-col items-center gap-[44px] h-[500px] w-full bg-[#b8b8b8] rounded-[40px] px-[24px] py-[32px] relative overflow-hidden">
+                        <div
+                            class="absolute top-[-40px] left-[calc(50%-194px)] w-[388px] h-[580px] overflow-hidden z-[0]">
+                            <img src="../images/footer2.png" alt="" class="w-full h-full object-cover rounded-[inherit]">
+                        </div>
+                        <div class="flex flex-col items-center relative gap-[24px] flex-1" style="z-index: 3;">
+                            <div class="flex flex-col items-center gap-[10px] flex-1 justify-center">
+                                <div class="flex items-center justify-center w-[32px] h-[32px] bg-white rounded-[26px]">
+                                    <h2 class="text-[20px] text-[#3a3a38] font-pretendard">2</h2>
+                                </div>
+                                <h6 class="text-[22px] text-white font-pretendard font-medium text-center">
+                                    The birth of new solutions<br>
+                                    driven by a spirit of inquiry
+                                </h6>
+                            </div>
+                            <p
+                                class="text-[#858585] text-center font-pretendard font-medium leading-[1.5] tracking-[-0.03em] relative z-20">
+                                Our inspiration starts with 'glass',<br>a material that comes from nature and<br>can return to nature. Furthermore, we are expanding the potential of glass for a better future for both humanity and nature.
+                            </p>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full h-[224px]"
+                            style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);z-index: 2;">
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="flex flex-col items-center gap-[32px] w-[342px]">
+                    <div
+                        class="flex flex-col items-center gap-[44px] h-[500px] w-full bg-[#b8b8b8] rounded-[40px] px-[24px] py-[32px] relative overflow-hidden">
+                        <div
+                            class="absolute top-[-40px] left-[calc(50%-194px)] w-[388px] h-[580px] overflow-hidden z-[0]">
+                            <img src="../images/footer3.png" alt="" class="w-full h-full object-cover rounded-[inherit]">
+                        </div>
+                        <div class="flex flex-col items-center relative gap-[24px] flex-1" style="z-index: 3;">
+                            <div class="flex flex-col items-center gap-[10px] flex-1 justify-center">
+                                <div class="flex items-center justify-center w-[32px] h-[32px] bg-white rounded-[26px]">
+                                    <h2 class="text-[20px] text-[#3a3a38] font-pretendard">3</h2>
+                                </div>
+                                <h6 class="text-[22px] text-white font-pretendard font-medium text-center">
+                                    Journey to Circulation
+                                </h6>
+                            </div>
+                            <p
+                                class="text-[#505050] text-center font-pretendard font-medium leading-[1.5] tracking-[-0.03em] relative z-20">
+                                Innovation from nature, innovation from people, and back from people to nature.<br>
+                                With the belief that the well-being of the Earth leads to the well-being of<br>
+                                humanity, the innovation we pursue is directed toward both people and nature.
+                            </p>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full h-[224px]"
+                            style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);z-index: 2;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Lightbox Overlay -->
+    <div id="overlay">
+        <div class="box">
+            <div id="content1" class="w-full flex flex-col gap-[40px]">
+                <div class="w-full flex flex-col gap-[25px]">
+                    <div class="w-full flex flex-col gap-[10px]">
+                        <div class="w-full flex items-center justify-between h-[51px]">
+                            <p
+                                class="font-pretendard text-[20px] font-medium tracking-[-0.04em] leading-[130%] text-[#0d0d0d]">
+                                Learn more<br>about product protection
+                            </p>
+                            <button
+                                class="w-[32px] h-[32px] rounded-full border border-[#0d0d0d] flex items-center justify-center cursor-pointer"
+                                aria-label="닫기">
+                                <svg width="12" height="12" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L17 17M17 1L1 17" stroke="#0d0d0d" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="font-pretendard text-[#2f2f2f]">
+                            LG PuroTec™ helps prevent damage<br>
+                            and maintain quality<br>
+                            by inhibiting the growth of microorganisms<br>
+                            that cause contamination in products.<br><br>
+
+                            Increase customer interest and awareness<br>
+                            by introducing LG PuroTec™ into the market<br>
+                            as a product with exceptional<br>
+                            antibacterial preservation performance.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <p
+                        class="font-pretendard text-[9px] tracking-[-0.01em] leading-[1.5em] text-left text-[#302F2F] font-medium">
+                        The result that proves the effectiveness of<br>LG PuroTec's antibacterial preservation (LG PuroTec™ 1% Addition)
+                    </p>
+                    <table class="overlay-table">
+                        <thead>
+                            <tr>
+                                <th>Material</th>
+                                <th>Antibacterial<br>performance</th>
+                                <th>Antifungal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PP</td>
+                                <td rowspan="11" class="text-center leading-[120%]">99.99%<br>Antibacterial activity
+                                    value of 4.0<br><br><small>*Test Organism: Escherichia coli /
+                                        Staphylococcus aureus<br>*Test Method: JIS Z 2801</small></td>
+                                <td rowspan="11" class="text-center leading-[120%]">Lv.0<br>No mold growth observed<br><br><small>*Test Organism:<br>Mixed fungus suspension<br>(Aspergillus brasiliensis, Penicillium funiculosum, Chaetomium globosum,
+                                        Trichoderma virens, Aureobasidium pullulans)<br>*Test Method: ASTM G 21</small></td>
+                            </tr>
+                            <tr>
+                                <td>PS</td>
+                            </tr>
+                            <tr>
+                                <td>ABS</td>
+                            </tr>
+                            <tr>
+                                <td>PVC</td>
+                            </tr>
+                            <tr>
+                                <td>TPE</td>
+                            </tr>
+                            <tr>
+                                <td>TPV</td>
+                            </tr>
+                            <tr>
+                                <td>PE</td>
+                            </tr>
+                            <tr>
+                                <td>EPDM</td>
+                            </tr>
+                            <tr>
+                                <td>Silicon</td>
+                            </tr>
+                            <tr>
+                                <td>PA</td>
+                            </tr>
+                            <tr>
+                                <td>Fiber</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="overlay-subtable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Antibacterial Performance Test</th>
+                                <th>Antifungal Performance Test</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Test Date</td>
+                                <td>December 2021</td>
+                                <td>January 2022</td>
+                            </tr>
+                            <tr>
+                                <td>Test Agency</td>
+                                <td>FITI Testing & Research Institute</td>
+                                <td>FITI Testing & Research Institute</td>
+                            </tr>
+                            <tr>
+                                <td>Test Subject</td>
+                                <td>Resin with added 1% LG PuroTec™ AAP</td>
+                                <td>Plastics enhanced with LG PuroTec™ AAP</td>
+                            </tr>
+                            <tr>
+                                <td>Test Conditions</td>
+                                <td>5 cm x 5 cm specimen, 35°C, 24 hours</td>
+                                <td>5cm x 5cm specimen, 28°C, 28 days exposure to fungal solution</td>
+                            </tr>
+                            <tr>
+                                <td>Test Method</td>
+                                <td>JIS Z 2801 Standard</td>
+                                <td>ASTM G 21</td>
+                            </tr>
+                            <tr>
+                                <td>Test Results</td>
+                                <td>Antibacterial activity value of 4.0</td>
+                                <td>Antifungal Grade Lv. 0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="overlay-footnote">
+                        *Results from tests under laboratory conditions and conditions, may vary in actual use.<br>
+                        *JIS Z 2801 is a test that measures the antibacterial activity of materials like plastics and rubber to which antibacterial substances have been added. The higher the antibacterial activity value, the stronger the antibacterial efficacy.<br>
+                        *ASTM G21 is a test method that measures the anti-fungal performance of materials like plastics and rubber. The lower the grade value, the stronger the anti-fungal efficacy.
+                    </p>
+                </div>
+            </div>
+
+            <div id="content2" class="w-full flex flex-col gap-[40px]">
+                <div class="w-full flex flex-col gap-[25px]">
+                    <div class="w-full flex flex-col gap-[10px]">
+                        <div class="w-full flex items-center justify-between h-[51px]">
+                            <p
+                                class="font-pretendard text-[20px] font-medium tracking-[-0.04em] leading-[130%] text-[#0d0d0d]">
+                                Learn more<br>about antibacterial durability
+                            </p>
+                            <button
+                                class="w-[32px] h-[32px] rounded-full border border-[#0d0d0d] flex items-center justify-center cursor-pointer"
+                                aria-label="닫기">
+                                <svg width="12" height="12" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L17 17M17 1L1 17" stroke="#0d0d0d" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="font-pretendard text-[#2f2f2f]">
+                            We have confirmed that<br>
+                            products containing LG PuroTec™<br>
+                            maintain their antibacterial preservation<br>
+                            even under conditions six times harsher<br>
+                            than those of the SIAA<br>
+                            (Japanese Antimicrobial Product<br>
+                            Technology Association)<br>
+                            water resistance test.<br><br>
+
+                            With the growing interest in hygiene,<br>
+                            secure a customer-centric brand image<br>
+                            that emphasizes everyday cleanliness<br>
+                            with LG PuroTec™.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <img src="../images/chart-en.png" alt="" class="w-full">
+                    <table class="overlay-subtable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Antibacterial preservation sustainability<br>evaluation results (water resistance test)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Test Date /<br>Test Agency</td>
+                                <td>March 2021 / FITI Testing & Research Institute</td>
+                            </tr>
+                            <tr>
+                                <td>Test Subject</td>
+                                <td>Resin with added 1% LG PuroTec™ AAP (HIPS)</td>
+                            </tr>
+                            <tr>
+                                <td>Test Conditions</td>
+                                <td>50°C hot water, 16/32/96 hours exposure</td>
+                            </tr>
+                            <tr>
+                                <td>Immersion<br>Conditions</td>
+                                <td>5 cm x 5 cm specimen, 35°C,<br>24 hours exposure to bacterial</td>
+                            </tr>
+                            <tr>
+                                <td>Test Method</td>
+                                <td>JIS Z 2801 Standard</td>
+                            </tr>
+                            <tr>
+                                <td>Test Results</td>
+                                <td>Antibacterial activity value of 4.0 or higher<br>(Range: Minimum 0 to Maximum 6)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="overlay-footnote">
+                        *Results from tests under laboratory conditions and conditions, may vary in actual use.<br>
+                        *Antibacterial activity: Generally evaluated using the JIS Z 2801 standard test. JIS Z 2801 measures the antibacterial efficacy of materials like plastics and rubber that contain added antibacterial substances. The higher the antibacterial activity value, the stronger the antibacterial efficacy.
+                    </p>
+                </div>
+            </div>
+
+            <div id="content3" class="w-full flex flex-col gap-[40px]">
+                <div class="w-full flex flex-col gap-[25px]">
+                    <div class="w-full flex flex-col gap-[10px]">
+                        <div class="w-full flex items-center justify-between h-[51px]">
+                            <p
+                                class="font-pretendard text-[20px] font-medium tracking-[-0.04em] leading-[130%] text-[#0d0d0d]">
+                                Learn more<br>about discoloration stability
+                            </p>
+                            <button
+                                class="w-[32px] h-[32px] rounded-full border border-[#0d0d0d] flex items-center justify-center cursor-pointer"
+                                aria-label="닫기">
+                                <svg width="12" height="12" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L17 17M17 1L1 17" stroke="#0d0d0d" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="font-pretendard text-[#2f2f2f]">
+                            LG PuroTec™ is highly durable<br>
+                            against external environmental factors<br>
+                            such as UV rays, heat, and humidity<br>
+                            that cause yellowing.<br><br>
+
+                            Maintaining discoloration stability<br>
+                            preserves the original quality,<br>
+                            extend product life, and<br>
+                            reduce customer complaints,<br>
+                            ultimately leading to lower maintenance costs.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <img src="../images/chart2-en.png" alt="" class="w-full">
+                    <p class="overlay-footnote">
+                        *This image is for illustrative purposes only and is based on the results of LG Electronics' internal testing.<br>
+                        *△E (chromatic difference): The distance between two colors in the color space specified by the International Commission on Illumination (CIE) / △b*: A numerical representation of the change in yellow<br>
+                        *△E 1.5 or less: Low level of change detectable by the naked eye (National Bureau of Standards, National Institute of Standards and Technology, USA)<br>
+                        *National Institute of Standards and Technology: A non-regulatory agency under the U.S. Department of Commerce that provides standards for a wide range of technologies.
+                    </p>
+                    <table class="overlay-subtable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>UV Exposure Test</th>
+                                <th>High Temperature/High Humidity Environment Testing</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Test Date</td>
+                                <td>December 20th</td>
+                                <td>July 24th</td>
+                            </tr>
+                            <tr>
+                                <td>Test Agency</td>
+                                <td>LG Electronics<br>internal testing</td>
+                                <td>LG Electronics<br>internal testing</td>
+                            </tr>
+                            <tr>
+                                <td>Test Subject</td>
+                                <td>1% LG PuroTec™ AAP added to ABS(Natural color)</td>
+                                <td>1% LG PuroTec™ AAP added to general PP(Natural color)</td>
+                            </tr>
+                            <tr>
+                                <td>Test Conditions</td>
+                                <td>UV Lamp(A/B), 20cm distance,<br>72 hours exposure</td>
+                                <td>70°C / 90Rh%</td>
+                            </tr>
+                            <tr>
+                                <td>Test Method</td>
+                                <td>Evaluation of color difference(△E,△b) before/after<br>UV exposure(72hours)</td>
+                                <td>Evaluation of color difference(△E,△b) before/after UV exposure (24hours, 168hours)<br>in a high temperature/high humidity environment</td>
+                            </tr>
+                            <tr>
+                                <td>Test Results</td>
+                                <td>Color difference values(△E,△b)<br>are indicated in the table above</td>
+                                <td>Color difference values(△E,△b)<br>are indicated in the table above</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="overlay-footnote">
+                        *UV exposure test and high temperature/high humidity environment test results may vary depending on the experimental conditions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        // 이미지와 원형 모두 등장 시 1회만 애니메이션 재생
+        document.addEventListener('DOMContentLoaded', function () {
+            const storySection = document.getElementById('storySection');
+            const storyImage = document.getElementById('storyImage');
+            const leftCircle = document.getElementById('leftCircle');
+            const centerCircle = document.getElementById('centerCircle');
+            const rightCircle = document.getElementById('rightCircle');
+
+            // 원형 애니메이션 1회만 실행
+            function animateCirclesOnce() {
+                setTimeout(() => {
+                    centerCircle.style.opacity = '1';
+                    centerCircle.style.transform = 'scale(1)';
+                }, 300);
+
+                setTimeout(() => {
+                    leftCircle.style.opacity = '1';
+                    rightCircle.style.opacity = '1';
+                    leftCircle.style.transform = 'translateX(0px)';
+                    rightCircle.style.transform = 'translateX(0px)';
+                }, 600);
+            }
+
+            // 이미지 애니메이션 1회만 실행
+            function animateImageOnce() {
+                storyImage.style.transition = 'opacity 1.2s cubic-bezier(0.4,0,0.2,1), transform 1.2s cubic-bezier(0.4,0,0.2,1)';
+                storyImage.style.opacity = '1';
+                storyImage.style.transform = 'scale(1)';
+            }
+
+            // 초기 상태
+            function setInitialState() {
+                storyImage.style.opacity = '0';
+                storyImage.style.transform = 'scale(1.5)';
+                centerCircle.style.opacity = '0';
+                centerCircle.style.transform = 'scale(0.5)';
+                leftCircle.style.opacity = '0';
+                rightCircle.style.opacity = '0';
+                leftCircle.style.transform = 'translateX(100px)';
+                rightCircle.style.transform = 'translateX(-100px)';
+            }
+            setInitialState();
+
+            // IntersectionObserver로 이미지와 원형 모두 1회만 트리거
+            let played = false;
+            const observer = new window.IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !played) {
+                        played = true;
+                        animateImageOnce();
+                        animateCirclesOnce();
+                        obs.disconnect();
+                    }
+                });
+            }, {
+                threshold: 0.3
+            });
+            observer.observe(storySection);
+        });
+    </script>
+    <section class="w-full h-[100vh] relative flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 w-[115%] h-[115%] -top-[59px] left-1/2 -translate-x-1/2">
+            <video src="../videos/footer_video.mp4" autoplay loop preload="auto" muted playsinline
+                class="w-full h-full object-cover"></video>
+        </div>
+        <div class="relative z-10 flex flex-col items-center gap-10">
+            <div class="flex flex-col items-center gap-5">
+                <h1
+                    class="text-[38px] text-[#E0E0E0] text-center font-pretendard font-[200] leading-[1.2em] tracking-[-0.01em]">
+                    Step into the<br>
+                    Journey to<br>
+                    Upgrade<br>
+                    Product Value
+                </h1>
+                <p class="text-[#A6A6A6] text-center font-pretendard font-medium tracking-[-0.03em] leading-[1.5em]">
+                    Meet LG PuroTec™,<br>
+                    a long-term partner that shares your vision
+                </p>
+            </div>
+            <div class="flex flex-col items-center gap-4">
+                <a href="https://www.lg.com/global/business/inquiry-to-buy" target="_blank" rel="noopener"
+                    class="flex items-center justify-center w-[240px] h-[45px] bg-white text-[#202020] font-pretendard font-semibold tracking-[-0.03em] leading-[1.5em] rounded-[24px] cursor-pointer overflow-hidden relative z-[1]">
+                    Contact us for purchase
+                </a>
+                <a href="mailto:advancedmaterials@lge.com" target="_blank" rel="noopener"
+                    class="flex items-center justify-center w-[240px] h-[45px] border border-white text-white font-pretendard font-semibold tracking-[-0.03em] leading-[1.5em] rounded-[24px] cursor-pointer overflow-hidden relative z-[1]">
+                    Product Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="flex flex-col items-center justify-center bg-[#0d0d0d] w-full p-[180px_32px_48px_30px] gap-3">
+        <div class="w-[111px] h-[14px] opacity-30">
+            <img src="../images/footer_logo.png" alt="LG PuroTec™ 로고" class="w-full h-full object-contain">
+        </div>
+        <h1
+            class="font-pretendard text-[14px] text-white text-center tracking-[-0.04em] leading-[1.4em] opacity-40">
+            LG PuroTec™ ⓒ 2024 All rights reserved.
+        </h1>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Toggle native select visibility on button click
+            $('.language-button').on('click', function (e) {
+                e.preventDefault();
+                $('.language-dropdown').toggleClass('hidden');
+            });
+            $('.language-dropdown a').on('click', function (e) {
+                e.preventDefault();
+                window.location.href = $(this).attr('href');
+            });
+            // Hide select if clicking outside the switcher
+            $(document).on('click', function (e) {
+                if (!$(e.target).closest('.language-switcher').length) {
+                    $('#language-select').addClass('hidden');
+                }
+            });
+
+            $('.value-more').on('click', function (e) {
+                e.preventDefault();
+                const id = $(this).data('value');
+                $('#content1').hide();
+                $('#content2').hide();
+                $('#content3').hide();
+                
+                $('#content' + id).show();
+                $('#overlay').show();
+                $('body').css('overflow', 'hidden');
+                $('.box').scrollTop(0);
+            });
+            $('#overlay').on('click', function (e) {
+                if ($(e.target).is('#overlay')) {
+                    $('#overlay').hide();
+                    $('body').css('overflow', 'auto');
+                }
+            });
+
+            $('.box button[aria-label="닫기"]').on('click', function () {
+                $('#overlay').hide();
+                $('body').css('overflow', 'auto');
+            });
+        });
+    </script>
+</body>
+
+</html>

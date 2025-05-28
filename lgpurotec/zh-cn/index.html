@@ -1,0 +1,1219 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LG PuroTec™</title>
+    <meta name="description" content="LG 电子 30 年的技术 LG PuroTec™, 一种功能性抗菌防腐剂">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LG PuroTec™">
+    <meta property="og:description" content="LG 电子 30 年的技术 LG PuroTec™, 一种功能性抗菌防腐剂">
+    <meta property="og:image" content="../meta.png">
+    <!-- favicon -->
+    <link rel="icon" href="../favicon.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- Pretendard (optional) -->
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+        rel="stylesheet">
+    <!-- Your main stylesheet -->
+    <link rel="stylesheet" href="../css/output.css">
+    <style>
+        /* Text moves down and icon moves up, then return */
+        @keyframes scrollText {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(8px);
+            }
+        }
+
+        @keyframes scrollIcon {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        body {
+            font-family: "Pretendard", sans-serif;
+        }
+
+        .scroll-down button {
+            animation: scrollText 1.2s ease-in-out infinite;
+        }
+
+        .scroll-down .caret {
+            animation: scrollIcon 1.2s ease-in-out infinite;
+        }
+
+        #hero video {
+            -webkit-mask: linear-gradient(180deg, #000000 85%, rgba(0, 0, 0, 0) 100%);
+            mask: linear-gradient(180deg, #000000 85%, rgba(0, 0, 0, 0) 100%);
+        }
+
+        #overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 10000;
+        }
+
+        #overlay .box {
+            align-content: flex-start;
+            align-items: flex-start;
+            background-color: #fff;
+            border-radius: 24px;
+            display: flex;
+            flex: none;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 25px;
+            height: 95%;
+            justify-content: flex-start;
+            left: calc(50% - min(390px, 95.13%) / 2);
+            max-width: 390px;
+            overflow: auto;
+            padding: 20px;
+            position: fixed;
+            top: 10px;
+            width: 95%;
+            z-index: 4;
+        }
+
+        .overlay-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            font-size: 11px;
+            color: #2f2f2f;
+            table-layout: fixed;
+            opacity: 0.7;
+        }
+
+        .overlay-table th,
+        .overlay-table td {
+            border: 1px solid #e0e0e0;
+            padding: 8px;
+            vertical-align: middle;
+        }
+
+        .overlay-table th:first-child,
+        .overlay-table td:first-child {
+            width: 25%;
+            padding-left: 12px;
+        }
+
+        .overlay-table th:nth-child(2),
+        .overlay-table td:nth-child(2) {
+            width: 35%;
+        }
+
+        .overlay-table th:nth-child(3),
+        .overlay-table td:nth-child(3) {
+            width: 40%;
+        }
+
+        .overlay-table th {
+            background: #f7f7f7;
+            font-weight: 500;
+        }
+
+        .overlay-subtable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            font-size: 9px;
+            color: #2f2f2f;
+            opacity: 0.6;
+        }
+
+
+        .overlay-subtable th:first-child,
+        .overlay-subtable td:first-child {
+            width: 20%;
+            padding-left: 12px;
+        }
+
+
+        .overlay-subtable th:nth-child(2),
+        .overlay-subtable td:nth-child(2) {
+            width: 40%;
+        }
+
+        .overlay-subtable th:nth-child(3),
+        .overlay-subtable td:nth-child(3) {
+            width: 40%;
+        }
+
+
+        .overlay-subtable th,
+        .overlay-subtable td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .overlay-subtable th {
+            font-weight: 500;
+        }
+
+        .overlay-table td,
+        .overlay-subtable td {
+            text-align: center;
+        }
+
+        .overlay-footnote {
+            margin-top: 12px;
+            font-size: 8px;
+            color: #2f2f2f;
+            line-height: 1.4em;
+            opacity: 0.6;
+            letter-spacing: -0.04em;
+        }
+    </style>
+</head>
+
+<body class="relative bg-[#0d0d0d]">
+    <!-- Main Content -->
+    <main class="relative bg-[#0d0d0d]">
+        <!-- Hero Section -->
+        <section id="hero" class="h-screen relative flex items-center justify-center">
+            <video class="absolute inset-0 w-full h-full object-cover" src="../videos/main.mp4" autoplay muted loop
+                playsinline></video>
+            <div
+                class="flex flex-col gap-4 items-center scroll-down absolute bottom-[28px] left-1/2 -translate-x-1/2 opacity-60">
+                <button class="font-ibm-plex-mono text-[12px] text-[#5E5E5E]" aria-label="아래로 스크롤">
+                    SCROLL DOWN
+                </button>
+                <div class="caret">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="22" height="22">
+                        <path d="M 2 4.5 L 6 8.5 L 10 4.5" fill="none" stroke="#5E5E5E" stroke-width="0.8"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Header: 로고 및 언어 선택 -->
+        <header class="absolute top-0 left-0 w-full z-20 h-screen">
+            <div class="w-full h-full flex justify-center items-center">
+                <div class="flex flex-col items-center gap-[18px]">
+                    <img src="../images/logo.png" alt="LG PuroTec™ 로고" class="w-[275px] h-auto" draggable="false">
+                    <p class="font-ibm-plex-mono font-[500] text-[14px] text-[#bababa] uppercase">Innovative
+                        Antimicrobial Technology</p>
+                </div>
+                <nav class="language-switcher absolute top-[12px] right-[12px] w-[60px] h-[40px]">
+                    <label for="language-select" class="sr-only">Language select</label>
+
+                    <button
+                        class="cursor-pointer h-full px-2.5 language-button flex items-center gap-2 border border-[#959595] rounded-[10px] bg-white/15 hover:bg-white/50">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="18" height="18"
+                                fill="rgb(255, 255, 255)">
+                                <path
+                                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm87.63,96H175.8c-1.41-28.46-10.27-55.47-25.12-77A88.2,88.2,0,0,1,215.63,120ZM128,215.89c-18.73-20.27-30.09-49-31.77-79.89h63.54C158.09,166.87,146.73,195.62,128,215.89ZM96.23,120c1.68-30.87,13-59.62,31.77-79.89,18.73,20.27,30.09,49,31.77,79.89Zm9.09-77C90.47,64.53,81.61,91.54,80.2,120H40.37A88.2,88.2,0,0,1,105.32,43ZM40.37,136H80.2c1.41,28.46,10.27,55.47,25.12,77A88.2,88.2,0,0,1,40.37,136Zm110.31,77c14.85-21.56,23.71-48.57,25.12-77h39.83A88.2,88.2,0,0,1,150.68,213Z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="caret">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" width="12" height="12">
+                                <path d="M 2 4.5 L 6 8.5 L 10 4.5" fill="none" stroke="rgb(255, 255, 255)"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                    </button>
+                    <div
+                        class="language-dropdown hidden absolute top-full right-0 mt-1 w-[260px] bg-white/15 backdrop-blur-sm border border-[#959595] rounded-[10px] shadow-lg overflow-hidden">
+                        <a href="/"
+                            class="w-full text-left px-4 py-3 hover:bg-white/50 text-[15px] text-white flex items-center gap-2"
+                            data-lang="ko">
+                            Korean
+                        </a>
+                        <a href="/en"
+                            class="w-full text-left px-4 py-3 hover:bg-white/50 text-[15px] text-white flex items-center gap-2"
+                            data-lang="en">
+                            English (United States)
+                        </a>
+                        <a href="/zh-cn"
+                            class="w-full text-left px-4 py-3 hover:bg-white/50 text-[15px] text-white flex items-center gap-2"
+                            data-lang="zh">
+                            Chinese (China)
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="max-w-[400px] mx-auto">
+            <!-- Features Section -->
+            <section id="features"
+                class="flex flex-col items-center justify-center w-full max-w-[400px] h-min overflow-hidden relative bg-[#0d0d0d]">
+                <div class="w-full flex flex-col gap-[44px]" style="padding: 132px 24px 64px;">
+                    <div class="w-full flex flex-col gap-[16px]">
+                        <div class="w-full flex flex-col gap-[21px]">
+                            <h2
+                                class="w-full text-left font-ibm-plex-mono text-[14px] font-[500] leading-[1.3em] text-[#4e4e4e] uppercase animate-on-scroll">
+                                Innovative<br />Antimicrobial Technology</h2>
+
+                            <p
+                                class="w-full text-left font-pretendard text-[30px] tracking-[-0.04em] leading-[1.3em] text-white animate-on-scroll">
+                                LG电子以30年的技术实力<br>研发了无机抗菌添加剂<br>
+                                <img src="../images/logo.png" class="w-[191px] h-auto mt-[8px] animate-on-scroll"
+                                    alt="LG PuroTec™ logo">
+                            </p>
+
+                        </div>
+                        <div class="w-full min-h-[1px] bg-[#2e2e2e] mt-[12px]"></div>
+                        <p class="font-pretendard text-[#a6a6a6] tracking-[-0.03em] leading-[1.5em] animate-on-scroll">
+                            LG PuroTec™是物理化学性能稳定的无机玻璃材料，<br>
+                            少量添加于产品中, 便能达到清洁和抗菌效果。
+                    </div>
+                    <img src="../images/values.png" class="w-full h-auto animate-on-scroll" alt="LG PuroTec™"
+                        draggable="false">
+                </div>
+                <div class="w-full flex flex-col gap-[44px]" style="padding: 103px 24px 181px;">
+                    <div class="w-full flex flex-col gap-[16px]">
+                        <div class="w-full flex flex-col gap-[21px]">
+                            <h2
+                                class="w-full text-left font-ibm-plex-mono text-[14px] font-[500] leading-[1.3em] text-[#4e4e4e] uppercase animate-on-scroll">
+                                The next generation of<br>
+                                GLASS-BASED ANTIMICROBIALS
+                            </h2>
+
+                            <p
+                                class="w-full text-left font-pretendard text-[30px] tracking-[-0.04em] leading-[1.3em] text-white animate-on-scroll">
+                                用玻璃制造的<br>
+                                新一代抗菌添加剂。
+                            </p>
+
+                        </div>
+                        <div class="w-full min-h-[1px] bg-[#2e2e2e] mt-[12px]"></div>
+                        <p class="font-pretendard text-[#a6a6a6] tracking-[-0.03em] leading-[1.5em] animate-on-scroll">
+                            以LG电子的设计研发技术来制造的 LG PuroTec™,<br>
+                            能够有效地抑制微生物的生长。
+                        </p>
+                    </div>
+                    <img src="../images/value2-cn.png" class="w-full h-auto animate-on-scroll" alt="LG PuroTec™"
+                        draggable="false">
+                </div>
+            </section>
+
+            <!-- Special Offer Cards -->
+            <section id="offers"
+                class="flex flex-col items-center justify-center w-full max-w-[400px] h-min overflow-hidden relative bg-[#0d0d0d]">
+                <div class="w-full flex flex-col gap-[16px]" style="padding: 56px 20px 120px;">
+                    <h2 class="font-pretendard text-[28px] tracking-[-0.04em] leading-[1.3em] text-[#e0e0e0]">Special
+                        Values<br />for Your Product</h2>
+                    <div class="cards offer-cards flex flex-col gap-[30px]">
+                        <article class="card animate-card bg-[#dfeeed] rounded-[24px] p-[15px] pb-[54px] flex flex-col">
+                            <div class="w-full h-[280px] aspect-video rounded-[16px] overflow-hidden">
+                                <video src="../videos/product1.mp4" muted loop playsinline autoplay
+                                    class="w-full h-[280px] object-cover"></video>
+                            </div>
+                            <div class="flex flex-row items-start justify-between gap-[8px] pt-[22px] pb-[23px]">
+                                <h3
+                                    class="font-pretendard font-[300] text-[24px] tracking-[0.02em] leading-[1.1em] text-[#1f1f1f]">
+                                    Powerful<br>Antimicrobial Protection</h3>
+                                <div
+                                    class="flex items-center justify-center w-[32px] h-[32px] rounded-[26px] border border-[#222222] overflow-hidden">
+                                    <span
+                                        class="font-pretendard font-[300] text-[20px] leading-[1em] text-[#1f1f1f]">1</span>
+                                </div>
+                            </div>
+                            <div class="w-full h-[1px] bg-[#a6bfbd] mb-[12px]"></div>
+                            <p class="font-pretendard text-[#1f1f1f] tracking-[-0.03em] leading-[1.5em] opacity-60">强力保护产品<br>防止微生物污染。</p>
+                        </article>
+                        <article class="card animate-card bg-[#e7eedf] rounded-[24px] p-[15px] pb-[54px] flex flex-col">
+                            <div class="w-full h-[280px] aspect-video rounded-[16px] overflow-hidden">
+                                <video src="../videos/product2.mp4" muted loop playsinline autoplay
+                                    class="w-full h-[280px] object-cover"></video>
+                            </div>
+                            <div class="flex flex-row items-start justify-between gap-[8px] pt-[22px] pb-[23px]">
+                                <h3
+                                    class="font-pretendard font-[300] text-[24px] tracking-[0.02em] leading-[1.1em] text-[#1f1f1f]">
+                                    Long-lasting<br>Performance
+                                </h3>
+                                <div
+                                    class="flex items-center justify-center w-[32px] h-[32px] rounded-[26px] border border-[#222222] overflow-hidden">
+                                    <span
+                                        class="font-pretendard font-[300] text-[20px] leading-[1em] text-[#1f1f1f]">2</span>
+                                </div>
+                            </div>
+                            <div class="w-full h-[1px] bg-[#a6bfbd] mb-[12px]"></div>
+                            <p class="font-pretendard text-[#1f1f1f] tracking-[-0.03em] leading-[1.5em] opacity-60">
+                                惊人的<br>
+                                抗菌持续性。
+                            </p>
+                        </article>
+                        <article class="card animate-card bg-[#eeebdf] rounded-[24px] p-[15px] pb-[54px] flex flex-col">
+                            <div class="w-full h-[280px] aspect-video rounded-[16px] overflow-hidden">
+                                <video src="../videos/product3.mp4" muted loop playsinline autoplay
+                                    class="w-full h-[280px] object-cover"></video>
+                            </div>
+                            <div class="flex flex-row items-start justify-between gap-[8px] pt-[22px] pb-[23px]">
+                                <h3
+                                    class="font-pretendard font-[300] text-[24px] tracking-[0.02em] leading-[1.1em] text-[#1f1f1f]">
+                                    Stability<br>for Discoloration
+                                </h3>
+                                <div
+                                    class="flex items-center justify-center w-[32px] h-[32px] rounded-[26px] border border-[#222222] overflow-hidden">
+                                    <span
+                                        class="font-pretendard font-[300] text-[20px] leading-[1em] text-[#1f1f1f]">3</span>
+                                </div>
+                            </div>
+                            <div class="w-full h-[1px] bg-[#a6bfbd] mb-[12px]"></div>
+                            <p class="font-pretendard text-[#1f1f1f] tracking-[-0.03em] leading-[1.5em] opacity-60">
+                                以变色稳定性,<br>
+                                维持产品价值。
+                            </p>
+                        </article>
+                    </div>
+            </section>
+
+            <style>
+                .animate-card {
+                    opacity: 0.5;
+                    transform: scale(0.9);
+                    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+                }
+
+                .animate-card.visible {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const cards = document.querySelectorAll('.animate-card');
+
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('visible');
+                            }
+                        });
+                    }, {
+                        threshold: 0.5,
+                        rootMargin: '-20% 0px'
+                    });
+
+                    cards.forEach(card => {
+                        observer.observe(card);
+                    });
+                });
+            </script>
+
+            <style>
+                .animate-on-scroll {
+                    opacity: 0;
+                    transform: translateY(50px);
+                    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+                }
+
+                .animate-on-scroll.visible {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            </style>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('visible');
+                            } else {
+                                entry.target.classList.remove('visible');
+                            }
+                        });
+                    }, {
+                        threshold: 0.1,
+                        rootMargin: '0px'
+                    });
+
+                    animatedElements.forEach(element => {
+                        observer.observe(element);
+                    });
+                });
+            </script>
+
+        </div>
+
+        <section class="w-full bg-white">
+            <div class="max-w-[400px] mx-auto">
+                <div
+                    class="w-full flex flex-col items-start justify-center gap-[10px] h-min overflow-hidden relative pt-[128px] px-4 bg-white">
+                    <div class="w-full flex flex-col gap-[36px]">
+                        <h2 class="font-ibm-plex-mono text-[14px] text-[#bababa] uppercase">
+                            Our Values
+                        </h2>
+                        <div class="flex flex-col gap-[12px]">
+                            <p class="font-pretendard text-[26px] tracking-[-0.04em] leading-[1.4em] text-[#0d0d0d]">
+                                LG PuroTec™<br>
+                                提供的价值。
+                            </p>
+                            <p class="font-pretendard text-[16px] text-[#0d0d0d] opacity-70">
+                                通过抗菌添加剂,<br>
+                                提高产品的价值。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="w-full flex flex-col items-start justify-center h-min overflow-hidden relative pt-[50px] pb-[72px] px-4 bg-white">
+                    <h2 class="font-ibm-plex-mono text-[14px] text-[#bababa] uppercase pb-[16px]">
+                        Benefits for your product
+                    </h2>
+                    <div class="w-full flex flex-col gap-[16px]">
+                        <article class="w-full flex flex-col gap-[16px] bg-black rounded-[24px] px-[56px] py-[64px]">
+                            <div class="flex flex-col gap-[12px]">
+                                <div
+                                    class="border border-[rgba(74,159,170,0.5)] rounded-[25px] px-[13px] py-[6px] w-fit">
+                                    <p class="font-ibm-plex-mono text-[12px] text-[#4A9FAA] font-medium">VALUE 1</p>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h6 class="text-white text-[20px] font-medium">强力保护产品,<br>
+                                        防止微生物污染。</h6>
+                                </div>
+                            </div>
+
+                            <div class="w-[240px] h-[240px] rounded-[20px] overflow-hidden">
+                                <video src="../videos/value1.mp4" autoplay loop preload="auto" muted playsinline
+                                    class="w-full h-full object-cover"></video>
+                            </div>
+
+                            <div class="flex flex-col gap-[20px]">
+                                <div class="opacity-70">
+                                    <p class="text-white text-[16px]">以卓越的抗菌产品,<br>
+                                        获得客户不同凡响的认可。</p>
+                                </div>
+                                <div class="value-more w-full border border-white rounded-[24px] px-4 py-2 cursor-pointer"
+                                    data-value="1">
+                                    <p class="text-white text-center">继续了解。</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="w-full flex flex-col gap-[16px] bg-black rounded-[24px] px-[56px] py-[64px]">
+                            <div class="flex flex-col gap-[12px]">
+                                <div
+                                    class="border border-[rgba(107,128,82,0.5)] rounded-[25px] px-[13px] py-[6px] w-fit">
+                                    <p class="font-ibm-plex-mono text-[12px] text-[#6B8052] font-medium">VALUE 2</p>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h6 class="text-white text-[20px] font-medium">惊人的<br>
+                                        抗菌持续性。</h6>
+                                </div>
+                            </div>
+
+                            <div class="w-[240px] h-[240px] rounded-[20px] overflow-hidden">
+                                <video src="../videos/value2.mp4" autoplay loop preload="auto" muted playsinline
+                                    class="w-full h-full object-cover"></video>
+                            </div>
+
+                            <div class="flex flex-col gap-[20px]">
+                                <div class="opacity-70">
+                                    <p class="text-white text-[16px]">负责日常保洁与卫生,<br>
+                                        树立以客户为中心的品牌形象。</p>
+                                </div>
+                                <div class="value-more w-full border border-white rounded-[24px] px-4 py-2 cursor-pointer"
+                                    data-value="2">
+                                    <p class="text-white text-center">继续了解。</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="w-full flex flex-col gap-[16px] bg-black rounded-[24px] px-[56px] py-[64px]">
+                            <div class="flex flex-col gap-[12px]">
+                                <div
+                                    class="border border-[rgba(153,144,108,0.5)] rounded-[25px] px-[13px] py-[6px] w-fit">
+                                    <p class="font-ibm-plex-mono text-[12px] text-[#99906C] font-medium">VALUE 3</p>
+                                </div>
+                                <div class="flex flex-col">
+                                    <h6 class="text-white text-[20px] font-medium">以变色稳定性,<br>
+                                        维持产品价值。</h6>
+                                </div>
+                            </div>
+
+                            <div class="w-[240px] h-[240px] rounded-[20px] overflow-hidden">
+                                <video src="../videos/value3.mp4" autoplay loop preload="auto" muted playsinline
+                                    class="w-full h-full object-cover"></video>
+                            </div>
+
+                            <div class="flex flex-col gap-[20px]">
+                                <div class="opacity-70">
+                                    <p class="text-white text-[16px]">减少因产品变色引起的客户抱怨,<br>
+                                        节约产品维护/维修费用。</p>
+                                </div>
+                                <div class="value-more w-full border border-white rounded-[24px] px-4 py-2 cursor-pointer"
+                                    data-value="3">
+                                    <p class="text-white text-center">继续了解。</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gradient-to-b from-[#010202] via-[rgba(40,36,32,1)] to-[rgba(107,98,86,1)]">
+            <video src="../videos/animation.mp4" autoplay loop preload="auto" muted playsinline
+                class="w-full object-cover min-h-[800px]"></video>
+        </section>
+
+        <div class="max-w-[400px] mx-auto">
+            <section class="w-full h-[725px] relative overflow-hidden" id="storySection">
+                <img src="../images/story.png" alt="story"
+                    class="w-full h-[725px] object-cover transition-all duration-300" id="storyImage">
+                <!-- 위쪽 딤 그라디언트 -->
+                <div class="absolute inset-0 pointer-events-none z-10"
+                    style="background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(13,13,13, 0.6) 160%);"></div>
+                <!-- 아래쪽 딤 그라디언트 -->
+                <div class="absolute inset-0 pointer-events-none z-10"
+                    style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(13, 13, 13) 100%);"></div>
+                <div
+                    class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-between z-20 p-[40px]">
+                    <p class="font-pretendard font-medium text-[22px] tracking-[-0.04em] leading-[1.3em] text-center text-white">
+                        引领革新的<br>LG Advanced Materials故事。
+                    </p>
+                    <div class="flex items-center justify-center relative w-full" style="height: 150px;">
+                        <!-- 왼쪽 작은 원 -->
+                        <div class="w-[32px] h-[32px] rounded-full border border-white flex items-center justify-center overflow-hidden transition-all duration-1000 absolute left-0"
+                            id="leftCircle">
+                            <div class="w-[16px] h-[16px] rounded-full bg-white"></div>
+                        </div>
+
+                        <!-- 가운데 큰 원 -->
+                        <div class="w-[150px] h-[150px] rounded-full bg-white flex items-center justify-center transition-all duration-1000 mx-auto"
+                            id="centerCircle">
+                            <p class="font-ibm-plex-mono text-[14px] text-black text-center leading-[1.2em]">
+                                LG<br>Advanced<br>Materials<br>Way
+                            </p>
+                        </div>
+
+                        <!-- 오른쪽 작은 원 -->
+                        <div class="w-[32px] h-[32px] rounded-full border border-white flex items-center justify-center overflow-hidden transition-all duration-1000 absolute right-0"
+                            id="rightCircle">
+                            <div class="w-[16px] h-[16px] rounded-full bg-white"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div
+                class="bg-[#0d0d0d] sticky top-0 h-[800px] flex flex-col items-center justify-start p-[140px_20px] overflow-hidden z-[1]">
+                <div class="text-container">
+                    <p class="font-pretendard text-[23px] font-[500] tracking-[-0.04em] leading-[1.4em] text-[#3d3d3d]">
+                        <span class="line">LG PuroTec™</span><br>
+                        <span class="line">凭借玻璃的无限潜能,</span><br>
+                        <span class="line">规划人类与自然向往的远景。</span><br>
+                        <span class="line">与LG电子 Advanced Materials</span><br>
+                        <span class="line">合作会创造更好的未来。</span><br><br>
+                        <span class="line">与LG Advanced Materials</span><br>
+                        <span class="line">一同参与创造美好未来的旅程吧。</span>
+                    </p>
+                </div>
+            </div>
+
+            <style>
+                .line {
+                    display: inline-block;
+                    transition: color 0.3s ease;
+                }
+            </style>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const lines = document.querySelectorAll('.line');
+                    const container = document.querySelector('.text-container');
+                    let lastScrollTop = 0;
+
+                    function updateTextColor() {
+                        const containerRect = container.getBoundingClientRect();
+                        const windowHeight = window.innerHeight;
+                        const viewportCenter = windowHeight / 2;
+                        const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                        lines.forEach((line, index) => {
+                            const lineRect = line.getBoundingClientRect();
+                            const lineCenter = lineRect.top + lineRect.height / 2;
+                            const distanceFromCenter = Math.abs(lineCenter - viewportCenter);
+
+                            if (currentScrollTop > lastScrollTop) {
+                                // 아래로 스크롤
+                                if (distanceFromCenter < 100) {
+                                    line.style.color = '#ffffff';
+                                }
+                            } else {
+                                // 위로 스크롤
+                                if (distanceFromCenter < 100) {
+                                    line.style.color = '#3d3d3d';
+                                }
+                            }
+                        });
+
+                        lastScrollTop = currentScrollTop;
+                    }
+
+                    window.addEventListener('scroll', updateTextColor);
+                    updateTextColor();
+                });
+            </script>
+        </div>
+        <div class="max-w-[400px] mx-auto">
+            <div class="w-full flex flex-col items-center justify-center gap-[56px] bg-[#0d0d0d] p-[96px_20px_180px]">
+                <!-- Card 1 -->
+                <div class="flex flex-col items-center gap-[32px] w-[342px]">
+                    <div
+                        class="flex flex-col items-center gap-[44px] h-[500px] w-full bg-[#b8b8b8] rounded-[40px] px-[24px] py-[32px] relative overflow-hidden">
+                        <div
+                            class="absolute top-[-40px] left-[calc(50%-194px)] w-[388px] h-[580px] overflow-hidden z-[0]">
+                            <img src="../images/footer1.png" alt="" class="w-full h-full object-cover rounded-[inherit]">
+                        </div>
+                        <div class="flex flex-col items-center relative gap-[24px] flex-1" style="z-index: 3;">
+                            <div class="flex flex-col items-center gap-[10px] flex-1 justify-center">
+                                <div class="flex items-center justify-center w-[32px] h-[32px] bg-white rounded-[26px]">
+                                    <h2 class="text-[20px] text-[#3a3a38] font-pretendard">1</h2>
+                                </div>
+                                <h6 class="text-[22px] text-white font-pretendard font-medium text-center">材料、因小见大</h6>
+                            </div>
+                            <p
+                                class="text-[#858585] text-center font-pretendard font-medium leading-[1.5] tracking-[-0.03em] relative z-20">
+                                我们的日常是由小小的材料世界组成的<br>
+                                大世界。<br>
+                                为大家的舒适生活,<br>
+                                我们致力于研究肉眼无法识别的材料价值。
+                            </p>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full h-[224px]"
+                            style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);z-index: 2;">
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="flex flex-col items-center gap-[32px] w-[342px]">
+                    <div
+                        class="flex flex-col items-center gap-[44px] h-[500px] w-full bg-[#b8b8b8] rounded-[40px] px-[24px] py-[32px] relative overflow-hidden">
+                        <div
+                            class="absolute top-[-40px] left-[calc(50%-194px)] w-[388px] h-[580px] overflow-hidden z-[0]">
+                            <img src="../images/footer2.png" alt="" class="w-full h-full object-cover rounded-[inherit]">
+                        </div>
+                        <div class="flex flex-col items-center relative gap-[24px] flex-1" style="z-index: 3;">
+                            <div class="flex flex-col items-center gap-[10px] flex-1 justify-center">
+                                <div class="flex items-center justify-center w-[32px] h-[32px] bg-white rounded-[26px]">
+                                    <h2 class="text-[20px] text-[#3a3a38] font-pretendard">2</h2>
+                                </div>
+                                <h6 class="text-[22px] text-white font-pretendard font-medium text-center">
+                                    钻研精神引领的全新解决方案
+                                </h6>
+                            </div>
+                            <p
+                                class="text-[#858585] text-center font-pretendard font-medium leading-[1.5] tracking-[-0.03em] relative z-20">
+                                我们的灵感源于自然,<br>归于宁静的"玻璃"开始。<br>在此刻, 为人们更美好的生活创新材料,<br>扩大玻璃的无线潜力。
+                            </p>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full h-[224px]"
+                            style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);z-index: 2;">
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="flex flex-col items-center gap-[32px] w-[342px]">
+                    <div
+                        class="flex flex-col items-center gap-[44px] h-[500px] w-full bg-[#b8b8b8] rounded-[40px] px-[24px] py-[32px] relative overflow-hidden">
+                        <div
+                            class="absolute top-[-40px] left-[calc(50%-194px)] w-[388px] h-[580px] overflow-hidden z-[0]">
+                            <img src="../images/footer3.png" alt="" class="w-full h-full object-cover rounded-[inherit]">
+                        </div>
+                        <div class="flex flex-col items-center relative gap-[24px] flex-1" style="z-index: 3;">
+                            <div class="flex flex-col items-center gap-[10px] flex-1 justify-center">
+                                <div class="flex items-center justify-center w-[32px] h-[32px] bg-white rounded-[26px]">
+                                    <h2 class="text-[20px] text-[#3a3a38] font-pretendard">3</h2>
+                                </div>
+                                <h6 class="text-[22px] text-white font-pretendard font-medium text-center">
+                                    循环的旅程
+                                </h6>
+                            </div>
+                            <p
+                                class="text-[#505050] text-center font-pretendard font-medium leading-[1.5] tracking-[-0.03em] relative z-20">
+                                自然到创新, 创新到人类, 再从人类到自然。<br>
+                                我们坚信地球的安宁就是人类的安宁,<br>
+                                我们追求的创新就是向往人类和自然。
+                            </p>
+                        </div>
+                        <div class="absolute bottom-0 left-0 w-full h-[224px]"
+                            style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);z-index: 2;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Lightbox Overlay -->
+    <div id="overlay">
+        <div class="box">
+            <div id="content1" class="w-full flex flex-col gap-[40px]">
+                <div class="w-full flex flex-col gap-[25px]">
+                    <div class="w-full flex flex-col gap-[10px]">
+                        <div class="w-full flex items-center justify-between h-[51px]">
+                            <p
+                                class="font-pretendard text-[20px] font-medium tracking-[-0.04em] leading-[130%] text-[#0d0d0d]">
+                                详细了解保护力。
+                            </p>
+                            <button
+                                class="w-[32px] h-[32px] rounded-full border border-[#0d0d0d] flex items-center justify-center cursor-pointer"
+                                aria-label="닫기">
+                                <svg width="12" height="12" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L17 17M17 1L1 17" stroke="#0d0d0d" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="font-pretendard text-[#2f2f2f]">
+                            LG PuroTec™抑制有害微生物的滋生,<br>
+                            从而保护产品，帮助产品保持稳定的品质。<br><br>
+
+                            应用LG PuroTec™为产品添加卓越的抗菌性能,<br>
+                            获得市场不同凡响的认可
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <p
+                        class="font-pretendard text-[9px] tracking-[-0.01em] leading-[1.5em] text-left text-[#302F2F] font-medium">
+                        验证LG PuroTec™抗菌性能的测试结果 (LG PuroTec™ 1% 添加)
+                    </p>
+                    <table class="overlay-table">
+                        <thead>
+                            <tr>
+                                <th>Material</th>
+                                <th>抗菌性能<br>[大肠菌、 金黄色葡萄球菌2种]</th>
+                                <th>抗霉菌</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PP</td>
+                                <td rowspan="11" class="text-center leading-[120%]">99.99%<br>抗菌活性值4.0<br><br><small>*Test Organism: Escherichia coli /
+                                        Staphylococcus aureus<br>*试验法: JIS Z 1801</small></td>
+                                <td rowspan="11" class="text-center leading-[120%]">Lv.0<br>未滋生霉菌<br><br><small>*Test Organism:<br>Mixed fungus suspension<br>(Aspergillus brasiliensis, Penicillium funiculosum, Chaetomium globosum,
+                                        Trichoderma virens, Aureobasidium pullulans)<br>*试验法: ASTM G 21</small></td>
+                            </tr>
+                            <tr>
+                                <td>PS</td>
+                            </tr>
+                            <tr>
+                                <td>ABS</td>
+                            </tr>
+                            <tr>
+                                <td>PVC</td>
+                            </tr>
+                            <tr>
+                                <td>TPE</td>
+                            </tr>
+                            <tr>
+                                <td>TPV</td>
+                            </tr>
+                            <tr>
+                                <td>PE</td>
+                            </tr>
+                            <tr>
+                                <td>EPDM</td>
+                            </tr>
+                            <tr>
+                                <td>Silicon</td>
+                            </tr>
+                            <tr>
+                                <td>PA</td>
+                            </tr>
+                            <tr>
+                                <td>Fiber</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="overlay-subtable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>抗菌性能试验</th>
+                                <th>抗霉菌性能试验</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>试验时间</td>
+                                <td>21 年 12 月</td>
+                                <td>22 年 1 月</td>
+                            </tr>
+                            <tr>
+                                <td>试验地点</td>
+                                <td>FITI 究院试验研</td>
+                                <td>FITI 究院试验研</td>
+                            </tr>
+                            <tr>
+                                <td>试验材料</td>
+                                <td>添加PuroTecTM AAP 1% 树脂</td>
+                                <td>添加PuroTecTM AAP 1% 树脂</td>
+                            </tr>
+                            <tr>
+                                <td>试验条件</td>
+                                <td>5cm x 5cm 试片, 35°C,<br>24 小时暴露菌液</td>
+                                <td>5cm x 5cm 试片, 28°C,<br>28 日暴露菌液</td>
+                            </tr>
+                            <tr>
+                                <td>试验法</td>
+                                <td>JIS Z 2801</td>
+                                <td>ASTM G 21</td>
+                            </tr>
+                            <tr>
+                                <td>试验结果</td>
+                                <td>抗菌活性值 4.0 以上<br>( 范围: 最小 0~ 最大 6)</td>
+                                <td>抗菌等霉级 Lv. 0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="overlay-footnote">
+                        * 以上结果为实验室环境及条件测试的结果，与实际使用环境不同有所差异。<br>
+                        * 抗菌活性值: 一般以 JIS Z 2801 规格评价。JIS Z 2801 是测试，添加抗菌物质的塑料、橡胶等材料抗菌力的试验，判断为活性值越高抗菌效果越强。<br>
+                        * 抗霉菌性能试验: 抗霉菌性能试验以 ASTM G21 规格评价。ASTM G21 是应用于塑料、橡胶等材料抗菌性能的试验法，判断为等级值越低，抗霉菌效果越强
+                    </p>
+                </div>
+            </div>
+
+            <div id="content2" class="w-full flex flex-col gap-[40px]">
+                <div class="w-full flex flex-col gap-[25px]">
+                    <div class="w-full flex flex-col gap-[10px]">
+                        <div class="w-full flex items-center justify-between h-[51px]">
+                            <p
+                                class="font-pretendard text-[20px] font-medium tracking-[-0.04em] leading-[130%] text-[#0d0d0d]">
+                                详细了解抗菌性能。
+                            </p>
+                            <button
+                                class="w-[32px] h-[32px] rounded-full border border-[#0d0d0d] flex items-center justify-center cursor-pointer"
+                                aria-label="닫기">
+                                <svg width="12" height="12" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L17 17M17 1L1 17" stroke="#0d0d0d" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="font-pretendard text-[#2f2f2f]">
+                            把应用LG PuroTec™的产品,<br>
+                            放入到比SIAA(日本抗菌产品技术协会)<br>
+                            耐水性测试苛刻6倍的试验中,<br>
+                            发现依然维持抗菌性能。<br><br>
+
+                            对卫生的需求日益增长的情形下,<br>
+                            用LG PuroTec™负责贵公司客户的日常保洁,<br>
+                            并树立以客户为中心的品牌形象。
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <img src="../images/chart-cn.png" alt="" class="w-full">
+                    <table class="overlay-subtable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>抗菌性能试验</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>试验时间</td>
+                                <td>21 年 3 月</td>
+                            </tr>
+                            <tr>
+                                <td>试验地点</td>
+                                <td>FITI 究院试验研</td>
+                            </tr>
+                            <tr>
+                                <td>试验材料</td>
+                                <td>添加LG PuroTecTM AAP 1% 脂树 (HIPS)</td>
+                            </tr>
+                            <tr>
+                                <td>试验条件</td>
+                                <td>5cm x 5cm 试片, 35°C, 菌液暴露 24 小时</td>
+                            </tr>
+                            <tr>
+                                <td>试验法</td>
+                                <td>JIS Z 2801</td>
+                            </tr>
+                            <tr>
+                                <td>试验结果</td>
+                                <td>抗菌活性值 4.0 以上 ( 范围: 最少 0~ 最大 6)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="overlay-footnote">
+                        * 以上结果为实验室环境及条件测试的结果，与实际使用环境不同有所差异。<br>
+                        * JIS Z 2801 是测试添加抗菌物质的塑料，橡胶等材料抗菌力的试验，判断为活性值越高抗菌效果越强。
+                    </p>
+                </div>
+            </div>
+
+            <div id="content3" class="w-full flex flex-col gap-[40px]">
+                <div class="w-full flex flex-col gap-[25px]">
+                    <div class="w-full flex flex-col gap-[10px]">
+                        <div class="w-full flex items-center justify-between h-[51px]">
+                            <p
+                                class="font-pretendard text-[20px] font-medium tracking-[-0.04em] leading-[130%] text-[#0d0d0d]">
+                                了解变色稳定性。
+                            </p>
+                            <button
+                                class="w-[32px] h-[32px] rounded-full border border-[#0d0d0d] flex items-center justify-center cursor-pointer"
+                                aria-label="닫기">
+                                <svg width="12" height="12" viewBox="0 0 18 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L17 17M17 1L1 17" stroke="#0d0d0d" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="font-pretendard text-[#2f2f2f]">
+                            LG PuroTec™面临紫外线、<br>
+                            热度、湿度等对环境产生影响的要素时,<br>
+                            也显现了超强的耐久性。<br><br>
+
+                            卓越的变色稳定性使产品<br>
+                            维持最初的品质并延长产品寿命,<br>
+                            从而减少客户抱怨。<br>
+                            最终可节约产品维护费用
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <img src="../images/chart2-cn.png" alt="" class="w-full">
+                    <p class="overlay-footnote">
+                        *以LG电子司内试验结果为基准，以便容易理解而演示的对比图。<br>
+                        *△E (色差):国际照明委员会 CIE规定颜色空间里两个颜色之间的距离 / △b*: Yellow变化的数值化<br>
+                        *△E 1.5 之下: 肉眼观察时变化认知水准低 (National Bureau of Standards, 美国 国立标准技术研究所)<br>
+                        *美国 国立标准技术研究所: 为广泛技术提供标准的美国商务部下属的非监管机构
+                    </p>
+                    <table class="overlay-subtable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>UV曝光测试</th>
+                                <th>高温度/高湿度环境测试</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>试验时间</td>
+                                <td>20 年 12 月</td>
+                                <td>24 年 7 月</td>
+                            </tr>
+                            <tr>
+                                <td>试验机关</td>
+                                <td>LG电子公司内进行试验</td>
+                                <td>LG电子公司内进行试验</td>
+                            </tr>
+                            <tr>
+                                <td>试验对象</td>
+                                <td>ABS(Natural color)<br>里添加1% PuroTec™ AAP</td>
+                                <td>PP(Natural color)<br>里添加1% PuroTec™ AAP</td>
+                            </tr>
+                            <tr>
+                                <td>试验条件</td>
+                                <td>UV Lamp (A/B), 20cm 间距,<br>暴光72小时</td>
+                                <td>70°C / 90 Rh%</td>
+                            </tr>
+                            <tr>
+                                <td>试验方法</td>
+                                <td>评价UV曝光前/后(72小时)<br>的色差(ΔE, Δb)</td>
+                                <td>评价高温/高湿度环境 暴露前/后<br>(24小时, 168小时)</td>
+                            </tr>
+                            <tr>
+                                <td>试验结果</td>
+                                <td>色差值(△E, △b)<br>标记在上表里</td>
+                                <td>色差值(△E, △b)<br>标记在上表里</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="overlay-footnote">
+                        *UV曝光测试和高温/高湿度环境测试结果，根据试验环境可能有所不同。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        // 이미지와 원형 모두 등장 시 1회만 애니메이션 재생
+        document.addEventListener('DOMContentLoaded', function () {
+            const storySection = document.getElementById('storySection');
+            const storyImage = document.getElementById('storyImage');
+            const leftCircle = document.getElementById('leftCircle');
+            const centerCircle = document.getElementById('centerCircle');
+            const rightCircle = document.getElementById('rightCircle');
+
+            // 원형 애니메이션 1회만 실행
+            function animateCirclesOnce() {
+                setTimeout(() => {
+                    centerCircle.style.opacity = '1';
+                    centerCircle.style.transform = 'scale(1)';
+                }, 300);
+
+                setTimeout(() => {
+                    leftCircle.style.opacity = '1';
+                    rightCircle.style.opacity = '1';
+                    leftCircle.style.transform = 'translateX(0px)';
+                    rightCircle.style.transform = 'translateX(0px)';
+                }, 600);
+            }
+
+            // 이미지 애니메이션 1회만 실행
+            function animateImageOnce() {
+                storyImage.style.transition = 'opacity 1.2s cubic-bezier(0.4,0,0.2,1), transform 1.2s cubic-bezier(0.4,0,0.2,1)';
+                storyImage.style.opacity = '1';
+                storyImage.style.transform = 'scale(1)';
+            }
+
+            // 초기 상태
+            function setInitialState() {
+                storyImage.style.opacity = '0';
+                storyImage.style.transform = 'scale(1.5)';
+                centerCircle.style.opacity = '0';
+                centerCircle.style.transform = 'scale(0.5)';
+                leftCircle.style.opacity = '0';
+                rightCircle.style.opacity = '0';
+                leftCircle.style.transform = 'translateX(100px)';
+                rightCircle.style.transform = 'translateX(-100px)';
+            }
+            setInitialState();
+
+            // IntersectionObserver로 이미지와 원형 모두 1회만 트리거
+            let played = false;
+            const observer = new window.IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !played) {
+                        played = true;
+                        animateImageOnce();
+                        animateCirclesOnce();
+                        obs.disconnect();
+                    }
+                });
+            }, {
+                threshold: 0.3
+            });
+            observer.observe(storySection);
+        });
+    </script>
+    <section class="w-full h-[100vh] relative flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 w-[115%] h-[115%] -top-[59px] left-1/2 -translate-x-1/2">
+            <video src="../videos/footer_video.mp4" autoplay loop preload="auto" muted playsinline
+                class="w-full h-full object-cover"></video>
+        </div>
+        <div class="relative z-10 flex flex-col items-center gap-10">
+            <div class="flex flex-col items-center gap-5">
+                <h1
+                    class="text-[38px] text-[#E0E0E0] text-center font-pretendard font-[200] leading-[1.2em] tracking-[-0.01em]">
+                    Step into the<br>
+                    Journey to<br>
+                    Upgrade<br>
+                    Product Value
+                </h1>
+                <p class="text-[#A6A6A6] text-center font-pretendard font-medium tracking-[-0.03em] leading-[1.5em]">
+                    请相会能与贵公司同舟共济的LG PuroTec™吧。
+                </p>
+            </div>
+            <div class="flex flex-col items-center gap-4">
+                <a href="https://www.lg.com/global/business/inquiry-to-buy" target="_blank" rel="noopener"
+                    class="flex items-center justify-center w-[240px] h-[45px] bg-white text-[#202020] font-pretendard font-semibold tracking-[-0.03em] leading-[1.5em] rounded-[24px] cursor-pointer overflow-hidden relative z-[1]">
+                    采购咨询服务
+                </a>
+                <a href="mailto:advancedmaterials@lge.com" target="_blank" rel="noopener"
+                    class="flex items-center justify-center w-[240px] h-[45px] border border-white text-white font-pretendard font-semibold tracking-[-0.03em] leading-[1.5em] rounded-[24px] cursor-pointer overflow-hidden relative z-[1]">
+                    产品咨询服务
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="flex flex-col items-center justify-center bg-[#0d0d0d] w-full p-[180px_32px_48px_30px] gap-3">
+        <div class="w-[111px] h-[14px] opacity-30">
+            <img src="../images/footer_logo.png" alt="LG PuroTec™ 로고" class="w-full h-full object-contain">
+        </div>
+        <h1
+            class="font-pretendard text-[14px] text-white text-center tracking-[-0.04em] leading-[1.4em] opacity-40">
+            LG PuroTec™ ⓒ 2024 All rights reserved.
+        </h1>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Toggle native select visibility on button click
+            $('.language-button').on('click', function (e) {
+                e.preventDefault();
+                $('.language-dropdown').toggleClass('hidden');
+            });
+            $('.language-dropdown a').on('click', function (e) {
+                e.preventDefault();
+                window.location.href = $(this).attr('href');
+            });
+            // Hide select if clicking outside the switcher
+            $(document).on('click', function (e) {
+                if (!$(e.target).closest('.language-switcher').length) {
+                    $('#language-select').addClass('hidden');
+                }
+            });
+
+            $('.value-more').on('click', function (e) {
+                e.preventDefault();
+                const id = $(this).data('value');
+                $('#content1').hide();
+                $('#content2').hide();
+                $('#content3').hide();
+                
+                $('#content' + id).show();
+                $('#overlay').show();
+                $('body').css('overflow', 'hidden');
+                $('.box').scrollTop(0);
+            });
+            $('#overlay').on('click', function (e) {
+                if ($(e.target).is('#overlay')) {
+                    $('#overlay').hide();
+                    $('body').css('overflow', 'auto');
+                }
+            });
+
+            $('.box button[aria-label="닫기"]').on('click', function () {
+                $('#overlay').hide();
+                $('body').css('overflow', 'auto');
+            });
+        });
+    </script>
+</body>
+
+</html>
