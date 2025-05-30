@@ -3,4 +3,5 @@
     --font-ibm-plex-mono: "IBM Plex Mono", monospace;
     --font-inter: "Inter", sans-serif;
     --font-pretendard: "Pretendard", sans-serif;
+    --breakpoint-3xl: 120rem;
 }
