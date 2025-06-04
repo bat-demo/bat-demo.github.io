@@ -581,7 +581,7 @@
 
         <section class="bg-gradient-to-b from-[#010202] via-[rgba(40,36,32,1)] to-[rgba(107,98,86,1)]">
             <video src="../videos/animation.mp4" autoplay loop preload="auto" muted playsinline
-                class="w-full object-cover min-h-[800px]"></video>
+                class="w-full object-cover min-h-[800px] max-h-[800px] 2xl:max-h-[1000px] 3xl:max-h-fit"></video>
         </section>
 
         <div class="max-w-[400px] mx-auto">
@@ -1154,11 +1154,15 @@
         <div class="absolute inset-0 w-[115%] h-[115%] -top-[59px] left-1/2 -translate-x-1/2 bg-[#0d0d0d]">
             <video src="../videos/footer_video.mp4" autoplay loop preload="auto" muted playsinline
                 class="w-full h-full object-cover mix-blend-lighten"></video>
+            <!-- 상단 그라디언트 -->
+            <div class="absolute top-[50px] left-0 w-full h-[100px] bg-gradient-to-b from-[#0d0d0d] to-transparent z-[1]"></div>
+            <!-- 하단 그라디언트 -->
+            <div class="absolute bottom-[50px] left-0 w-full h-[100px] bg-gradient-to-t from-[#0d0d0d] to-transparent z-[1]"></div>
         </div>
         <div class="relative z-10 flex flex-col items-center gap-10">
             <div class="flex flex-col items-center gap-5">
                 <h1
-                    class="text-[38px] text-[#E0E0E0] text-center font-pretendard font-[200] leading-[1.2em] tracking-[-0.01em]">
+                    class="text-[38px] text-[#E0E0E0] text-center font-pretendard font-[400] leading-[1.2em] tracking-[-0.01em]">
                     Step into the<br>
                     Journey to<br>
                     Upgrade<br>
