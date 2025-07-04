@@ -1,0 +1,10 @@
+* {
+    font-family: "Inter", sans-serif;
+}
+.capability-toggle {
+    text-transform: uppercase;
+}
+.capability-content {
+    letter-spacing: -0.64px;
+    line-height: 130%;
+}

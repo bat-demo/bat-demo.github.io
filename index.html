@@ -1,25 +1,632 @@
-
 <!doctype html>
 <html lang="ko">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Seoul Robotics</title>
-    <meta name="description" content="B2B Autonomous Driving Technology.">
-    <!-- 스타일시트 링크 -->
+    <meta name="description" content="Seoul Robotics. Autonomous Logistics, Now.">
+    <link rel="icon" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+        rel="stylesheet">
     <link rel="stylesheet" href="/css/output.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
+
 <body>
-    <header>
-        <h1>WIP</h1>
+    <header class="fixed w-full flex items-center justify-start h-[60px] px-[20px] md:px-[50px] z-50">
+        <div class="flex items-center">
+            <img src="/img/logo_w.png" alt="Seoul Robotics Logo" class="w-[74px] h-auto">
+        </div>
+        <!-- 모바일 메뉴 버튼 -->
+        <button id="mobile-menu-btn"
+            class="ml-auto flex flex-col justify-center items-center w-[32px] h-[32px] md:hidden z-50 relative"
+            aria-label="모바일 메뉴 열기">
+            <span class="block w-full h-[2px] bg-white mb-[6px] transition-all duration-300" id="bar1"></span>
+            <span class="block w-full h-[2px] bg-white transition-all duration-300" id="bar2"></span>
+        </button>
+        <nav class="ml-[94px] hidden md:block">
+            <ul class="flex gap-[40px]">
+                <li><button class="menu-scroll text-white text-[12px] font-medium uppercase leading-none tracking-[-0.36px] hover:opacity-70" data-target="about-section">About us</button></li>
+                <li><button class="menu-scroll text-white text-[12px] font-medium uppercase leading-none tracking-[-0.36px] hover:opacity-70" data-target="solutions-section">solutions</button></li>
+                <li><button class="menu-scroll text-white text-[12px] font-medium uppercase leading-none tracking-[-0.36px] hover:opacity-70" data-target="technology-section">technology</button></li>
+                <li><button class="menu-scroll text-white text-[12px] font-medium uppercase leading-none tracking-[-0.36px] hover:opacity-70" data-target="benefits-section">benefits</button></li>
+                <li><button class="menu-scroll text-white text-[12px] font-medium uppercase leading-none tracking-[-0.36px] hover:opacity-70" data-target="updates-section">updates</button></li>
+            </ul>
+        </nav>
     </header>
-    
+    <!-- 모바일 메뉴 오버레이 -->
+    <div id="mobile-menu-overlay"
+        class="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center z-40 transition-opacity duration-500 opacity-0 pointer-events-none md:hidden">
+        <ul class="flex flex-col gap-0 w-full h-full px-[20px] mt-[120px] animate-menu-slidein">
+            <li
+                class="mobile-menu-item opacity-0 -translate-y-4 transition-all duration-500 delay-100 border-b border-white/30 text-white text-[22px] font-[500] uppercase py-[10px] pl-1 tracking-[-0.66px] leading-[100%]">
+                <button type="button" class="menu-scroll w-full text-left uppercase" data-target="about-section" aria-label="About us">About us</button>
+            </li>
+            <li
+                class="mobile-menu-item opacity-0 -translate-y-4 transition-all duration-500 delay-200 border-b border-white/30 text-white text-[22px] font-[500] uppercase py-[10px] pl-1 tracking-[-0.66px] leading-[100%]">
+                <button type="button" class="menu-scroll w-full text-left uppercase" data-target="solutions-section" aria-label="solutions">solutions</button>
+            </li>
+            <li
+                class="mobile-menu-item opacity-0 -translate-y-4 transition-all duration-500 delay-300 border-b border-white/30 text-white text-[22px] font-[500] uppercase py-[10px] pl-1 tracking-[-0.66px] leading-[100%]">
+                <button type="button" class="menu-scroll w-full text-left uppercase" data-target="technology-section" aria-label="technology">technology</button>
+            </li>
+            <li
+                class="mobile-menu-item opacity-0 -translate-y-4 transition-all duration-500 delay-400 border-b border-white/30 text-white text-[22px] font-[500] uppercase py-[10px] pl-1 tracking-[-0.66px] leading-[100%]">
+                <button type="button" class="menu-scroll w-full text-left uppercase" data-target="benefits-section" aria-label="benefits">benefits</button>
+            </li>
+            <li
+                class="mobile-menu-item opacity-0 -translate-y-4 transition-all duration-500 delay-500 text-white text-[22px] font-[500] uppercase py-[10px] pl-1 tracking-[-0.66px] leading-[100%]">
+                <button type="button" class="menu-scroll w-full text-left uppercase" data-target="updates-section" aria-label="updates">updates</button>
+            </li>
+        </ul>
+    </div>
     <main>
-        <section>
+        <section class="text-white h-[100dvh] flex items-center px-[20px] md:px-[40px] relative overflow-hidden">
+            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+                <source src="/video/main.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 w-full h-full bg-black opacity-40"></div>
+            <div class="absolute z-10 bottom-[24px] md:bottom-[40px] left-[20px] md:left-[40px] w-[60%]">
+                <h1
+                    class="text-white text-[36px] md:text-[64px] font-medium md:font-normal leading-[100%] tracking-[-1.44px] md:tracking-[-1.4px] mb-[20px] md:mb-[30px]">
+                    Seoul Robotics.<br />Autonomous Logistics, Now.</h1>
+                <a href="https://www.youtube.com/watch?v=09bvu6ckPs0" target="_blank"
+                    class="text-white text-[12px] font-medium w-fit leading-[100%] tracking-[-0.36px] hover:opacity-70 flex h-[40px] px-[35px] py-[14px] justify-center items-center border border-white">Watch
+                    full video</a>
+            </div>
+        </section>
+        <section id="about-section" class="text-white h-[100dvh] flex items-center px-[20px] md:px-[140px] relative overflow-hidden">
+            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+                <source src="/video/asset1.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 w-full h-full bg-black opacity-60"></div>
+            <div class="relative z-10 flex flex-col gap-[20px] md:gap-[50px] max-w-[783px]">
+                <p class="text-white text-[36px] md:text-[64px] font-normal leading-[100%] tracking-[-1.4px]">Leader in
+                    Autonomous <br />Vehicle Marshaling, <br />Autonomous Vehicle Parking</p>
+                <p
+                    class="text-white text-[16px] md:text-[22px] font-normal leading-[130%] tracking-[-0.32px] md:tracking-[-1.1px]">
+                    Seoul Robotics is the leader in B2B autonomous driving solutions, creating the new standard for
+                    operational efficiency and safety in industrial logistics. Our technology, refined through nearly a
+                    decade of development and deployed in the world's largest automation projects, is built on three
+                    core principles.
+                </p>
+            </div>
+        </section>
+        <!-- The Seoul Robotics Difference -->
+        <section id="the-seoul-robotics-difference-section" class="w-full max-w-[400px] mx-auto py-[140px] px-[20px]">
+            <div class="flex flex-col gap-[60px]">
+                <h1 class="text-black text-[36px] font-medium leading-[100%] tracking-[-1.44px]">The Seoul Robotics
+                    Difference</h1>
+                <div class="w-full">
+                    <img src="/img/section1-1.png" alt="The Seoul Robotics Difference" class="w-full h-auto">
+                </div>
+                <div class="flex items-start">
+                    <div class="text-black text-[28px] font-[500] min-w-[50px] leading-[28px]">1</div>
+                    <div>
+                        <h2 class="text-black text-[28px] font-[500] leading-[28px] mb-[20px]">
+                            Proven,<br />All-Condition<br />Performance
+                        </h2>
+                        <p class="text-black text-[16px] font-[400] leading-[130%] tracking-[-0.64px]">
+                            We deliver the industry's most robust and proven autonomous platform, validated for seamless
+                            operation indoors, outdoors, and in virtually all weather scenarios. This isn't a future
+                            promise; it's a real-world system deployed in production today.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <img src="/img/section1-2.png" alt="The Seoul Robotics Difference" class="w-full h-auto">
+                </div>
+                <div class="flex items-start">
+                    <div class="text-black text-[28px] font-[500] min-w-[50px] leading-[28px]">2</div>
+                    <div>
+                        <h2 class="text-black text-[28px] font-[500] leading-[28px] mb-[20px]">
+                            Intelligent<br />Fleet-Level<br />Orchestration
+                        </h2>
+                        <p class="text-black text-[16px] font-[400] leading-[130%] tracking-[-0.64px]">
+                            We move entire fleets of vehicles—not just single units—with an uncompromising focus on
+                            safety, centimeter-level precision, and operational efficiency. Our AI is designed to
+                            control hundreds of vehicles simultaneously, optimizing complex logistics at scale.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full">
+                    <img src="/img/section1-3.png" alt="The Seoul Robotics Difference" class="w-full h-auto">
+                </div>
+                <div class="flex items-start">
+                    <div class="text-black text-[28px] font-[500] min-w-[50px] leading-[28px]">3</div>
+                    <div>
+                        <h2 class="text-black text-[28px] font-[500] leading-[28px] mb-[20px]">
+                            Constant<br />AI-Powered<br />Improvement
+                        </h2>
+                        <p class="text-black text-[16px] font-[400] leading-[130%] tracking-[-0.64px]">
+                            Our platform isn't static; it's a learning system. Powered by our advanced AI engines, our
+                            solutions continuously improve with every vehicle moved and every piece of data gathered,
+                            ensuring our partners always have the leading edge in automation technology.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Solutions -->
+        <div id="solutions-section" class="w-full bg-[#2A2C2F]">
+            <section class="w-full bg-[#2A2C2F] text-white max-w-[400px] mx-auto py-[140px] px-[20px]">
+                <div class="flex flex-col gap-[60px]">
+                    <h1 class="text-[36px] font-medium leading-[100%] tracking-[-1.44px]">Solutions</h1>
+                    <div class="h-[0.5px] bg-white w-full"></div>
+                    <!-- 1. Autonomy Through Infrastructure (ATI) -->
+                    <div class="w-full">
+                        <p class="text-[#B2B2B2] text-[22px] font-[500] leading-[100%] tracking-[-0.66px]">1</p>
+                        <p class="text-[36px] font-[500] leading-[100%] tracking-[-1.44px] mt-[10px]">Autonomy Through
+                            Infrastructure (ATI)</p>
+                        <img src="/img/section2-1.png" alt="The Seoul Robotics Difference"
+                            class="w-full h-auto mt-[30px]">
+                        <p class="font-[Inter] text-[28px] font-[500] leading-[100%] tracking-[-0.84px] mt-[30px]">
+                            Full-Scale Vehicle Logistics</p>
+                        <p class="text-[#B2B2B2] text-[16px] font-[400] leading-[130%] tracking-[-0.64px] mt-[30px]">
+                            Autonomy Through Infrastructure (ATI) solution is the world's first globally certified,
+                            infrastructure-based autonomy platform, fully operational and ready for serial production6.
+                            It
+                            provides comprehensive, fleet-level autonomous driving that automates the entire vehicle
+                            journey
+                            within automotive factories and large-scale logistics hubs.</p>
+                        <p class="text-[#B2B2B2] text-[16px] font-[400] leading-[130%] tracking-[-0.64px] mt-[30px]">
+                            This
+                            turnkey solution automates complex processes that are difficult or impossible to manage with
+                            fixed conveyor belts, offering unparalleled flexibility for modern production.</p>
+                        <p class="font-[Inter] text-[28px] font-[500] leading-[100%] tracking-[-0.84px] mt-[60px]">
+                            Proven
+                            Capabilities</p>
+                        <div class="capabilities-accordion flex flex-col w-full mt-[30px]">
+                            <div class="border-b border-[#444]">
+                                <button type="button"
+                                    class="w-full flex items-center justify-between py-[10px] group capability-toggle font-[500] text-[16px] text-white opacity-80 tracking-[-0.5px]">
+                                    <span>END-TO-END AUTOMATION</span>
+                                    <svg class="capability-arrow transition-transform duration-200 rotate-0" width="16"
+                                        height="10" viewBox="0 0 16 10" fill="none">
+                                        <path d="M15 1.07129L7.92893 8.14236L0.857864 1.07129" stroke="white"
+                                            stroke-opacity="0.8" stroke-width="1.5" />
+                                    </svg>
+                                </button>
+                                <div
+                                    class="capability-content hidden pt-[10px] pb-[30px] font-[400] text-[16px] text-[#B2B2B2] leading-[1.5]">
+                                    Manages vehicle movement from the moment they roll off the end-of-line, through
+                                    various
+                                    processing stations, to their final parking destination.
+                                </div>
+                            </div>
+                            <div class="border-b border-[#444]">
+                                <button type="button"
+                                    class="w-full flex items-center justify-between py-[10px] group capability-toggle font-[500] text-[16px] text-white opacity-80 tracking-[-0.5px]">
+                                    <span>COMPLEX MANEUVERING</span>
+                                    <svg class="capability-arrow transition-transform duration-200 rotate-0" width="16"
+                                        height="10" viewBox="0 0 16 10" fill="none">
+                                        <path d="M15 1.07129L7.92893 8.14236L0.857864 1.07129" stroke="white"
+                                            stroke-opacity="0.8" stroke-width="1.5" />
+                                    </svg>
+                                </button>
+                                <div
+                                    class="capability-content hidden pt-[10px] pb-[30px] font-[400] text-[16px] text-[#B2B2B2] leading-[1.5]">
+                                    Seamlessly navigates vehicles through dynamic environments, including car washes,
+                                    diagnostic test benches, charging stations, and wheel alignment stands.
+                                </div>
+                            </div>
+                            <div class="border-b border-[#444]">
+                                <button type="button"
+                                    class="w-full flex items-center justify-between py-[10px] group capability-toggle font-[500] text-[16px] text-white opacity-80 tracking-[-0.5px]">
+                                    <span>INTELLIGENT FLEET COORDINATION</span>
+                                    <svg class="capability-arrow transition-transform duration-200 rotate-0" width="16"
+                                        height="10" viewBox="0 0 16 10" fill="none">
+                                        <path d="M15 1.07129L7.92893 8.14236L0.857864 1.07129" stroke="white"
+                                            stroke-opacity="0.8" stroke-width="1.5" />
+                                    </svg>
+                                </button>
+                                <div
+                                    class="capability-content hidden pt-[10px] pb-[30px] font-[400] text-[16px] text-[#B2B2B2] leading-[1.5]">
+                                    Manages vehicle movement from the moment they roll off the end-of-line, through
+                                    various
+                                    processing stations, to their final parking destination.
+                                </div>
+                            </div>
+                            <div class="">
+                                <button type="button"
+                                    class="w-full flex items-center justify-between py-[10px] group capability-toggle font-[500] text-[16px] text-white opacity-80 tracking-[-0.5px]">
+                                    <span>VERIFIED DEPLOYMENTS</span>
+                                    <svg class="capability-arrow transition-transform duration-200 rotate-0" width="16"
+                                        height="10" viewBox="0 0 16 10" fill="none">
+                                        <path d="M15 1.07129L7.92893 8.14236L0.857864 1.07129" stroke="white"
+                                            stroke-opacity="0.8" stroke-width="1.5" />
+                                    </svg>
+                                </button>
+                                <div
+                                    class="capability-content hidden pt-[10px] pb-[30px] font-[400] text-[16px] text-[#B2B2B2] leading-[1.5]">
+                                    Successfully deployed and proven in the real world at three BMW factories in
+                                    Germany,
+                                    with further expansions planned across Europe and the U.S..
+                                </div>
+                            </div>
+                        </div>
+                        <p class="font-[Inter] text-[28px] font-[500] leading-[100%] tracking-[-0.84px] mt-[60px]">
+                            Proven
+                            Future-Ready for<br />Modular Production</p>
+                        <div class="capabilities-accordion flex flex-col w-full mt-[30px]">
+                            <div class="">
+                                <button type="button"
+                                    class="w-full flex items-center justify-between py-[10px] group capability-toggle font-[500] text-[16px] text-white opacity-80 tracking-[-0.5px]">
+                                    <span>THE DIGITAL CONVEYOR BELT</span>
+                                    <svg class="capability-arrow transition-transform duration-200 rotate-0" width="16"
+                                        height="10" viewBox="0 0 16 10" fill="none">
+                                        <path d="M15 1.07129L7.92893 8.14236L0.857864 1.07129" stroke="white"
+                                            stroke-opacity="0.8" stroke-width="1.5" />
+                                    </svg>
+                                </button>
+                                <div
+                                    class="capability-content hidden pt-[10px] pb-[30px] font-[400] text-[16px] text-[#B2B2B2] leading-[1.5]">
+                                    ATI addresses upstream logistics by autonomously transporting a vehicle's
+                                    "skateboard"
+                                    chassis to various production islands before the vehicle's own driving hardware is
+                                    even
+                                    installed. This supports flexible and modular production architectures, reducing
+                                    dependency on traditional, linear assembly lines.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-[0.5px] bg-white w-full opacity-20 my-[20px]"></div>
+                    <!-- 2. Autonomous Yard Tractor (AYT) -->
+                    <div class="w-full">
+                        <p class="text-[#B2B2B2] text-[22px] font-[500] leading-[100%] tracking-[-0.66px]">2</p>
+                        <p class="text-[36px] font-[500] leading-[100%] tracking-[-1.44px] mt-[10px]">Autonomous Yard
+                            Tractor (AYT)</p>
+                        <img src="/img/section2-2.png" alt="The Seoul Robotics Difference"
+                            class="w-full h-auto mt-[30px]">
+                        <p class="font-[Inter] text-[28px] font-[500] leading-[100%] tracking-[-0.84px] mt-[30px]">
+                            For Ports and Logistic Yards</p>
+                        <p class="text-[#B2B2B2] text-[16px] font-[400] leading-[130%] tracking-[-0.64px] mt-[30px]">
+                            Autonomous Yard Tractor (AYT) solution delivers precision autonomous operations, offering
+                            the
+                            adaptability required in complex logistic environments14. Designed for seamless integration
+                            into
+                            dynamic traffic scenarios—such as busy logistics yards, mixed-vehicle environments, and
+                            areas
+                            frequently traversed by pedestrians and equipment—the AYT operates safely and effectively in
+                            all
+                            weather conditions, day or night.</p>
+                        <div class="capabilities-accordion flex flex-col w-full mt-[30px]">
+                            <div class="">
+                                <button type="button"
+                                    class="w-full flex items-center justify-between py-[10px] group capability-toggle font-[500] text-[16px] text-white opacity-80 tracking-[-0.5px]">
+                                    <span>Enhanced by Infrastructure</span>
+                                    <svg class="capability-arrow transition-transform duration-200 rotate-0" width="16"
+                                        height="10" viewBox="0 0 16 10" fill="none">
+                                        <path d="M15 1.07129L7.92893 8.14236L0.857864 1.07129" stroke="white"
+                                            stroke-opacity="0.8" stroke-width="1.5" />
+                                    </svg>
+                                </button>
+                                <div
+                                    class="capability-content hidden pt-[10px] pb-[30px] font-[400] text-[16px] text-[#B2B2B2] leading-[1.5]">
+                                    AYT can be further enhanced when packaged with our ATI solution, leveraging smart
+                                    infrastructure to deliver the highest standards in autonomous driving. By combining
+                                    tractor-based and infrastructure-based intelligence, this integrated package
+                                    significantly boosts robustness, efficiency, and reliability.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="h-[0.5px] bg-white w-full opacity-20 my-[20px]"></div>
+                    <!-- 3. AYT Solution -->
+                    <div class="w-full">
+                        <p class="text-[#B2B2B2] text-[22px] font-[500] leading-[100%] tracking-[-0.66px]">3</p>
+                        <p class="text-[36px] font-[500] leading-[100%] tracking-[-1.44px] mt-[10px]">AYT Solution</p>
+                        <img src="/img/section2-3.png" alt="The Seoul Robotics Difference"
+                            class="w-full h-auto mt-[30px]">
+                        <p class="font-[Inter] text-[28px] font-[500] leading-[100%] tracking-[-0.84px] mt-[30px]">A
+                            Complete, Turnkey Solution</p>
+                        <p class="text-[#B2B2B2] text-[16px] font-[400] leading-[130%] tracking-[-0.64px] mt-[30px]">
+                            Our AYT solution is delivered as a comprehensive, all-in-one package, ensuring seamless
+                            integration and ongoing operational excellence.
+                        </p>
+                        <div class="capabilities-accordion flex flex-col w-full mt-[30px]">
+                            <div class="border-b border-[#444]">
+                                <button type="button"
+                                    class="w-full flex items-center justify-between py-[10px] group capability-toggle font-[500] text-[16px] text-white opacity-80 tracking-[-0.5px]">
+                                    <span>Onboard Hardware Components</span>
+                                    <svg class="capability-arrow transition-transform duration-200 rotate-0" width="16"
+                                        height="10" viewBox="0 0 16 10" fill="none">
+                                        <path d="M15 1.07129L7.92893 8.14236L0.857864 1.07129" stroke="white"
+                                            stroke-opacity="0.8" stroke-width="1.5" />
+                                    </svg>
+                                </button>
+                                <div
+                                    class="capability-content hidden pt-[10px] pb-[30px] font-[400] text-[16px] text-[#B2B2B2] leading-[1.5]">
+                                    A robust suite of automotive-grade hardware including Lidars, Cameras, and GNSS
+                                    Antennas for full 360° perception.
+                                </div>
+                            </div>
+                            <div class="border-b border-[#444]">
+                                <button type="button"
+                                    class="w-full flex items-center justify-between py-[10px] group capability-toggle font-[500] text-[16px] text-white opacity-80 tracking-[-0.5px]">
+                                    <span>Autonomous Driving Software</span>
+                                    <svg class="capability-arrow transition-transform duration-200 rotate-0" width="16"
+                                        height="10" viewBox="0 0 16 10" fill="none">
+                                        <path d="M15 1.07129L7.92893 8.14236L0.857864 1.07129" stroke="white"
+                                            stroke-opacity="0.8" stroke-width="1.5" />
+                                    </svg>
+                                </button>
+                                <div
+                                    class="capability-content hidden pt-[10px] pb-[30px] font-[400] text-[16px] text-[#B2B2B2] leading-[1.5]">
+                                    <div class="flex flex-col gap-[5px]">
+                                        <p class="text-white font-[500] mb-[5px]">AI-Powered Perception (Horus™)</p>
+                                        <p>Real-time object detection and classification.</p>
+                                        <p class="text-white font-[500] mt-[20px] mb-[5px]">Dynamic Motion Planning
+                                            (Atlas™)</p>
+                                        <p>Predictive, real-time trajectory and behavior planning.</p>
+                                        <p class="text-white font-[500] mt-[20px] mb-[5px]">Redundant Safety Platform
+                                        </p>
+                                        <p>A continuously monitoring safety layer to validate all actions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-b border-[#444]">
+                                <button type="button"
+                                    class="w-full flex items-center justify-between py-[10px] group capability-toggle font-[500] text-[16px] text-white opacity-80 tracking-[-0.5px]">
+                                    <span>Fleet Management</span>
+                                    <svg class="capability-arrow transition-transform duration-200 rotate-0" width="16"
+                                        height="10" viewBox="0 0 16 10" fill="none">
+                                        <path d="M15 1.07129L7.92893 8.14236L0.857864 1.07129" stroke="white"
+                                            stroke-opacity="0.8" stroke-width="1.5" />
+                                    </svg>
+                                </button>
+                                <div
+                                    class="capability-content hidden pt-[10px] pb-[30px] font-[400] text-[16px] text-[#B2B2B2] leading-[1.5]">
+                                    Intelligent Dispatching and Mission Assignment.
+                                    <br />
+                                    Real-Time Status Monitoring.
+                                    <br />
+                                    Parking and Yard Slot Management.
+                                </div>
+                            </div>
+                            <div class="border-b border-[#444]">
+                                <button type="button"
+                                    class="w-full flex items-center justify-between py-[10px] group capability-toggle font-[500] text-[16px] text-white opacity-80 tracking-[-0.5px]">
+                                    <span>Full System Integration</span>
+                                    <svg class="capability-arrow transition-transform duration-200 rotate-0" width="16"
+                                        height="10" viewBox="0 0 16 10" fill="none">
+                                        <path d="M15 1.07129L7.92893 8.14236L0.857864 1.07129" stroke="white"
+                                            stroke-opacity="0.8" stroke-width="1.5" />
+                                    </svg>
+                                </button>
+                                <div
+                                    class="capability-content hidden pt-[10px] pb-[30px] font-[400] text-[16px] text-[#B2B2B2] leading-[1.5]">
+                                    <p>Seamless integration with your Terminal Operating System (TOS) and Equipment
+                                        Control Systems (ECS).</p>
+                                    <p class="mt-[20px]">Standardized interfaces for communication with Container
+                                        Handling Equipment.</p>
+                                </div>
+                            </div>
+                            <div class="">
+                                <button type="button"
+                                    class="w-full flex items-center justify-between py-[10px] group capability-toggle font-[500] text-[16px] text-white opacity-80 tracking-[-0.5px]">
+                                    <span>End-to-End Operations & Support</span>
+                                    <svg class="capability-arrow transition-transform duration-200 rotate-0" width="16"
+                                        height="10" viewBox="0 0 16 10" fill="none">
+                                        <path d="M15 1.07129L7.92893 8.14236L0.857864 1.07129" stroke="white"
+                                            stroke-opacity="0.8" stroke-width="1.5" />
+                                    </svg>
+                                </button>
+                                <div
+                                    class="capability-content hidden pt-[10px] pb-[30px] font-[400] text-[16px] text-[#B2B2B2] leading-[1.5]">
+                                    <p>Full deployment support, from initial scoping and mapping to final certification.
+                                    </p>
+                                    <p class="mt-[20px]">24/7 operational assistance to ensure maximum uptime and
+                                        performance.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+        </div>
+        <!-- Technology -->
+        <section id="technology-section" class="w-full max-w-[400px] mx-auto py-[140px] px-[20px]">
+            <div class="flex flex-col gap-[60px]">
+                <h1 class="text-black text-[36px] font-medium leading-[100%] tracking-[-1.44px]">Technology</h1>
+            </div>
+        </section>
+        <!-- Trusted by Global Leaders -->
+        <section class="relative w-full min-h-[500px] flex flex-col items-center justify-center text-center"
+            style="background: url('/img/g_bg.png') center/cover no-repeat;">
+            <div
+                class="max-w-[400px] mx-auto relative z-10 flex flex-col items-center justify-center w-full h-full py-[100px] px-[20px]">
+                <h2 class="text-white text-[28px] font-[500] leading-[100%] tracking-[-0.84px] text-center mb-[30px]">
+                    Trusted by<br />Global Leaders</h2>
+                <p
+                    class="text-white text-[16px] font-[400] leading-[130%] tracking-[-0.64px] text-center max-w-[600px]">
+                    Our solutions are validated and trusted by industry leaders worldwide, deployed across top-tier
+                    automotive manufacturers and logistics companies.
+                </p>
+            </div>
+        </section>
+        <!-- Seoul Robotics Autonomous Driving Solution Benefits -->
+        <div class="w-full bg-[#1A1D1E]">
+            <section id="benefits-section" class="w-full bg-[#1A1D1E] text-white max-w-[400px] mx-auto py-[140px] px-[20px]">
+                <div class="flex flex-col gap-[60px]">
+                    <h1 class="text-[36px] font-medium leading-[100%] tracking-[-1.44px]">Seoul Robotics Autonomous Driving Solution Benefits</h1>
+                </div>
+            </section>
+        </div>
+        <!-- Updates -->
+        <section id="updates-section" class="w-full max-w-[400px] mx-auto py-[140px] px-[20px]">
+            <div class="flex flex-col gap-[60px]">
+                <h1 class="text-black text-[36px] font-medium leading-[100%] tracking-[-1.44px]">Updates</h1>
+            </div>
         </section>
     </main>
-    
-    <footer>
+
+    <footer class="w-full bg-black text-white px-[20px]">
+        <div class="max-w-[400px] mx-auto flex flex-col pt-[100px] pb-[24px]">
+            <!-- Contact Info -->
+            <div>
+                <div class="text-[12px] font-[400] text-white mb-[16px] leading-[130%] tracking-[-0.48px]">Contact</div>
+                <div class="text-[12px] font-[400] text-white leading-[130%] tracking-[-0.48px] mt-[30px]">
+                    4, Banpo-daero 22-gil,<br>
+                    Seocho-gu, Seoul,<br>
+                    Republic of Korea.
+                </div>
+                <div class="text-[12px] font-[400] text-white leading-[130%] tracking-[-0.48px] mt-[10px]">
+                    +82 70-8666-0819
+                </div>
+                <div class="text-[12px] font-[400] text-white leading-[130%] tracking-[-0.48px] mt-[10px]">
+                    hello@seoulrobotics.org
+                </div>
+                <a href="https://srshop.ai" target="_blank"
+                    class="inline-flex items-center gap-2 text-[#FFF176] font-[500] text-[12px] mt-[30px] leading-[100%] tracking-[-0.36px]">
+                    SR Shop
+                </a>
+            </div>
+            <!-- Logo & Social -->
+            <div class="flex flex-col items-start gap-[20px] mt-[60px]">
+                <img src="/img/footer_logo.png" alt="Seoul Robotics Logo" class="w-[160px] h-auto" />
+                <div class="flex items-center gap-[4px] mt-2">
+                    <a href="https://www.linkedin.com/company/seoul-robotics/" target="_blank"><img
+                            src="/img/icon-linkedin.svg" class="w-[34px] h-[34px]" alt="LinkedIn"></a>
+                    <a href="https://x.com/seoulrobotics" target="_blank"><img src="/img/icon-x.svg"
+                            class="w-[34px] h-[34px]" alt="X"></a>
+                    <a href="https://www.instagram.com/seoulrobotics/" target="_blank"><img
+                            src="/img/icon-instagram.svg" class="w-[34px] h-[34px]" alt="Instagram"></a>
+                    <a href="https://www.youtube.com/channel/UCcfXs-yXfkN3VfhAwUTooFg" target="_blank"><img
+                            src="/img/icon-youtube.svg" class="w-[34px] h-[34px]" alt="YouTube"></a>
+                </div>
+            </div>
+            <!-- Copyright -->
+            <div class="text-white text-[12px] font-[400] leading-[130%] tracking-[-0.48px] mt-[14px]">© 2025 Seoul
+                Robotics. All rights reserved.</div>
+        </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function () {
+            var open = false;
+            var $btn = $('#mobile-menu-btn');
+            var $overlay = $('#mobile-menu-overlay');
+            var $bar1 = $('#bar1');
+            var $bar2 = $('#bar2');
+            var $items = $('.mobile-menu-item');
+            var $header = $('header');
+            var $section = $('#the-seoul-robotics-difference-section');
+
+            $btn.on('click', function () {
+                open = !open;
+                if (open) {
+                    $overlay.removeClass('opacity-0 pointer-events-none').addClass('opacity-100');
+                    $bar1.css('transform', 'rotate(45deg) translateY(6px)');
+                    $bar2.css('transform', 'rotate(-45deg) translateY(-6px)');
+                    $items.each(function (i, item) {
+                        setTimeout(function () {
+                            $(item).removeClass('opacity-0 translate-y-4').addClass('opacity-100 translate-y-0');
+                        }, 50 + i * 50);
+                    });
+                    // 메뉴 열 때: 헤더 투명화, 텍스트 흰색 제거, 스크롤 비활성화
+                    $header.removeClass('header-white-bg');
+                    $('body').removeClass('white-text');
+                    $('body').css('overflow', 'hidden');
+                } else {
+                    $overlay.addClass('opacity-0 pointer-events-none').removeClass('opacity-100');
+                    $bar1.css('transform', '');
+                    $bar2.css('transform', '');
+                    $items.each(function (i, item) {
+                        $(item).addClass('opacity-0 translate-y-4').removeClass('opacity-100 translate-y-0');
+                    });
+                    // 메뉴 닫을 때: 스크롤 활성화, 마지막 헤더 상태 복원
+                    $('body').css('overflow', '');
+                    checkHeaderSimple();
+                }
+            });
+            // 오버레이 클릭 시 닫기
+            $overlay.on('click', function (e) {
+                if (e.target === this) $btn.click();
+            });
+            // 아코디언 토글
+            $('.capabilities-accordion .capability-toggle').on('click', function () {
+                var $btn = $(this);
+                var $content = $btn.parent().find('.capability-content');
+                var $arrow = $btn.find('.capability-arrow');
+                if ($content.is(':visible')) {
+                    $content.slideUp(200);
+                    $arrow.removeClass('rotate-90').addClass('rotate-0');
+                    $btn.removeClass('opacity-100').addClass('opacity-80');
+                } else {
+                    $content.slideDown(200);
+                    $arrow.removeClass('rotate-0').addClass('rotate-90');
+                    $btn.removeClass('opacity-80').addClass('opacity-100');
+                }
+            });
+            $('.menu-scroll').on('click', function() {
+                var target = $(this).data('target');
+                if (target && $('#' + target).length) {
+                    // 모바일 메뉴 닫기
+                    if ($('#mobile-menu-overlay').is(':visible')) {
+                        $('#mobile-menu-btn').trigger('click');
+                        setTimeout(function() {
+                            $('html, body').animate({ scrollTop: $('#' + target).offset().top }, 600);
+                        }, 400);
+                    } else {
+                        $('html, body').animate({ scrollTop: $('#' + target).offset().top }, 600);
+                    }
+                }
+            });
+            function checkHeaderSimple() {
+                var scroll = $(window).scrollTop();
+                var offset = $section.offset().top;
+                if (scroll + 60 >= offset) {
+                    $header.addClass('header-white-bg');
+                    $('body').addClass('white-text');
+                } else {
+                    $header.removeClass('header-white-bg');
+                    $('body').removeClass('white-text');
+                }
+            }
+            $(window).on('scroll resize', checkHeaderSimple);
+            checkHeaderSimple();
+        });
+    </script>
+    <style>
+        .rotate-90 {
+            transform: rotate(90deg) !important;
+        }
+
+        .rotate-0 {
+            transform: rotate(0deg) !important;
+        }
+        .header-white-bg {
+            background: #fff !important;
+            transition: background 0.3s;
+            border-bottom: 1px solid #E5E5E5;
+        }
+        .header-white-bg .menu-scroll,
+        .header-white-bg .menu-scroll:focus,
+        .header-white-bg .menu-scroll:hover {
+            color: #111 !important;
+        }
+        .header-white-bg img[alt="Seoul Robotics Logo"] {
+            filter: invert(1) grayscale(1) brightness(0.1);
+        }
+        body.white-text {
+            color: #111 !important;
+        }
+        .header-white-bg #mobile-menu-btn span {
+            background: #111 !important;
+        }
+    </style>
 </body>
+
 </html>
