@@ -8,3 +8,40 @@
     letter-spacing: -0.64px;
     line-height: 130%;
 }
+
+.rotate-90 {
+    transform: rotate(90deg) !important;
+}
+
+.rotate-0 {
+    transform: rotate(0deg) !important;
+}
+
+header {
+    transition: background-color 0.3s ease, border-bottom-color 0.3s ease;
+    background-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.header-white-bg {
+    background: #fff !important;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.header-white-bg .menu-scroll,
+.header-white-bg .menu-scroll:focus,
+.header-white-bg .menu-scroll:hover {
+    color: #111 !important;
+}
+
+.header-white-bg img[alt="Seoul Robotics Logo"] {
+    filter: invert(1) grayscale(1) brightness(0.1);
+}
+
+body.white-text {
+    color: #111 !important;
+}
+
+.header-white-bg #mobile-menu-btn span {
+    background: #111 !important;
+}
