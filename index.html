@@ -6,22 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Seoul Robotics</title>
     <meta name="description" content="Seoul Robotics. Autonomous Logistics, Now.">
-    <link rel="icon" href="/favicon.png">
+    <meta property="og:image" content="/img/meta.png">
+    <meta property="twitter:image" content="/img/meta.png">
+    <link rel="icon" href="/img/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
         rel="stylesheet">
     <link rel="stylesheet" href="/css/output.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
+    <style>
+        /* Ensure hamburger bars pivot around their center point */
+        #mobile-menu-btn span {
+            transform-origin: center center;
+        }
+    </style>
+    <style>
+        /* Hover-zoom effect on section images */
+        .hover-zoom-container {
+            overflow: hidden;
+        }
+
+        .hover-zoom-container img {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-zoom-container:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+    <style>
+      .reveal {
+        opacity: 0;
+        transform: translateY(60px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
 </head>
 
 <body>
     <header class="fixed w-full flex items-center justify-start h-[60px] px-[20px] md:px-[50px] z-50">
         <div class="flex items-center">
-            <img src="/img/logo_w.png" alt="Seoul Robotics Logo" class="w-[74px] h-auto">
+            <a href="/">
+                <img src="/img/logo_w.png" alt="Seoul Robotics Logo" class="w-[74px] h-auto">
+            </a>
         </div>
         <!-- 모바일 메뉴 버튼 -->
         <button id="mobile-menu-btn"
@@ -33,19 +70,19 @@
         <nav class="ml-[94px] hidden md:block">
             <ul class="flex gap-[40px]">
                 <li><button
-                        class="menu-scroll text-white text-[12px] font-medium uppercase leading-none tracking-[-0.36px] hover:opacity-70"
+                        class="menu-scroll text-white text-[12px] font-[500] uppercase leading-none tracking-[-0.36px] hover:opacity-70"
                         data-target="about-section">About us</button></li>
                 <li><button
-                        class="menu-scroll text-white text-[12px] font-medium uppercase leading-none tracking-[-0.36px] hover:opacity-70"
+                        class="menu-scroll text-white text-[12px] font-[500] uppercase leading-none tracking-[-0.36px] hover:opacity-70"
                         data-target="solutions-section">solutions</button></li>
                 <li><button
-                        class="menu-scroll text-white text-[12px] font-medium uppercase leading-none tracking-[-0.36px] hover:opacity-70"
+                        class="menu-scroll text-white text-[12px] font-[500] uppercase leading-none tracking-[-0.36px] hover:opacity-70"
                         data-target="technology-section">technology</button></li>
                 <li><button
-                        class="menu-scroll text-white text-[12px] font-medium uppercase leading-none tracking-[-0.36px] hover:opacity-70"
+                        class="menu-scroll text-white text-[12px] font-[500] uppercase leading-none tracking-[-0.36px] hover:opacity-70"
                         data-target="benefits-section">benefits</button></li>
                 <li><button
-                        class="menu-scroll text-white text-[12px] font-medium uppercase leading-none tracking-[-0.36px] hover:opacity-70"
+                        class="menu-scroll text-white text-[12px] font-[500] uppercase leading-none tracking-[-0.36px] hover:opacity-70"
                         data-target="updates-section">updates</button></li>
             </ul>
         </nav>
@@ -89,10 +126,10 @@
             <div class="absolute inset-0 w-full h-full bg-black opacity-40"></div>
             <div class="absolute z-10 bottom-[24px] md:bottom-[40px] left-[20px] md:left-[40px] w-[60%]">
                 <h1
-                    class="text-white text-[36px] md:text-[64px] font-medium md:font-normal leading-[100%] tracking-[-1.44px] md:tracking-[-1.4px] mb-[20px] md:mb-[30px]">
+                    class="text-white text-[36px] md:text-[64px] font-[500] md:font-normal leading-[100%] tracking-[-1.44px] md:tracking-[-1.4px] mb-[20px] md:mb-[30px]">
                     Seoul Robotics.<br />Autonomous Logistics, Now.</h1>
                 <a href="https://www.youtube.com/watch?v=09bvu6ckPs0" target="_blank"
-                    class="text-white text-[12px] font-medium w-fit leading-[100%] tracking-[-0.36px] hover:opacity-70 flex h-[40px] px-[35px] py-[14px] justify-center items-center border border-white">Watch
+                    class="text-white text-[12px] font-[500] w-fit leading-[100%] tracking-[-0.36px] hover:opacity-70 flex h-[40px] px-[35px] py-[14px] justify-center items-center border border-white">Watch
                     full video</a>
             </div>
         </section>
@@ -115,12 +152,14 @@
             </div>
         </section>
         <!-- The Seoul Robotics Difference -->
-        <section id="the-seoul-robotics-difference-section" class="w-full max-w-[430px] mx-auto py-[140px] px-[20px]">
+        <section id="the-seoul-robotics-difference-section" class="reveal w-full max-w-[430px] mx-auto py-[140px] px-[20px]">
             <div class="flex flex-col gap-[60px]">
-                <h1 class="text-black text-[36px] font-medium leading-[100%] tracking-[-1.44px]">The Seoul Robotics
+                <h1 class="text-black text-[36px] font-[500] leading-[100%] tracking-[-1.44px]">The Seoul Robotics
                     Difference</h1>
                 <div class="w-full">
-                    <img src="/img/section1-1.png" alt="The Seoul Robotics Difference" class="w-full h-auto">
+                    <div class="hover-zoom-container">
+                        <img src="/img/section1-1.png" alt="The Seoul Robotics Difference" class="w-full h-auto">
+                    </div>
                 </div>
                 <div class="flex items-start">
                     <div class="text-black text-[28px] font-[500] min-w-[50px] leading-[28px]">1</div>
@@ -136,7 +175,9 @@
                     </div>
                 </div>
                 <div class="w-full">
-                    <img src="/img/section1-2.png" alt="The Seoul Robotics Difference" class="w-full h-auto">
+                    <div class="hover-zoom-container">
+                        <img src="/img/section1-2.png" alt="The Seoul Robotics Difference" class="w-full h-auto">
+                    </div>
                 </div>
                 <div class="flex items-start">
                     <div class="text-black text-[28px] font-[500] min-w-[50px] leading-[28px]">2</div>
@@ -152,7 +193,9 @@
                     </div>
                 </div>
                 <div class="w-full">
-                    <img src="/img/section1-3.png" alt="The Seoul Robotics Difference" class="w-full h-auto">
+                    <div class="hover-zoom-container">
+                        <img src="/img/section1-3.png" alt="The Seoul Robotics Difference" class="w-full h-auto">
+                    </div>
                 </div>
                 <div class="flex items-start">
                     <div class="text-black text-[28px] font-[500] min-w-[50px] leading-[28px]">3</div>
@@ -171,17 +214,19 @@
         </section>
         <!-- Solutions -->
         <div id="solutions-section" class="w-full bg-[#2A2C2F]">
-            <section class="w-full bg-[#2A2C2F] text-white max-w-[430px] mx-auto py-[140px] px-[20px]">
+            <section class="reveal w-full bg-[#2A2C2F] text-white max-w-[430px] mx-auto py-[140px] px-[20px]">
                 <div class="flex flex-col gap-[60px]">
-                    <h1 class="text-[36px] font-medium leading-[100%] tracking-[-1.44px]">Solutions</h1>
+                    <h1 class="text-[36px] font-[500] leading-[100%] tracking-[-1.44px]">Solutions</h1>
                     <div class="h-[0.5px] bg-white w-full"></div>
                     <!-- 1. Autonomy Through Infrastructure (ATI) -->
                     <div class="w-full">
                         <p class="text-[#B2B2B2] text-[22px] font-[500] leading-[100%] tracking-[-0.66px]">1</p>
                         <p class="text-[36px] font-[500] leading-[100%] tracking-[-1.44px] mt-[10px]">Autonomy Through
                             Infrastructure (ATI)</p>
-                        <img src="/img/section2-1.png" alt="The Seoul Robotics Difference"
-                            class="w-full h-auto mt-[30px]">
+                        <div class="hover-zoom-container">
+                            <img src="/img/section2-1.png" alt="The Seoul Robotics Difference"
+                                class="w-full h-auto mt-[30px]">
+                        </div>
                         <p class="font-[Inter] text-[28px] font-[500] leading-[100%] tracking-[-0.84px] mt-[30px]">
                             Full-Scale Vehicle Logistics</p>
                         <p class="text-[#B2B2B2] text-[16px] font-[400] leading-[130%] tracking-[-0.64px] mt-[30px]">
@@ -299,8 +344,10 @@
                         <p class="text-[#B2B2B2] text-[22px] font-[500] leading-[100%] tracking-[-0.66px]">2</p>
                         <p class="text-[36px] font-[500] leading-[100%] tracking-[-1.44px] mt-[10px]">Autonomous Yard
                             Tractor (AYT)</p>
-                        <img src="/img/section2-2.png" alt="The Seoul Robotics Difference"
-                            class="w-full h-auto mt-[30px]">
+                        <div class="hover-zoom-container">
+                            <img src="/img/section2-2.png" alt="The Seoul Robotics Difference"
+                                class="w-full h-auto mt-[30px]">
+                        </div>
                         <p class="font-[Inter] text-[28px] font-[500] leading-[100%] tracking-[-0.84px] mt-[30px]">
                             For Ports and Logistic Yards</p>
                         <p class="text-[#B2B2B2] text-[16px] font-[400] leading-[130%] tracking-[-0.64px] mt-[30px]">
@@ -341,8 +388,10 @@
                     <div class="w-full">
                         <p class="text-[#B2B2B2] text-[22px] font-[500] leading-[100%] tracking-[-0.66px]">3</p>
                         <p class="text-[36px] font-[500] leading-[100%] tracking-[-1.44px] mt-[10px]">AYT Solution</p>
-                        <img src="/img/section2-3.png" alt="The Seoul Robotics Difference"
-                            class="w-full h-auto mt-[30px]">
+                        <div class="hover-zoom-container">
+                            <img src="/img/section2-3.png" alt="The Seoul Robotics Difference"
+                                class="w-full h-auto mt-[30px]">
+                        </div>
                         <p class="font-[Inter] text-[28px] font-[500] leading-[100%] tracking-[-0.84px] mt-[30px]">A
                             Complete, Turnkey Solution</p>
                         <p class="text-[#B2B2B2] text-[16px] font-[400] leading-[130%] tracking-[-0.64px] mt-[30px]">
@@ -453,9 +502,56 @@
             </section>
         </div>
         <!-- Technology -->
-        <section id="technology-section" class="w-full max-w-[430px] mx-auto py-[140px] px-[20px]">
+        <section id="technology-section" class="reveal w-full max-w-[430px] mx-auto py-[140px] px-[20px]">
             <div class="flex flex-col gap-[60px]">
-                <h1 class="text-black text-[36px] font-medium leading-[100%] tracking-[-1.44px]">Technology</h1>
+                <div class="flex flex-col gap-[30px]">
+                    <h1 class="text-black text-[36px] font-[500] leading-[100%] tracking-[-1.44px]">Technology</h1>
+                    <p class="text-[16px] font-[400] leading-[130%] tracking-[-0.64px]">
+                        At the heart of Seoul Robotics' technology are two synergistic AI engines that enable full-stack
+                        autonomy. Our platform combines hyper-realistic perception with intelligent, large-scale fleet
+                        orchestration.
+                    </p>
+                </div>
+                <div class="w-full h-[0.5px] bg-black opacity-30"></div>
+
+                <!-- Card 1 -->
+                <div class="flex flex-col gap-[30px]">
+                    <div class="flex flex-col gap-[10px]">
+                        <p class="text-[36px] font-[500] leading-[100%] tracking-[-1.44px]">
+                            Horus™
+                        </p>
+                        <p class="text-[#979797] text-[22px] font-[500] leading-[100%] tracking-[-0.66px]">AI-Powered
+                            Perception</p>
+                    </div>
+                    <video src="/video/asset2.mp4" autoplay muted loop playsinline
+                        class="w-full aspect-square object-cover"></video>
+                    <p class="text-[#000] text-[16px] font-[400] leading-[130%] tracking-[-0.64px]">
+                        The "eyes" of our system, Horus is our patented AI technology that provides superhuman
+                        awareness. It fuses and processes data from hundreds of disparate sensors simultaneously to
+                        create a single, flawless, high-fidelity 3D model of the operational environment.
+                    </p>
+                </div>
+
+                <div class="w-full h-[0.5px] bg-black opacity-30"></div>
+
+                <!-- Card 2 -->
+                <div class="flex flex-col gap-[30px]">
+                    <div class="flex flex-col gap-[10px]">
+                        <p class="text-[36px] font-[500] leading-[100%] tracking-[-1.44px]">
+                            Atlas™
+                        </p>
+                        <p class="text-[#979797] text-[22px] font-[500] leading-[100%] tracking-[-0.66px]">AI-Driven
+                            Fleet Orchestration</p>
+                    </div>
+                    <video src="/video/asset3.mp4" autoplay muted loop playsinline
+                        class="w-full aspect-square object-cover"></video>
+                    <p class="text-[#000] text-[16px] font-[400] leading-[130%] tracking-[-0.64px]">
+                        Atlas is our AI-driven planning engine designed to control hundreds of vehicles simultaneously.
+                        Unlike traditional deterministic methods that rely on pre-programmed movements, Atlas uses
+                        advanced AI to dynamically plot and manage complex, fleet-wide maneuvers in real-time, ensuring
+                        optimal flow and efficiency.
+                    </p>
+                </div>
             </div>
         </section>
         <!-- Trusted by Global Leaders -->
@@ -475,17 +571,258 @@
         <!-- Seoul Robotics Autonomous Driving Solution Benefits -->
         <div class="w-full bg-[#1A1D1E]">
             <section id="benefits-section"
-                class="w-full bg-[#1A1D1E] text-white max-w-[430px] mx-auto py-[140px] px-[20px]">
-                <div class="flex flex-col gap-[60px]">
-                    <h1 class="text-[36px] font-medium leading-[100%] tracking-[-1.44px]">Seoul Robotics Autonomous
+                class="reveal w-full bg-[#1A1D1E] text-white max-w-[430px] mx-auto py-[140px] px-[20px]">
+                <div class="flex flex-col gap-[60px] overflow-hidden">
+                    <h1 class="text-[36px] font-[500] leading-[100%] tracking-[-1.44px]">Seoul Robotics Autonomous
                         Driving Solution Benefits</h1>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <!-- first slide markup (the first <div class="relative"> ... ) -->
+                                <div class="relative">
+                                    <div>
+                                        <img src="/img/slide1.png" alt="Benefit" class="w-full h-auto">
+                                    </div>
+                                    <div
+                                        class="flex flex-col gap-[15px] absolute bottom-0 left-0 right-0 min-h-[250px] m-[20px] p-[16px] backdrop-blur-[45px] bg-white/20">
+                                        <p class="text-white text-[22px] font-[500] leading-[100%] tracking-[-0.66px]">
+                                            Drastic<br />Cost Reduction
+                                            <!-- Enhanced<br />Safety and Precision</p> -->
+                                        <div class="h-[0.5px] bg-white w-full"></div>
+                                        <div class="flex flex-row justify-start items-start gap-[8px]">
+                                            <div class="min-w-[9.4px] h-auto p-[5px]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8"
+                                                    viewBox="0 0 11 8" fill="none">
+                                                    <path
+                                                        d="M7.67773 7.6503L10.209 5.11905L7.67773 2.5878V7.6503ZM8.4533 5.57928V4.65882H0.79137V5.57928H8.4533ZM1.68626 5.57928V0.209961H0.765802V5.57928H1.68626Z"
+                                                        fill="white" />
+                                                </svg>
+                                            </div>
+                                            <p
+                                                class="text-white text-[12px] font-[400] leading-[130%] tracking-[-0.48px]">
+                                                Reduces manual operational costs by over 50%, with a potential
+                                                break-even on investment in approximately two years
+                                            </p>
+                                        </div>
+                                        <div class="h-[0.5px] bg-white w-full"></div>
+                                        <div class="flex flex-row justify-start items-start gap-[8px]">
+                                            <div class="min-w-[9.4px] h-auto p-[5px]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8"
+                                                    viewBox="0 0 11 8" fill="none">
+                                                    <path
+                                                        d="M7.67773 7.6503L10.209 5.11905L7.67773 2.5878V7.6503ZM8.4533 5.57928V4.65882H0.79137V5.57928H8.4533ZM1.68626 5.57928V0.209961H0.765802V5.57928H1.68626Z"
+                                                        fill="white" />
+                                                </svg>
+                                            </div>
+                                            <p
+                                                class="text-white text-[12px] font-[400] leading-[130%] tracking-[-0.48px]">
+                                                Minimizes dependency on fixed hardware like conveyor belts,
+                                                substantially lowering maintenance costs and facility constraints.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <!-- second slide markup -->
+                                <div class="relative">
+                                    <div>
+                                        <img src="/img/slide2.png" alt="Benefit" class="w-full h-auto">
+                                    </div>
+                                    <div
+                                        class="flex flex-col gap-[15px] absolute bottom-0 left-0 right-0 min-h-[250px] m-[20px] p-[16px] backdrop-blur-[45px] bg-white/20">
+                                        <p class="text-white text-[22px] font-[500] leading-[100%] tracking-[-0.66px]">
+                                            Enhanced<br />Safety and Precision</p>
+                                        <div class="h-[0.5px] bg-white w-full"></div>
+                                        <div class="flex flex-row justify-start items-start gap-[8px]">
+                                            <div class="min-w-[9.4px] h-auto p-[5px]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8"
+                                                    viewBox="0 0 11 8" fill="none">
+                                                    <path
+                                                        d="M7.67773 7.6503L10.209 5.11905L7.67773 2.5878V7.6503ZM8.4533 5.57928V4.65882H0.79137V5.57928H8.4533ZM1.68626 5.57928V0.209961H0.765802V5.57928H1.68626Z"
+                                                        fill="white" />
+                                                </svg>
+                                            </div>
+                                            <p
+                                                class="text-white text-[12px] font-[400] leading-[130%] tracking-[-0.48px]">
+                                                Eliminates human errors and significantly reduces accident-related costs
+                                                through
+                                                precise, centimeter-level vehicle control
+                                            </p>
+                                        </div>
+                                        <div class="h-[0.5px] bg-white w-full"></div>
+                                        <div class="flex flex-row justify-start items-start gap-[8px]">
+                                            <div class="min-w-[9.4px] h-auto p-[5px]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8"
+                                                    viewBox="0 0 11 8" fill="none">
+                                                    <path
+                                                        d="M7.67773 7.6503L10.209 5.11905L7.67773 2.5878V7.6503ZM8.4533 5.57928V4.65882H0.79137V5.57928H8.4533ZM1.68626 5.57928V0.209961H0.765802V5.57928H1.68626Z"
+                                                        fill="white" />
+                                                </svg>
+                                            </div>
+                                            <p
+                                                class="text-white text-[12px] font-[400] leading-[130%] tracking-[-0.48px]">
+                                                Ensures compliance with stringent safety protocols for safe operation in
+                                                mixed-traffic environments with workers, AGVs, and other vehicles.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <!-- third slide markup -->
+                                <div class="relative">
+                                    <div>
+                                        <img src="/img/slide3.png" alt="Benefit" class="w-full h-auto">
+                                    </div>
+                                    <div
+                                        class="flex flex-col gap-[15px] absolute bottom-0 left-0 right-0 min-h-[250px] m-[20px] p-[16px] backdrop-blur-[45px] bg-white/20">
+                                        <p class="text-white text-[22px] font-[500] leading-[100%] tracking-[-0.66px]">
+                                            Maximized<br />Productivity and Resilience</p>
+                                        <div class="h-[0.5px] bg-white w-full"></div>
+                                        <div class="flex flex-row justify-start items-start gap-[8px]">
+                                            <div class="min-w-[9.4px] h-auto p-[5px]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8"
+                                                    viewBox="0 0 11 8" fill="none">
+                                                    <path
+                                                        d="M7.67773 7.6503L10.209 5.11905L7.67773 2.5878V7.6503ZM8.4533 5.57928V4.65882H0.79137V5.57928H8.4533ZM1.68626 5.57928V0.209961H0.765802V5.57928H1.68626Z"
+                                                        fill="white" />
+                                                </svg>
+                                            </div>
+                                            <p
+                                                class="text-white text-[12px] font-[400] leading-[130%] tracking-[-0.48px]">
+                                                Maintains consistent, reliable operations 24/7 in all weather
+                                                conditions, helping to overcome labor shortages
+                                            </p>
+                                        </div>
+                                        <div class="h-[0.5px] bg-white w-full"></div>
+                                        <div class="flex flex-row justify-start items-start gap-[8px]">
+                                            <div class="min-w-[9.4px] h-auto p-[5px]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8"
+                                                    viewBox="0 0 11 8" fill="none">
+                                                    <path
+                                                        d="M7.67773 7.6503L10.209 5.11905L7.67773 2.5878V7.6503ZM8.4533 5.57928V4.65882H0.79137V5.57928H8.4533ZM1.68626 5.57928V0.209961H0.765802V5.57928H1.68626Z"
+                                                        fill="white" />
+                                                </svg>
+                                            </div>
+                                            <p
+                                                class="text-white text-[12px] font-[400] leading-[130%] tracking-[-0.48px]">
+                                                Optimizes logistic flows, eliminates idle time, and improves dispatching
+                                                through real-time obstacle avoidance and dynamic routing
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <!-- fourth slide markup -->
+                                <div class="relative">
+                                    <div>
+                                        <img src="/img/slide4.png" alt="Benefit" class="w-full h-auto">
+                                    </div>
+                                    <div
+                                        class="flex flex-col gap-[15px] absolute bottom-0 left-0 right-0 min-h-[250px] m-[20px] p-[16px] backdrop-blur-[45px] bg-white/20">
+                                        <p class="text-white text-[22px] font-[500] leading-[100%] tracking-[-0.66px]">
+                                            Unmatched<br />Operational Flexibility</p>
+                                        <div class="h-[0.5px] bg-white w-full"></div>
+                                        <div class="flex flex-row justify-start items-start gap-[8px]">
+                                            <div class="min-w-[9.4px] h-auto p-[5px]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8"
+                                                    viewBox="0 0 11 8" fill="none">
+                                                    <path
+                                                        d="M7.67773 7.6503L10.209 5.11905L7.67773 2.5878V7.6503ZM8.4533 5.57928V4.65882H0.79137V5.57928H8.4533ZM1.68626 5.57928V0.209961H0.765802V5.57928H1.68626Z"
+                                                        fill="white" />
+                                                </svg>
+                                            </div>
+                                            <p
+                                                class="text-white text-[12px] font-[400] leading-[130%] tracking-[-0.48px]">
+                                                Supports seamless production line reconfigurations to adapt to changing
+                                                operational needs
+                                            </p>
+                                        </div>
+                                        <div class="h-[0.5px] bg-white w-full"></div>
+                                        <div class="flex flex-row justify-start items-start gap-[8px]">
+                                            <div class="min-w-[9.4px] h-auto p-[5px]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8"
+                                                    viewBox="0 0 11 8" fill="none">
+                                                    <path
+                                                        d="M7.67773 7.6503L10.209 5.11905L7.67773 2.5878V7.6503ZM8.4533 5.57928V4.65882H0.79137V5.57928H8.4533ZM1.68626 5.57928V0.209961H0.765802V5.57928H1.68626Z"
+                                                        fill="white" />
+                                                </svg>
+                                            </div>
+                                            <p
+                                                class="text-white text-[12px] font-[400] leading-[130%] tracking-[-0.48px]">
+                                                Intelligently groups vehicles, manages automated charging, and automates
+                                                complex maneuvers to improve overall throughput.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-row gap-[8px] justify-start mt-[30px]">
+                            <div
+                                class="custom-swiper-button-prev min-w-[40px] min-h-[40px] border border-white flex items-center justify-center cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14"
+                                    fill="none">
+                                    <path d="M7.84766 13.4893L1.51407 7.15567L7.84766 0.82209" stroke="white"
+                                        stroke-width="0.895704" />
+                                </svg>
+                            </div>
+                            <div
+                                class="custom-swiper-button-next min-w-[40px] min-h-[40px] border border-white flex items-center justify-center cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14"
+                                    fill="none">
+                                    <path d="M1.15234 13.4893L7.48593 7.15567L1.15234 0.82209" stroke="white"
+                                        stroke-width="0.895704" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </section>
         </div>
         <!-- Updates -->
-        <section id="updates-section" class="w-full max-w-[430px] mx-auto py-[140px] px-[20px]">
+        <section id="updates-section" class="reveal w-full max-w-[430px] mx-auto py-[140px] px-[20px]">
             <div class="flex flex-col gap-[60px]">
-                <h1 class="text-black text-[36px] font-medium leading-[100%] tracking-[-1.44px]">Updates</h1>
+                <h1 class="text-black text-[36px] font-[500] leading-[100%] tracking-[-1.44px]">Updates</h1>
+                <div class="flex flex-col gap-[30px]">
+                    <div class="hover-zoom-container">
+                        <img src="/img/updates1.png" alt="Updates" class="w-full h-auto">
+                    </div>
+                    <div class="flex flex-col gap-[20px]">
+                        <p
+                            class="text-[#2A2C2F] font-space-mono text-[11px] font-[400] leading-[11px] tracking-[0.23px] uppercase">
+                            June 18, 2025</p>
+                        <p class="text-[#2A2C2F] text-[17px] font-[500] leading-[19px] tracking-[-0.69px] pb-[22px]">Why
+                            Seoul Robotics Believes Infrastructure, Not Cars, Will Drive the Future of Autonomy</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-[30px]">
+                    <div class="hover-zoom-container">
+                        <img src="/img/updates2.png" alt="Updates" class="w-full h-auto">
+                    </div>
+                    <div class="flex flex-col gap-[20px]">
+                        <p
+                            class="text-[#2A2C2F] font-space-mono text-[11px] font-[400] leading-[11px] tracking-[0.23px] uppercase">
+                            June 18, 2025</p>
+                        <p class="text-[#2A2C2F] text-[17px] font-[500] leading-[19px] tracking-[-0.69px] pb-[22px]">Why
+                            Seoul Robotics Believes Infrastructure, Not Cars, Will Drive the Future of Autonomy</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-[30px]">
+                    <div class="hover-zoom-container">
+                        <img src="/img/updates3.png" alt="Updates" class="w-full h-auto">
+                    </div>
+                    <div class="flex flex-col gap-[20px]">
+                        <p
+                            class="text-[#2A2C2F] font-space-mono text-[11px] font-[400] leading-[11px] tracking-[0.23px] uppercase">
+                            June 18, 2025</p>
+                        <p class="text-[#2A2C2F] text-[17px] font-[500] leading-[19px] tracking-[-0.69px] pb-[22px]">Why
+                            Seoul Robotics Believes Infrastructure, Not Cars, Will Drive the Future of Autonomy</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -531,8 +868,31 @@
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         $(function () {
+            // Initialize Lenis
+            const lenis = new Lenis({
+                autoRaf: true,
+            });
+
+            // Swiper 초기화
+            new Swiper('.swiper-container', {
+                slidesPerView: 1.1,
+                centeredSlides: false,
+                spaceBetween: 17,
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: '.custom-swiper-button-next',
+                    prevEl: '.custom-swiper-button-prev',
+                },
+            });
+
+            // 모바일 메뉴 관련 변수
             var open = false;
             var $btn = $('#mobile-menu-btn');
             var $overlay = $('#mobile-menu-overlay');
@@ -542,12 +902,13 @@
             var $header = $('header');
             var $section = $('#the-seoul-robotics-difference-section');
 
+            // 모바일 메뉴 토글
             $btn.on('click', function () {
                 open = !open;
                 if (open) {
                     $overlay.removeClass('opacity-0 pointer-events-none').addClass('opacity-100');
-                    $bar1.css('transform', 'rotate(45deg) translateY(6px)');
-                    $bar2.css('transform', 'rotate(-45deg) translateY(-6px)');
+                    $bar1.css('transform', 'translateY(4px) rotate(45deg)');
+                    $bar2.css('transform', 'translateY(-4px) rotate(-45deg)');
                     $items.each(function (i, item) {
                         setTimeout(function () {
                             $(item).removeClass('opacity-0 translate-y-4').addClass('opacity-100 translate-y-0');
@@ -569,10 +930,12 @@
                     checkHeaderSimple();
                 }
             });
+            
             // 오버레이 클릭 시 닫기
             $overlay.on('click', function (e) {
                 if (e.target === this) $btn.click();
             });
+            
             // 아코디언 토글
             $('.capabilities-accordion .capability-toggle').on('click', function () {
                 var $btn = $(this);
@@ -588,6 +951,8 @@
                     $btn.removeClass('opacity-80').addClass('opacity-100');
                 }
             });
+            
+            // 메뉴 스크롤
             $('.menu-scroll').on('click', function () {
                 var target = $(this).data('target');
                 if (target && $('#' + target).length) {
@@ -602,6 +967,8 @@
                     }
                 }
             });
+            
+            // 헤더 상태 체크
             function checkHeaderSimple() {
                 var scroll = $(window).scrollTop();
                 var offset = $section.offset().top;
@@ -613,9 +980,30 @@
                     $('body').removeClass('white-text');
                 }
             }
+            
+            // 스크롤 및 리사이즈 이벤트
             $(window).on('scroll resize', checkHeaderSimple);
             checkHeaderSimple();
         });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const reveals = document.querySelectorAll('.reveal');
+        const observerOptions = {
+          root: null,
+          rootMargin: '0px 0px -100px 0px',
+          threshold: 0
+        };
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+        reveals.forEach(el => revealObserver.observe(el));
+      });
     </script>
 </body>
 
