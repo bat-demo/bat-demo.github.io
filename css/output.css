@@ -16,6 +16,7 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-pretendard: "Pretendard", sans-serif;
     --font-space-mono: "Space Mono", monospace;
   }
 }
@@ -551,6 +552,9 @@
   .font-\[Inter\] {
     font-family: Inter;
   }
+  .font-pretendard {
+    font-family: var(--font-pretendard);
+  }
   .font-space-mono {
     font-family: var(--font-space-mono);
   }
@@ -565,6 +569,9 @@
   }
   .text-\[17px\] {
     font-size: 17px;
+  }
+  .text-\[18px\] {
+    font-size: 18px;
   }
   .text-\[22px\] {
     font-size: 22px;
@@ -598,6 +605,10 @@
   .leading-\[130\%\] {
     --tw-leading: 130%;
     line-height: 130%;
+  }
+  .leading-\[140\%\] {
+    --tw-leading: 140%;
+    line-height: 140%;
   }
   .leading-none {
     --tw-leading: 1;
@@ -642,6 +653,10 @@
   .tracking-\[-0\.69px\] {
     --tw-tracking: -0.69px;
     letter-spacing: -0.69px;
+  }
+  .tracking-\[-0\.72px\] {
+    --tw-tracking: -0.72px;
+    letter-spacing: -0.72px;
   }
   .tracking-\[-0\.84px\] {
     --tw-tracking: -0.84px;
