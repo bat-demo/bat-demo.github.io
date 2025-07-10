@@ -16,8 +16,8 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
         rel="stylesheet">
-    <link rel="stylesheet" href="/css/output.css?v=1">
-    <link rel="stylesheet" href="/css/main.css?v=1">
+    <link rel="stylesheet" href="/css/output.css?v=2">
+    <link rel="stylesheet" href="/css/main.css?v=2">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
     <style>
@@ -25,31 +25,25 @@
         #mobile-menu-btn span {
             transform-origin: center center;
         }
-    </style>
-    <style>
         /* Hover-zoom effect on section images */
         .hover-zoom-container {
             overflow: hidden;
         }
-
         .hover-zoom-container img {
             transition: transform 0.3s ease;
         }
-
         .hover-zoom-container:hover img {
             transform: scale(1.05);
         }
-    </style>
-    <style>
-      .reveal {
-        opacity: 0;
-        transform: translateY(60px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-      }
-      .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-      }
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 
@@ -71,7 +65,7 @@
             <ul class="flex gap-[40px]">
                 <li><button
                         class="menu-scroll text-white text-[12px] font-[500] uppercase leading-none tracking-[-0.36px] hover:opacity-70"
-                        data-target="about-section">About us</button></li>
+                        data-target="the-seoul-robotics-difference-section">About us</button></li>
                 <li><button
                         class="menu-scroll text-white text-[12px] font-[500] uppercase leading-none tracking-[-0.36px] hover:opacity-70"
                         data-target="solutions-section">solutions</button></li>
@@ -93,8 +87,8 @@
         <ul class="flex flex-col gap-0 w-full h-full px-[20px] mt-[120px] animate-menu-slidein">
             <li
                 class="mobile-menu-item opacity-0 -translate-y-4 transition-all duration-500 delay-100 border-b border-white/30 text-white text-[22px] font-[500] uppercase py-[10px] pl-1 tracking-[-0.66px] leading-[100%]">
-                <button type="button" class="menu-scroll w-full text-left uppercase" data-target="about-section"
-                    aria-label="About us">About us</button>
+                <button type="button" class="menu-scroll w-full text-left uppercase"
+                    data-target="the-seoul-robotics-difference-section" aria-label="About us">About us</button>
             </li>
             <li
                 class="mobile-menu-item opacity-0 -translate-y-4 transition-all duration-500 delay-200 border-b border-white/30 text-white text-[22px] font-[500] uppercase py-[10px] pl-1 tracking-[-0.66px] leading-[100%]">
@@ -124,35 +118,18 @@
                 <source src="/video/main.mp4" type="video/mp4">
             </video>
             <div class="absolute inset-0 w-full h-full bg-black opacity-40"></div>
-            <div class="absolute z-10 bottom-[24px] md:bottom-[40px] left-[20px] md:left-[40px] w-[60%]">
+            <div class="absolute z-10 bottom-[24px] md:bottom-[40px] left-[20px] md:left-[40px]">
                 <h1
-                    class="text-white text-[36px] md:text-[64px] font-[500] md:font-normal leading-[100%] tracking-[-1.44px] md:tracking-[-1.4px] mb-[20px] md:mb-[30px]">
-                    Seoul Robotics.<br />Autonomous Logistics, Now.</h1>
+                    class="text-white text-[30px] md:text-[64px] font-[500] md:font-normal leading-[120%] md:leading-[100%] tracking-[-1.2px] md:tracking-[-1.4px] mb-[20px] md:mb-[30px]">
+                    Seoul Robotics.<br />Autonomous Logistics, <br />Now.</h1>
                 <a href="https://www.youtube.com/watch?v=09bvu6ckPs0" target="_blank"
                     class="text-white text-[12px] font-[500] w-fit leading-[100%] tracking-[-0.36px] hover:opacity-70 flex h-[40px] px-[35px] py-[14px] justify-center items-center border border-white">Watch
                     full video</a>
             </div>
         </section>
-        <section id="about-section"
-            class="text-white h-[100dvh] flex items-center px-[20px] md:px-[140px] relative overflow-hidden">
-            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
-                <source src="/video/asset1.mp4" type="video/mp4">
-            </video>
-            <div class="absolute inset-0 w-full h-full bg-black opacity-60"></div>
-            <div class="relative z-10 flex flex-col gap-[20px] md:gap-[50px] max-w-[783px]">
-                <p class="text-white text-[36px] md:text-[64px] font-normal leading-[100%] tracking-[-1.4px]">Leader in
-                    Autonomous <br />Vehicle Marshaling, <br />Autonomous Vehicle Parking</p>
-                <p
-                    class="text-white text-[16px] md:text-[22px] font-normal leading-[130%] tracking-[-0.32px] md:tracking-[-1.1px]">
-                    Seoul Robotics is the leader in B2B autonomous driving solutions, creating the new standard for
-                    operational efficiency and safety in industrial logistics. Our technology, refined through nearly a
-                    decade of development and deployed in the world's largest automation projects, is built on three
-                    core principles.
-                </p>
-            </div>
-        </section>
         <!-- The Seoul Robotics Difference -->
-        <section id="the-seoul-robotics-difference-section" class="reveal w-full max-w-[430px] mx-auto py-[140px] px-[20px]">
+        <section id="the-seoul-robotics-difference-section"
+            class="reveal w-full max-w-[430px] mx-auto py-[140px] px-[20px]">
             <div class="flex flex-col gap-[60px]">
                 <h1 class="text-black text-[36px] font-[500] leading-[100%] tracking-[-1.44px]">The Seoul Robotics
                     Difference</h1>
@@ -328,7 +305,10 @@
                                 </button>
                                 <div
                                     class="capability-content hidden pt-[10px] pb-[30px] font-[400] text-[16px] text-[#B2B2B2] leading-[1.5]">
-                                    ATI addresses upstream logistics by autonomously transporting a vehicle's "skateboard" chassis to various production islands before the vehicle's own driving hardware is even installed. This supports flexible and modular production architectures, reducing dependency on traditional, linear assembly lines.
+                                    ATI addresses upstream logistics by autonomously transporting a vehicle's
+                                    "skateboard" chassis to various production islands before the vehicle's own driving
+                                    hardware is even installed. This supports flexible and modular production
+                                    architectures, reducing dependency on traditional, linear assembly lines.
                                 </div>
                             </div>
                         </div>
@@ -346,7 +326,11 @@
                         <p class="font-[Inter] text-[28px] font-[500] leading-[100%] tracking-[-0.84px] mt-[30px]">
                             For Ports and Logistic Yards</p>
                         <p class="text-[#B2B2B2] text-[16px] font-[400] leading-[130%] tracking-[-0.64px] mt-[30px]">
-                            Autonomous Yard Tractor (AYT) solution delivers precision autonomous operations, offering the adaptability required in complex logistic environments. Designed for seamless integration into dynamic traffic scenarios—such as busy logistics yards, mixed-vehicle environments, and areas frequently traversed by pedestrians and equipment—the AYT operates safely and effectively in all weather conditions, day or night.</p>
+                            Autonomous Yard Tractor (AYT) solution delivers precision autonomous operations, offering
+                            the adaptability required in complex logistic environments. Designed for seamless
+                            integration into dynamic traffic scenarios—such as busy logistics yards, mixed-vehicle
+                            environments, and areas frequently traversed by pedestrians and equipment—the AYT operates
+                            safely and effectively in all weather conditions, day or night.</p>
                         <div class="capabilities-accordion flex flex-col w-full mt-[30px]">
                             <div class="">
                                 <button type="button"
@@ -542,17 +526,48 @@
             </div>
         </section>
         <!-- Trusted by Global Leaders -->
-        <section class="relative w-full min-h-[500px] flex flex-col items-center justify-center text-center"
+        <section class="relative w-full min-h-[597px] flex flex-col items-center justify-center text-center"
             style="background: url('/img/g_bg.png') center/cover no-repeat;">
             <div
                 class="max-w-[430px] mx-auto relative z-10 flex flex-col items-center justify-center w-full h-full py-[100px] px-[20px]">
                 <h2 class="text-white text-[28px] font-[500] leading-[100%] tracking-[-0.84px] text-center mb-[30px]">
-                    Trusted by<br />Global Leaders</h2>
+                    Trusted by<br />Global Leaders
+                </h2>
                 <p
                     class="text-white text-[16px] font-[400] leading-[130%] tracking-[-0.64px] text-center max-w-[600px]">
                     Our solutions are validated and trusted by industry leaders worldwide, deployed across top-tier
                     automotive manufacturers and logistics companies.
                 </p>
+                <div class="logo-marquee-container overflow-hidden mt-[100px]">
+                  <div class="logo-marquee-inner flex items-center gap-[68px]">
+                    <!-- Original 12 logos -->
+                    <img src="/img/rolling/1.png" alt="logo" class="h-[48px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/2.png" alt="logo" class="h-[48px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/3.png" alt="logo" class="h-[48px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/4.png" alt="logo" class="h-[48px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/5.png" alt="logo" class="h-[22px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/6.png" alt="logo" class="h-[28px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/7.png" alt="logo" class="h-[28px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/8.png" alt="logo" class="h-[28px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/9.png" alt="logo" class="h-[36px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/10.png" alt="logo" class="h-[28px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/11.png" alt="logo" class="h-[36px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/12.png" alt="logo" class="h-[36px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <!-- Duplicate for seamless loop -->
+                    <img src="/img/rolling/1.png" alt="logo" class="h-[48px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/2.png" alt="logo" class="h-[48px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/3.png" alt="logo" class="h-[48px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/4.png" alt="logo" class="h-[48px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/5.png" alt="logo" class="h-[22px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/6.png" alt="logo" class="h-[28px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/7.png" alt="logo" class="h-[28px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/8.png" alt="logo" class="h-[28px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/9.png" alt="logo" class="h-[36px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/10.png" alt="logo" class="h-[28px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/11.png" alt="logo" class="h-[36px] w-auto" draggable="false" oncontextmenu="return false;" />
+                    <img src="/img/rolling/12.png" alt="logo" class="h-[36px] w-auto" draggable="false" oncontextmenu="return false;" />
+                  </div>
+                </div>
             </div>
         </section>
         <!-- Seoul Robotics Autonomous Driving Solution Benefits -->
@@ -774,21 +789,6 @@
         <section id="updates-section" class="reveal w-full max-w-[430px] mx-auto py-[140px] px-[20px]">
             <div class="flex flex-col gap-[60px]">
                 <h1 class="text-black text-[36px] font-[500] leading-[100%] tracking-[-1.44px]">Updates</h1>
-                <a href="https://www.forbeskorea.co.kr/news/articleView.html?idxno=338785" target="_blank">
-                    <div class="flex flex-col gap-[30px]">
-                        <div class="hover-zoom-container">
-                            <img src="/img/updates1.png" alt="Updates" class="w-full h-auto">
-                        </div>
-                        <div class="flex flex-col gap-[20px]">
-                            <p
-                                class="text-[#2A2C2F] font-space-mono text-[11px] font-[400] leading-[11px] tracking-[0.23px] uppercase">
-                                november 24, 2023</p>
-                            <p class="text-[#2A2C2F] text-[18px] font-[500] leading-[140%] tracking-[-0.72px] pb-[22px] font-pretendard">
-                                이한빈 서울로보틱스 대표
-                            </p>
-                        </div>
-                    </div>
-                </a>
                 <a href="https://www.forbeskorea.co.kr/news/articleView.html?idxno=340729" target="_blank">
                     <div class="flex flex-col gap-[30px]">
                         <div class="hover-zoom-container">
@@ -796,11 +796,13 @@
                         </div>
                         <div class="flex flex-col gap-[20px]">
                             <p
-                                class="text-[#2A2C2F] font-space-mono text-[11px] font-[400] leading-[11px] tracking-[0.23px] uppercase">
-                                february 04, 2025</p>
-                            <p class="text-[#2A2C2F] text-[18px] font-[500] leading-[140%] tracking-[-0.72px] pb-[22px] font-pretendard">
+                                class="text-[#2A2C2F] text-[18px] font-[500] leading-[140%] tracking-[-0.72px] font-pretendard">
                                 '자율주행' 기술, B2C부터 B2B까지…미래 산업 지형 바꾼다
                             </p>
+                            <p
+                                class="text-[#2A2C2F] font-space-mono text-[11px] font-[400] leading-[11px] tracking-[0.23px] uppercase">
+                                february 04, 2025</p>
+                            <img src="/img/up1.png" alt="publisher" class="w-[70px] h-auto">
                         </div>
                     </div>
                 </a>
@@ -811,11 +813,13 @@
                         </div>
                         <div class="flex flex-col gap-[20px]">
                             <p
-                                class="text-[#2A2C2F] font-space-mono text-[11px] font-[400] leading-[11px] tracking-[0.23px] uppercase">
-                                october 29, 2024</p>
-                            <p class="text-[#2A2C2F] text-[18px] font-[500] leading-[140%] tracking-[-0.72px] pb-[22px] font-pretendard">
+                                class="text-[#2A2C2F] text-[18px] font-[500] leading-[140%] tracking-[-0.72px] font-pretendard">
                                 이한빈 대표 "공장 안 자율주행으로 완성차 업체들과 본계약 단계" [WE, are not ROBOTaxi①]
                             </p>
+                            <p
+                                class="text-[#2A2C2F] font-space-mono text-[11px] font-[400] leading-[11px] tracking-[0.23px] uppercase">
+                                october 29, 2024</p>
+                            <img src="/img/up2.png" alt="publisher" class="w-[109px] h-auto">
                         </div>
                     </div>
                 </a>
@@ -826,41 +830,13 @@
                         </div>
                         <div class="flex flex-col gap-[20px]">
                             <p
-                                class="text-[#2A2C2F] font-space-mono text-[11px] font-[400] leading-[11px] tracking-[0.23px] uppercase">
-                                march 16, 2025</p>
-                            <p class="text-[#2A2C2F] text-[18px] font-[500] leading-[140%] tracking-[-0.72px] pb-[22px] font-pretendard">
+                                class="text-[#2A2C2F] text-[18px] font-[500] leading-[140%] tracking-[-0.72px] font-pretendard">
                                 [人사이트] 이한빈 서울로보틱스 대표 "자율주행기업 국내 1호 상장 도전"
                             </p>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://www.newstheai.com/news/articleView.html?idxno=7646" target="_blank">
-                    <div class="flex flex-col gap-[30px]">
-                        <div class="hover-zoom-container">
-                            <img src="/img/updates5.png" alt="Updates" class="w-full h-auto">
-                        </div>
-                        <div class="flex flex-col gap-[20px]">
                             <p
                                 class="text-[#2A2C2F] font-space-mono text-[11px] font-[400] leading-[11px] tracking-[0.23px] uppercase">
-                                april 16, 2025</p>
-                            <p class="text-[#2A2C2F] text-[18px] font-[500] leading-[140%] tracking-[-0.72px] pb-[22px] font-pretendard">
-                                이한빈 서울로보틱스 대표 "인력 부족, 자율주행으로 메꾼다"
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                <a href="https://www.joongang.co.kr/article/25264415" target="_blank">
-                    <div class="flex flex-col gap-[30px]">
-                        <div class="hover-zoom-container">
-                            <img src="/img/updates6.png" alt="Updates" class="w-full h-auto">
-                        </div>
-                        <div class="flex flex-col gap-[20px]">
-                            <p
-                                class="text-[#2A2C2F] font-space-mono text-[11px] font-[400] leading-[11px] tracking-[0.23px] uppercase">
-                                July 18, 2024</p>
-                            <p class="text-[#2A2C2F] text-[18px] font-[500] leading-[140%] tracking-[-0.72px] pb-[22px] font-pretendard">
-                                완성차 공장도 자율주행 바람...BMW가 선택한 기술 일본도 노린다
-                            </p>
+                                march 16, 2025</p>
+                            <img src="/img/up3.png" alt="publisher" class="w-[98px] h-auto">
                         </div>
                     </div>
                 </a>
@@ -871,11 +847,13 @@
                         </div>
                         <div class="flex flex-col gap-[20px]">
                             <p
-                                class="text-[#2A2C2F] font-space-mono text-[11px] font-[400] leading-[11px] tracking-[0.23px] uppercase">
-                                June 13, 2025</p>
-                            <p class="text-[#2A2C2F] text-[18px] font-[500] leading-[140%] tracking-[-0.72px] pb-[22px] font-pretendard">
+                                class="text-[#2A2C2F] text-[18px] font-[500] leading-[140%] tracking-[-0.72px] font-pretendard">
                                 서울로보틱스 "자율주행 日·中 수출 추진...지멘스·보쉬 등과 경쟁"
                             </p>
+                            <p
+                                class="text-[#2A2C2F] font-space-mono text-[11px] font-[400] leading-[11px] tracking-[0.23px] uppercase">
+                                June 13, 2025</p>
+                            <img src="/img/up4.png" alt="publisher" class="w-[133px] h-auto">
                         </div>
                     </div>
                 </a>
@@ -887,35 +865,35 @@
         <div class="max-w-[430px] mx-auto flex flex-col pt-[100px] pb-[24px]">
             <!-- Contact Info -->
             <div>
-                <div class="text-[12px] font-[400] text-white mb-[16px] leading-[130%] tracking-[-0.48px]">Contact</div>
-                <div class="text-[12px] font-[400] text-white leading-[130%] tracking-[-0.48px] mt-[30px]">
-                    4, Banpo-daero 22-gil,<br>
-                    Seocho-gu, Seoul,<br>
-                    Republic of Korea.
+                <div class="flex flex-col gap-[30px]">
+                    <div class="flex flex-col gap-[5px]">
+                        <p class="text-[12px] font-[700] text-white leading-[100%] tracking-[-0.36px]">Contact</p>
+                        <p class="text-[11px] font-[400] text-white leading-[100%] tracking-[-0.33px]"><a
+                                href="mailto:ir@seoulrobotics.org">ir@seoulrobotics.org</a></p>
+                    </div>
+                    <div class="flex flex-col gap-[5px]">
+                        <p class="text-[12px] font-[700] text-white leading-[130%] tracking-[-0.36px]">HQ</p>
+                        <p class="text-[11px] font-[400] text-white leading-[130%] tracking-[-0.33px]">4, Banpo-daero
+                            22-gil, Seocho-gu, Seoul, Korea</p>
+                    </div>
+                    <div class="flex flex-col gap-[5px]">
+                        <p class="text-[12px] font-[700] text-white leading-[130%] tracking-[-0.36px]">R&D Center</p>
+                        <p class="text-[11px] font-[400] text-white leading-[130%] tracking-[-0.33px]">388,
+                            Daewangpangyo-ro, Bundang-gu, Seongnam-si, Gyeonggi-do</p>
+                    </div>
                 </div>
-                <div class="text-[12px] font-[400] text-white leading-[130%] tracking-[-0.48px] mt-[10px]">
-                    +82 70-8666-0819
-                </div>
-                <div class="text-[12px] font-[400] text-white leading-[130%] tracking-[-0.48px] mt-[10px]">
-                    hello@seoulrobotics.org
-                </div>
+
                 <a href="https://srshop.ai" target="_blank"
                     class="inline-flex items-center gap-2 text-[#FFF176] font-[500] text-[12px] mt-[30px] leading-[100%] tracking-[-0.36px]">
                     SR Shop
                 </a>
             </div>
             <!-- Logo & Social -->
-            <div class="flex flex-col items-start gap-[20px] mt-[60px]">
+            <div class="flex flex-col items-start gap-[20px] mt-[80px]">
                 <img src="/img/footer_logo.png" alt="Seoul Robotics Logo" class="w-[160px] h-auto" />
                 <div class="flex items-center gap-[4px] mt-2">
                     <a href="https://www.linkedin.com/company/seoul-robotics/" target="_blank"><img
                             src="/img/icon-linkedin.svg" class="w-[34px] h-[34px]" alt="LinkedIn"></a>
-                    <a href="https://x.com/seoulrobotics" target="_blank"><img src="/img/icon-x.svg"
-                            class="w-[34px] h-[34px]" alt="X"></a>
-                    <a href="https://www.instagram.com/seoulrobotics/" target="_blank"><img
-                            src="/img/icon-instagram.svg" class="w-[34px] h-[34px]" alt="Instagram"></a>
-                    <a href="https://www.youtube.com/channel/UCcfXs-yXfkN3VfhAwUTooFg" target="_blank"><img
-                            src="/img/icon-youtube.svg" class="w-[34px] h-[34px]" alt="YouTube"></a>
                 </div>
             </div>
             <!-- Copyright -->
@@ -925,6 +903,7 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script>
         $(function () {
             // Initialize Lenis
@@ -986,12 +965,12 @@
                     checkHeaderSimple();
                 }
             });
-            
+
             // 오버레이 클릭 시 닫기
             $overlay.on('click', function (e) {
                 if (e.target === this) $btn.click();
             });
-            
+
             // 아코디언 토글
             $('.capabilities-accordion .capability-toggle').on('click', function () {
                 var $btn = $(this);
@@ -1007,7 +986,7 @@
                     $btn.removeClass('opacity-80').addClass('opacity-100');
                 }
             });
-            
+
             // 메뉴 스크롤
             $('.menu-scroll').on('click', function () {
                 var target = $(this).data('target');
@@ -1023,7 +1002,7 @@
                     }
                 }
             });
-            
+
             // 헤더 상태 체크
             function checkHeaderSimple() {
                 var scroll = $(window).scrollTop();
@@ -1036,31 +1015,43 @@
                     $('body').removeClass('white-text');
                 }
             }
-            
+
             // 스크롤 및 리사이즈 이벤트
             $(window).on('scroll resize', checkHeaderSimple);
             checkHeaderSimple();
         });
     </script>
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const reveals = document.querySelectorAll('.reveal');
-        const observerOptions = {
-          root: null,
-          rootMargin: '0px 0px -100px 0px',
-          threshold: 0
-        };
-        const revealObserver = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('active');
-              observer.unobserve(entry.target);
-            }
-          });
-        }, observerOptions);
-        reveals.forEach(el => revealObserver.observe(el));
-      });
+        document.addEventListener('DOMContentLoaded', function () {
+            const reveals = document.querySelectorAll('.reveal');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -100px 0px',
+                threshold: 0
+            };
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            reveals.forEach(el => revealObserver.observe(el));
+        });
     </script>
 </body>
 
 </html>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const marquee = document.querySelector('.logo-marquee-inner');
+        const width = marquee.scrollWidth / 2;
+        gsap.to(marquee, {
+          x: -width,
+          duration: width / 50,
+          ease: 'none',
+          repeat: -1
+        });
+      });
+    </script>
