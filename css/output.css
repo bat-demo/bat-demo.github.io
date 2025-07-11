@@ -295,6 +295,9 @@
   .h-\[28px\] {
     height: 28px;
   }
+  .h-\[30px\] {
+    height: 30px;
+  }
   .h-\[32px\] {
     height: 32px;
   }
@@ -387,6 +390,9 @@
   }
   .w-\[109px\] {
     width: 109px;
+  }
+  .w-\[121px\] {
+    width: 121px;
   }
   .w-\[133px\] {
     width: 133px;
@@ -526,6 +532,9 @@
   .overflow-x-scroll {
     overflow-x: scroll;
   }
+  .rounded-\[5px\] {
+    border-radius: 5px;
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -551,6 +560,9 @@
   }
   .bg-\[\#2A2C2F\] {
     background-color: #2A2C2F;
+  }
+  .bg-\[\#FFF176\] {
+    background-color: #FFF176;
   }
   .bg-black {
     background-color: var(--color-black);
@@ -588,14 +600,23 @@
   .px-\[20px\] {
     padding-inline: 20px;
   }
+  .px-\[30px\] {
+    padding-inline: 30px;
+  }
   .px-\[35px\] {
     padding-inline: 35px;
+  }
+  .py-\[5px\] {
+    padding-block: 5px;
   }
   .py-\[10px\] {
     padding-block: 10px;
   }
   .py-\[14px\] {
     padding-block: 14px;
+  }
+  .py-\[15px\] {
+    padding-block: 15px;
   }
   .py-\[100px\] {
     padding-block: 100px;
@@ -617,6 +638,9 @@
   }
   .pb-\[30px\] {
     padding-bottom: 30px;
+  }
+  .pb-\[45px\] {
+    padding-bottom: 45px;
   }
   .pl-1 {
     padding-left: calc(var(--spacing) * 1);
@@ -706,6 +730,10 @@
   .font-\[500\] {
     --tw-font-weight: 500;
     font-weight: 500;
+  }
+  .font-\[600\] {
+    --tw-font-weight: 600;
+    font-weight: 600;
   }
   .font-\[700\] {
     --tw-font-weight: 700;

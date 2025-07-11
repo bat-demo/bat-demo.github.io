@@ -25,21 +25,26 @@
         #mobile-menu-btn span {
             transform-origin: center center;
         }
+
         /* Hover-zoom effect on section images */
         .hover-zoom-container {
             overflow: hidden;
         }
+
         .hover-zoom-container img {
             transition: transform 0.3s ease;
         }
+
         .hover-zoom-container:hover img {
             transform: scale(1.05);
         }
+
         .reveal {
             opacity: 0;
             transform: translateY(60px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
+
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
@@ -77,7 +82,7 @@
                         data-target="benefits-section">benefits</button></li>
                 <li><button
                         class="menu-scroll text-white text-[12px] font-[500] uppercase leading-none tracking-[-0.36px] hover:opacity-70 cursor-pointer"
-                        data-target="updates-section">updates</button></li>
+                        data-target="updates-section">highlight</button></li>
             </ul>
         </nav>
     </header>
@@ -108,7 +113,7 @@
             <li
                 class="mobile-menu-item opacity-0 -translate-y-4 transition-all duration-500 delay-500 text-white text-[22px] font-[500] uppercase py-[10px] pl-1 tracking-[-0.66px] leading-[100%]">
                 <button type="button" class="menu-scroll w-full text-left uppercase" data-target="updates-section"
-                    aria-label="updates">updates</button>
+                    aria-label="updates">highlight</button>
             </li>
         </ul>
     </div>
@@ -358,7 +363,7 @@
                     <!-- 3. AYT Solution -->
                     <div class="w-full">
                         <p class="text-[#B2B2B2] text-[22px] font-[500] leading-[100%] tracking-[-0.66px]">3</p>
-                        <p class="text-[36px] font-[500] leading-[100%] tracking-[-1.44px] mt-[10px]">AYT Solution</p>
+                        <p class="text-[36px] font-[500] leading-[100%] tracking-[-1.44px] mt-[10px]">SR Sync</p>
                         <div class="hover-zoom-container">
                             <img src="/img/section2-3.png" alt="The Seoul Robotics Difference"
                                 class="w-full h-auto mt-[30px]">
@@ -366,8 +371,8 @@
                         <p class="font-[Inter] text-[28px] font-[500] leading-[100%] tracking-[-0.84px] mt-[30px]">A
                             Complete, Turnkey Solution</p>
                         <p class="text-[#B2B2B2] text-[16px] font-[400] leading-[130%] tracking-[-0.64px] mt-[30px]">
-                            Our AYT solution is delivered as a comprehensive, all-in-one package, ensuring seamless
-                            integration and ongoing operational excellence.
+                            SR Sync is delivered as a comprehensive, all-in-one package, ensuring seamless integration
+                            and ongoing operational excellence.
                         </p>
                         <div class="capabilities-accordion flex flex-col w-full mt-[30px]">
                             <div class="border-b border-[#444]">
@@ -387,24 +392,18 @@
                                 </div>
                             </div>
                             <div class="border-b border-[#444]">
-                                <button type="button"
-                                    class="w-full flex items-center justify-between py-[10px] group capability-toggle font-[500] text-[16px] text-white opacity-80 tracking-[-0.5px]">
+                                <div class="py-[15px] font-[500] text-[16px] text-white opacity-80 tracking-[-0.5px] uppercase leading-[100%]">
                                     <span>Autonomous Driving Software</span>
-                                    <svg class="capability-arrow transition-transform duration-200 rotate-0" width="16"
-                                        height="10" viewBox="0 0 16 10" fill="none">
-                                        <path d="M15 1.07129L7.92893 8.14236L0.857864 1.07129" stroke="white"
-                                            stroke-opacity="0.8" stroke-width="1.5" />
-                                    </svg>
-                                </button>
+                                </div>
                                 <div
-                                    class="capability-content hidden pt-[10px] pb-[30px] font-[400] text-[16px] text-[#B2B2B2] leading-[1.5]">
+                                    class="pt-[10px] pb-[45px] font-[400] text-[16px] text-[#B2B2B2] leading-[1.5]">
                                     <div class="flex flex-col gap-[5px]">
-                                        <p class="text-white font-[500] mb-[5px]">AI-Powered Perception (Horus™)</p>
+                                        <p class="text-white text-[22px] font-[500] leading-[100%] tracking-[-0.66px] mb-[5px]">AI-Powered Perception (Horus™)</p>
                                         <p>Real-time object detection and classification.</p>
-                                        <p class="text-white font-[500] mt-[20px] mb-[5px]">Dynamic Motion Planning
+                                        <p class="text-white text-[22px] font-[500] leading-[100%] tracking-[-0.66px] mt-[20px] mb-[5px]">Dynamic Motion Planning
                                             (Atlas™)</p>
                                         <p>Predictive, real-time trajectory and behavior planning.</p>
-                                        <p class="text-white font-[500] mt-[20px] mb-[5px]">Redundant Safety Platform
+                                        <p class="text-white text-[22px] font-[500] leading-[100%] tracking-[-0.66px] mt-[20px] mb-[5px]">Redundant Safety Platform
                                         </p>
                                         <p>A continuously monitoring safety layer to validate all actions.</p>
                                     </div>
@@ -526,7 +525,8 @@
             </div>
         </section>
         <!-- Trusted by Global Leaders -->
-        <section class="relative w-full min-h-[597px] flex flex-col items-center justify-center text-center overflow-hidden"
+        <section
+            class="relative w-full min-h-[597px] flex flex-col items-center justify-center text-center overflow-hidden"
             style="background: url('/img/g_bg.png') center/cover no-repeat;">
             <div
                 class="max-w-[430px] mx-auto relative z-10 flex flex-col items-center justify-center w-full h-full py-[100px] px-[20px]">
@@ -539,34 +539,58 @@
                     automotive manufacturers and logistics companies.
                 </p>
                 <div class="logo-marquee-container overflow-hidden mt-[100px]">
-                  <div class="logo-marquee-inner flex items-center gap-[68px]">
-                    <!-- Original 12 logos -->
-                    <img src="/img/rolling/1.png" alt="logo" class="h-[48px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/2.png" alt="logo" class="h-[48px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/3.png" alt="logo" class="h-[48px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/4.png" alt="logo" class="h-[48px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/5.png" alt="logo" class="h-[22px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/6.png" alt="logo" class="h-[28px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/7.png" alt="logo" class="h-[28px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/8.png" alt="logo" class="h-[28px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/9.png" alt="logo" class="h-[36px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/10.png" alt="logo" class="h-[28px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/11.png" alt="logo" class="h-[36px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/12.png" alt="logo" class="h-[36px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <!-- Duplicate for seamless loop -->
-                    <img src="/img/rolling/1.png" alt="logo" class="h-[48px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/2.png" alt="logo" class="h-[48px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/3.png" alt="logo" class="h-[48px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/4.png" alt="logo" class="h-[48px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/5.png" alt="logo" class="h-[22px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/6.png" alt="logo" class="h-[28px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/7.png" alt="logo" class="h-[28px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/8.png" alt="logo" class="h-[28px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/9.png" alt="logo" class="h-[36px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/10.png" alt="logo" class="h-[28px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/11.png" alt="logo" class="h-[36px] w-auto" draggable="false" oncontextmenu="return false;" />
-                    <img src="/img/rolling/12.png" alt="logo" class="h-[36px] w-auto" draggable="false" oncontextmenu="return false;" />
-                  </div>
+                    <div class="logo-marquee-inner flex items-center gap-[68px]">
+                        <!-- Original 12 logos -->
+                        <img src="/img/rolling/1.png" alt="logo" class="h-[48px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/2.png" alt="logo" class="h-[48px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/3.png" alt="logo" class="h-[48px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/4.png" alt="logo" class="h-[48px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/5.png" alt="logo" class="h-[22px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/6.png" alt="logo" class="h-[28px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/7.png" alt="logo" class="h-[28px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/8.png" alt="logo" class="h-[28px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/9.png" alt="logo" class="h-[36px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/10.png" alt="logo" class="h-[28px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/11.png" alt="logo" class="h-[36px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/12.png" alt="logo" class="h-[36px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <!-- Duplicate for seamless loop -->
+                        <img src="/img/rolling/1.png" alt="logo" class="h-[48px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/2.png" alt="logo" class="h-[48px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/3.png" alt="logo" class="h-[48px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/4.png" alt="logo" class="h-[48px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/5.png" alt="logo" class="h-[22px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/6.png" alt="logo" class="h-[28px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/7.png" alt="logo" class="h-[28px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/8.png" alt="logo" class="h-[28px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/9.png" alt="logo" class="h-[36px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/10.png" alt="logo" class="h-[28px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/11.png" alt="logo" class="h-[36px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                        <img src="/img/rolling/12.png" alt="logo" class="h-[36px] w-auto" draggable="false"
+                            oncontextmenu="return false;" />
+                    </div>
                 </div>
             </div>
         </section>
@@ -788,7 +812,7 @@
         <!-- Updates -->
         <section id="updates-section" class="reveal w-full max-w-[430px] mx-auto py-[140px] px-[20px]">
             <div class="flex flex-col gap-[60px]">
-                <h1 class="text-black text-[36px] font-[500] leading-[100%] tracking-[-1.44px]">Updates</h1>
+                <h1 class="text-black text-[36px] font-[500] leading-[100%] tracking-[-1.44px]">Highlight</h1>
                 <a href="https://www.forbeskorea.co.kr/news/articleView.html?idxno=340729" target="_blank">
                     <div class="flex flex-col gap-[30px]">
                         <div class="hover-zoom-container">
@@ -865,28 +889,27 @@
         <div class="max-w-[430px] mx-auto flex flex-col pt-[100px] pb-[24px]">
             <!-- Contact Info -->
             <div>
-                <div class="flex flex-col gap-[30px]">
+                <div class="flex flex-col gap-[40px]">
+                    <a href="https://srshop.ai" target="_blank"
+                        class="w-[121px] h-[30px] flex items-center justify-center  bg-[#FFF176] text-black font-[600] text-[16px] mt-[30px] leading-[130%] tracking-[-0.64px] rounded-[5px]">
+                        SR Shop
+                    </a>
                     <div class="flex flex-col gap-[5px]">
-                        <p class="text-[12px] font-[700] text-white leading-[100%] tracking-[-0.36px]">Contact</p>
-                        <p class="text-[11px] font-[400] text-white leading-[100%] tracking-[-0.33px]"><a
+                        <p class="text-white text-[16px] font-[700] leading-[130%] tracking-[-0.64px]">Contact</p>
+                        <p class="text-white text-[16px] font-[400] leading-[130%] tracking-[-0.64px]"><a
                                 href="mailto:ir@seoulrobotics.org">ir@seoulrobotics.org</a></p>
                     </div>
                     <div class="flex flex-col gap-[5px]">
-                        <p class="text-[12px] font-[700] text-white leading-[130%] tracking-[-0.36px]">HQ</p>
-                        <p class="text-[11px] font-[400] text-white leading-[130%] tracking-[-0.33px]">4, Banpo-daero
+                        <p class="text-white text-[16px] font-[700] leading-[130%] tracking-[-0.64px]">HQ</p>
+                        <p class="text-white text-[16px] font-[400] leading-[130%] tracking-[-0.64px]">4, Banpo-daero
                             22-gil, Seocho-gu, Seoul, Korea</p>
                     </div>
                     <div class="flex flex-col gap-[5px]">
-                        <p class="text-[12px] font-[700] text-white leading-[130%] tracking-[-0.36px]">R&D Center</p>
-                        <p class="text-[11px] font-[400] text-white leading-[130%] tracking-[-0.33px]">388,
+                        <p class="text-white text-[16px] font-[700] leading-[130%] tracking-[-0.64px]">R&D Center</p>
+                        <p class="text-white text-[16px] font-[400] leading-[130%] tracking-[-0.64px]">388,
                             Daewangpangyo-ro, Bundang-gu, Seongnam-si, Gyeonggi-do</p>
                     </div>
                 </div>
-
-                <a href="https://srshop.ai" target="_blank"
-                    class="inline-flex items-center gap-2 text-[#FFF176] font-[500] text-[12px] mt-[30px] leading-[100%] tracking-[-0.36px]">
-                    SR Shop
-                </a>
             </div>
             <!-- Logo & Social -->
             <div class="flex flex-col items-start gap-[20px] mt-[80px]">
@@ -1043,15 +1066,15 @@
 </body>
 
 </html>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
         const marquee = document.querySelector('.logo-marquee-inner');
         const width = marquee.scrollWidth / 2;
         gsap.to(marquee, {
-          x: -width,
-          duration: width / 50,
-          ease: 'none',
-          repeat: -1
+            x: -width,
+            duration: width / 50,
+            ease: 'none',
+            repeat: -1
         });
-      });
-    </script>
+    });
+</script>
