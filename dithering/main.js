@@ -78,7 +78,7 @@ scene.add(quad);
 
 // 5) 이미지 로드 → uniform에 할당
 new THREE.TextureLoader().load(
-  'https://images.squarespace-cdn.com/content/v1/64497cc5a1eda67135e1c952/2d57e9e7-b823-451f-a014-0aecbd269a99/lv5ctrltwr.jpg?format=2500w',
+  './m.jpg',
   tex => {
     tex.minFilter = THREE.LinearFilter;
     uniforms.u_image.value = tex;
